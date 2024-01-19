@@ -1,0 +1,136 @@
+@font-face {
+  font-family: "Roboto", sans-serif;
+  src: url("./assets/fonts/Roboto-Light.ttf");
+}
+@font-face {
+  font-family: "Roboto-Medium", sans-serif;
+  src: url("./assets/fonts/Roboto-Medium.ttf");
+}
+@font-face {
+  font-family: "Playfair Display", serif;
+  src: url("./assets/fonts/PlayfairDisplay-Regular.ttf");
+}
+@font-face {
+  font-family: "Playfair Display", serif;
+  src: url("./assets/fonts/Raleway-Thin.ttf");
+}
+.headingTwo {
+  font: 30px "Playfair Display", serif;
+  border-bottom: 1px solid rgb(77, 55, 50);
+  text-align: center;
+  color: rgb(91, 90, 89);
+  padding-bottom: 20px;
+  display: inline-block;
+}
+
+@media (max-width: 820px) {
+  .headingTwo {
+    font: 20px "Playfair Display", serif;
+    padding-top: 10vh;
+  }
+}
+.wrapperCard {
+  width: 100vw;
+  height: auto;
+  display: flex;
+  color: rgb(91, 90, 89);
+  flex-direction: column;
+  align-items: center; /* Center items horizontally */
+  justify-content: center;
+  padding-top: 5%;
+}
+
+.card_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 2%;
+}
+
+.card_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 20vw;
+  border: 1px solid rgb(77, 55, 50);
+  padding: 10px;
+  margin-left: 30px;
+  color: rgb(91, 90, 89);
+  transition: background-color 0.6s ease;
+}
+
+.card_box:hover {
+  background-color: rgba(150, 129, 125, 0.1); /* Add the background color you want for the hover effect */
+}
+
+.card_name {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background-image: url(../../app/components/assets/images/SoulLogoServices1.png);
+  background-size: 30% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card_name ul {
+  list-style-type: none;
+}
+
+.paragraphCard {
+  font: 14px "Roboto-Light", sans-serif;
+  text-align: center;
+  width: 80%;
+  line-height: 1.5;
+  padding-bottom: 2vh;
+  list-style-type: "-";
+  cursor: pointer;
+}
+
+.card_btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.learnMoreBtn {
+  width: 150px;
+  font-size: 16px;
+  padding: 8px 16px;
+  border: none;
+  background-color: rgb(150, 129, 125);
+  color: white;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.learnMoreBtn:hover {
+  background-color: rgb(77, 55, 50);
+  color: white;
+  transition: background-color 2s ease-out;
+}
+
+.headingThree {
+  font: 18px "Playfair Display", serif;
+}
+
+@media (max-width: 820px) {
+  .wrapperCard {
+    padding-top: 0;
+  }
+  .card_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .card_box {
+    margin-top: 1vh;
+    width: 70vw;
+    align-self: center;
+    margin-bottom: 1vh;
+    margin-left: 0;
+  }
+}/*# sourceMappingURL=services.module.css.map */

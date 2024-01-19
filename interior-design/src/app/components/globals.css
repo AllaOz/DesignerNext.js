@@ -1,0 +1,31 @@
+@font-face {
+  font-family: "Roboto", sans-serif;
+  src: url("./assets/fonts/Roboto-Light.ttf");
+}
+@font-face {
+  font-family: "Roboto-Medium", sans-serif;
+  src: url("./assets/fonts/Roboto-Medium.ttf");
+}
+@font-face {
+  font-family: "Playfair Display", serif;
+  src: url("./assets/fonts/PlayfairDisplay-Regular.ttf");
+}
+@font-face {
+  font-family: "Playfair Display", serif;
+  src: url("./assets/fonts/Raleway-Thin.ttf");
+}
+.headingTwo {
+  font: 30px "Playfair Display", serif;
+  border-bottom: 1px solid rgb(77, 55, 50);
+  text-align: center;
+  color: rgb(91, 90, 89);
+  padding-bottom: 20px;
+  display: inline-block;
+}
+
+@media (max-width: 820px) {
+  .headingTwo {
+    font: 20px "Playfair Display", serif;
+    padding-top: 10vh;
+  }
+}/*# sourceMappingURL=globals.css.map */
