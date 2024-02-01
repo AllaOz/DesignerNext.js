@@ -22,16 +22,16 @@ function Header() {
             <Link href="/" onClick ={()=> setNav(!nav)}>Home</Link>
           </li>
           <li>
-            <Link href="/notfound" onClick ={()=> setNav(!nav)}>Projects</Link>
+            <Link href="/NotFound/NotFound" onClick ={()=> setNav(!nav)}>Projects</Link>
           </li>
           <li>
-            <Link href="/services" onClick ={()=> setNav(!nav)}>Services</Link>
+            <Link href="/Services/Services" onClick ={()=> setNav(!nav)}>Services</Link>
           </li>
           <li>
-            <Link href="/aboutme" onClick ={()=> setNav(!nav)}>About me</Link>
+            <Link href="/Aboutme/Aboutme" onClick ={()=> setNav(!nav)}>About me</Link>
           </li>
           <li>
-            <Link href="/notfound"  onClick ={()=> setNav(!nav)}>Contacts</Link>
+            <Link href="/NotFound/NotFound"  onClick ={()=> setNav(!nav)}>Contacts</Link>
           </li>
           
           <select className={styles.languagesSelect}>

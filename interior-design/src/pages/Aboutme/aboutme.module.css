@@ -96,6 +96,7 @@
   .mainContainer {
     display: flex;
     flex-direction: column-reverse;
+    overflow-x: hidden;
   }
   .upContainer {
     display: flex;

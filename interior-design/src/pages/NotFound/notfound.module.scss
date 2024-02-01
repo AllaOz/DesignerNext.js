@@ -1,4 +1,4 @@
-@import "./globals.scss";
+@import "../../app/components/globals.scss";
 
 .notfound {
     width: 100vw;
@@ -7,16 +7,17 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: url('../assets/images/404bg.jpg');
+    background-image: url('/404bg.jpg');
     background-size: cover;
-    background-repeat: no-repeat;
-    
+    background-repeat: no-repeat; 
+    overflow-x: hidden;
 }
 .notfoundcontainer {
     width: 50vw;
     display: flex;
     flex-direction: column;
     align-self: center; 
+ 
 }
 
 
@@ -39,7 +40,7 @@ text-align: center;
 
 @media (max-width: 810px) {
     .notfound {
-        background-image: url('../assets/images/404bgmobile.jpg'); 
+        background-image: url('/404bgmobile.jpg');
     }
     .notfoundheading {
         font-size: 16px;
