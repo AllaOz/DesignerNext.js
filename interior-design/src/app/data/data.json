@@ -5,8 +5,11 @@
         "one": "Using every square meter, transforming the space to fit your lifestyle.",
         "two": "Designing lighting scenarios and carefully planning the placement of outlets",
         "three": "Assisting in communicating effectively with repair team.",
-        "four": " ldkfjsd;lkfjs;dlf"
-        
+        "four": "Measured Plan",
+        "five": "Planning Solution (2-4 Options to Choose From)",
+        "six": "Installation/Disassembly Plan",
+        "seven":  "Lighting and Electrical Plan"
+    
         
     },
     {
@@ -14,8 +17,11 @@
         "name": "Extended package",
         "one": "Make sure you're taken care of to the fullest",
         "two": "Assisting in planning and managing your budget.",
-        "three": "Thoughtfully considering every detail, from selecting the paint to the door handles."
-          
+        "three": "Thoughtfully considering every detail, from selecting the paint to the door handles.",
+        "four": "Express Package Contents",
+        "five": "Furnishing",
+        "six": "Detailed Cost Estimate"
+       
         
     },
     {

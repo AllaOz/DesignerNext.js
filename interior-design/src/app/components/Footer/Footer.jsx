@@ -17,7 +17,7 @@ function Footer() {
         <p className={styles.copyright}>&copy; {currentYear} Soul Decore</p>
       </div>
 
-      <Link href='/services'>
+      <Link href='/'>
           <Image src="/logo.jpg" className={styles.logoFooter}
           width={50} 
           height={50}

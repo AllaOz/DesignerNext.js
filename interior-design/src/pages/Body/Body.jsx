@@ -9,7 +9,7 @@ const Main = () => {
     <div className={styles.twoContainer}>
         <div className={styles.leftContainer}>
         <h2 className={styles.headingTwo}>Soul Decore & Dariya Amadi</h2>
-        <p className={styles.paragraph}>Designing spaces where style meets sustainability, making every design a masterpiece</p>
+        <p className={styles.paragraph}>Designing spaces where style meets sustainability, making every design a masterpiece.</p>
         <Link href='/NotFound/notfound'>
         <button className={styles.portfolioBtn}>
             Projects
