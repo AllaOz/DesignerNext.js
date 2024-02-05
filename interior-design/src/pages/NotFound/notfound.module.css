@@ -23,8 +23,13 @@
   display: inline-block;
 }
 
+.headingThree {
+  font: 20px "Playfair Display", serif;
+}
+
 .contactmeBtn {
   cursor: pointer;
+  font: 14px "Roboto-Light", sans-serif;
   width: 150px;
   background-color: white;
   border: 1px solid rgb(77, 55, 50);
@@ -35,7 +40,7 @@
 }
 
 .contactmeBtn:hover {
-  background-color: rgba(79, 146, 154, 0.7);
+  background-color: rgb(77, 55, 50);
   color: white;
   transition: background-color 2s ease-out;
 }

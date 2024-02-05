@@ -23,6 +23,10 @@
   display: inline-block;
 }
 
+.headingThree {
+  font: 20px "Playfair Display", serif;
+}
+
 .contactmeBtn {
   cursor: pointer;
   font: 14px "Roboto-Light", sans-serif;
