@@ -2,6 +2,7 @@
   "name": "interior-design",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://AllaOz.github.io/DesignerNext.js/",
   "devDependencies": {
     "eslint": "^8",
     "eslint-config-next": "14.0.4"
@@ -67,7 +68,9 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "next build && gh-pages -d out",
+    "predeploy": "next build"
   },
   
   "eslintConfig": {

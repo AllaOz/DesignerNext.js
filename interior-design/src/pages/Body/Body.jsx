@@ -8,13 +8,17 @@ const Main = () => {
     return (
     <div className={styles.twoContainer}>
         <div className={styles.leftContainer}>
+            <div className={styles.textContainer}>
         <h2 className={styles.headingTwo}>Soul Decore & Dariya Amadi</h2>
-        <p className={styles.paragraph}>Designing spaces where style meets sustainability, making every design a masterpiece.</p>
+        <p className={styles.paragraph}>Designing spaces where style meets sustainability, making every design a masterpiece.  </p>
+       <p className={styles.paragraphAboutme}>Embrace eco-friendly materials and innovative technologies to create a harmonious blend of aesthetic appeal and environmental consciousness in each  crafted space.
+       </p>
         <Link href='/NotFound/notfound'>
-        <button className={styles.portfolioBtn}>
-            Projects
+        <button className={styles.freeConsultationBtn}>
+            VIEW MY PORTFOLIO
         </button>
         </Link>
+        </div>
         </div>
 
     

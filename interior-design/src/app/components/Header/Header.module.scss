@@ -6,7 +6,7 @@
     left: 0;
     right: 0;
     width: 100%;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     box-shadow: 0px 0px 5px 0px  rgb(240, 226, 223);
     z-index: 100;
     font: 16px $default-font;
@@ -52,15 +52,9 @@
       text-decoration: underline;
     }
   
-    .languagesSelect {
-      border: none;
-      background-color: rgb(246, 247, 251);
-      color: $text-color;
-      font: 16px $default-font;
-    }
-  
-    .languagesSelect:hover {
-      color: $hover-color;
+
+    .learnMoreBtn {
+      margin-bottom: 0;
     }
 
   .hamburgerMenu {
@@ -124,6 +118,9 @@
     }
     .languagesSelect:hover {
       color: white;
+    }
+    .learnMoreBtn {
+      display: none;
     }
   }
 

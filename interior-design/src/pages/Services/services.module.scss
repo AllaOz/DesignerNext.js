@@ -8,56 +8,42 @@
   flex-direction: column;
   align-items: center; 
   justify-content: center;
-  padding-top: 5%;
+  padding-top: 7%;
+  padding-bottom: 3%;
   
-}
-.backgroundImg {
-  position: relative;
-  overflow-x: hidden;
-}
-
-.backgroundImg::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  // background-image: url(/bg_services.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  opacity: 0.6; 
-  z-index: -1; 
 }
 
 .card_container {
+ width: 70vw;
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  margin-top: 2%;
-  margin-bottom: 5%;
+  justify-content: space-evenly;
+  margin-top: 1%;
 }
 .paragraph_container {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  width: 85vw;
+  width: 60vw;
 }
 .modal-container {
     border: none;
  
 }
 
+.headingTwo, .headingThree {
+  -webkit-animation: slideInUp 1s ease-in-out;
+          animation: slideInUp 1s ease-in-out;
+}
+
 
 .card_box {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    width: 20vw;
-    border: 1px solid $icon-color;
-    padding: 10px;
-    margin-left: 30px;
+    justify-content: space-between;
+    width: 22vw;
+    margin-left: 40px;
+    padding: 20px;
     margin-top: 2vh;
     color: $text-color;
     transition: background-color 0.6s ease;
@@ -69,95 +55,92 @@
     justify-content: space-around;
     width: 20vw;
     border: 0.5px solid $icon-color;
-    padding:10vh;
-    margin-left: 30px;
+    padding:8vh;
+    margin-left: 30vw;
     margin-top: 20vh;
     color: $text-color;
     transition: background-color 0.6s ease;
     background-color: white;
   }
   .card_box:hover {
-    background-color:rgb(150, 129, 125, 0.1);; /* Add the background color you want for the hover effect */
+    background-color:rgb(150, 129, 125, 0.1);
   }
   .card_name {
-    width: 100%;
-    display: flex;
-justify-content: center;
-align-content: center;
-background-image: url('/SoulLogoServices1.png');
-background-size: 30% 100%; 
-  background-position: center;
+  height: 70px;
+  display: flex;
+justify-content: flex-start;
+background-image: url('/SoulLogoServices.png');
+background-size: 20% 100%; 
+  background-position: left;
   background-repeat: no-repeat;
   }
-  .card_name ul {
-    list-style-type: none; 
+  .card_name_modal {
+    height: 70px;
+    justify-content: center;
+background-image: url('/SoulLogoServices.png');
+background-size: 45% 100%; 
+  background-position: center;
+  background-repeat: no-repeat;
+
   }
-  .paragraphCard {
-    font: 14px $basic-font;
-    text-align: center;
-    width: 80%;
+.paragraphCard {
+    font: 16px $basic-font;
+    text-align: left;
     line-height: 1.5;
     padding-bottom: 2vh;
-    list-style-type: '-';
-    cursor: pointer; 
-
-    
+    list-style-type: none;
+    cursor: pointer;   
+  }
+  .card_container ul {
+padding: 0;
   }
   .card_btn {
     width: 100%;
     height: 60px;
     display: flex;
-justify-content: center;
-align-content: center; 
+justify-content: flex-start;
+align-content: center;
+align-self: left; 
+  }
+  .learnMoreBtn {
+    width: 100vw;
   }
   
-  .learnMoreBtn
- {
-  width: 150px;
-    font-size: 16px;
-    padding: 8px 16px;
-    border: none;
-    background-color:$icon-color;
-    color:white;
-    cursor: pointer;
-    margin-bottom: 20px;
-  }
-
-  .learnMoreBtn:hover {
-    background-color:$hover-color;
-    color: white;
-    -webkit-transition: background-color 2s ease-out;
-    -moz-transition: background-color 2s ease-out;
-    -o-transition: background-color 2s ease-out;
-    transition: background-color 2s ease-out;
-  }
 
   @media (max-width: 820px) {
     .wrapperCard {
      padding-top: 0;
     }
+    .paragraph_container {
+      width: 100vw;
+    }
+
     .card_container {
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      padding-top: 3%;
+      padding-top: 5%;
       margin-bottom: 1%;
+      width: 100vw;
+      margin-left: 10px;
     }
     .card_box {
+      display: flex;
       padding-top: 1vh;
       margin-top: 1vh;
       width: 80vw;
-      margin-left: 10px;
-      align-self: center;
       margin-bottom: 1vh;
-     border: 0.5px solid $icon-color;
+      margin-left: 10px;
+    //  border: 0.5px solid $icon-color;
     }
     .card_box_modal {
-      margin-top: 1vh;
+      margin-top: 3vh;
       width: 70vw;
       align-self: center;
-      margin-bottom: 1vh;
+      align-items: center;
      margin-left: 0;
+     border: none;
+
+
     }
     .headingTwo {
       font: 20px $heading-font;

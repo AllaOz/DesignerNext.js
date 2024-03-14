@@ -19,25 +19,19 @@ function Header() {
           nav ? [styles.menu, styles.active].join(' ') : [styles.menu]}>
          
           <li>
-            <Link href="/" onClick ={()=> setNav(!nav)}>Home</Link>
-          </li>
-          <li>
-            <Link href="/NotFound/NotFound" onClick ={()=> setNav(!nav)}>Projects</Link>
-          </li>
-          <li>
-            <Link href="/Services/Services" onClick ={()=> setNav(!nav)}>Services</Link>
+            <Link href="/Projects/Projects" onClick ={()=> setNav(!nav)}>Projects</Link>
           </li>
           <li>
             <Link href="/Aboutme/Aboutme" onClick ={()=> setNav(!nav)}>About me</Link>
           </li>
           <li>
+            <Link href="/Services/Services" onClick ={()=> setNav(!nav)}>Services</Link>
+          </li>
+          <li>
             <Link href="/NotFound/NotFound"  onClick ={()=> setNav(!nav)}>Contacts</Link>
           </li>
+          <li><Link href="/NotFound/NotFound"  onClick ={()=> setNav(!nav)}><button className={styles.learnMoreBtn}>Contact me</button></Link></li>
           
-          <select className={styles.languagesSelect}>
-            <option value="English">EN</option>
-            <option value="Russian">RU</option>
-          </select>
          
         </ul>
         <div onClick ={()=> setNav(!nav)} className={styles.hamburgerMenu}> {nav ? <AiOutlineClose size={25}/> :  <AiOutlineMenu size={30} />}

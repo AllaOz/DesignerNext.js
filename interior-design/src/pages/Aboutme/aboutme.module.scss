@@ -12,37 +12,40 @@
 
 .upContainer {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: left;
+  flex-direction: column;
   width: 50vw;
   flex: 1;
-  justify-content: center;
-  flex-direction: column;
+  padding-left: 10%;
+  
 }
-
-
 
 .downContainer {
   flex: 1;
   width: 50vw;
   display: flex;
-  align-content: center;
-  justify-content: center;
+  align-content: flex-start;
+  justify-content: flex-start;
+  padding-left: 7%;
   
 }
 .headingTwo {
-  font: 30px $heading-font;
-  border-bottom: 1px solid $hover-color;
-  padding-bottom: 20px; 
-  display: inline-block;
+  animation: slideInRight 1s ease-in-out; 
 }
 
 .aboutmeImg {
   width: 80%;
-  padding-bottom: 2vh;
-
-
+  animation: slideInLeft 1s ease-in-out;
   }
+.aboutmeImgSmall {
+    position: absolute;
+    padding-top: 42vh;
+    padding-left: 23vw;
+    z-index: 1;
+    animation: slideInRight 1s ease-in-out;
+  }
+
 
   @media (max-width: 820px) {
     .mainContainer {
@@ -57,12 +60,15 @@
       height: 50vh;
       width: 100vw;
       padding: 0;
+      
     }
   
     .downContainer {
       width: 100vw;
       height: 50vh;
       padding: 0;
+      padding-top: 5vh;
+      
     }
   
     .headingTwo {
@@ -73,15 +79,14 @@
   
     .aboutmeImg {
       padding-top: 1vh;
-      width: 100%;
+      width: 100vw;
       height: 80%;
       padding-bottom: 0;
     }
-  
-    .contactmeBtn {
-      margin-bottom: 20px;
-      margin-top: 10px;
+    .aboutmeImgSmall {
+      display: none;
     }
+  
   }
   
   

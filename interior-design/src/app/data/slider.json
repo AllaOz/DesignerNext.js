@@ -1,0 +1,46 @@
+ [
+    {
+      "id": 1,
+      "src": "/proj_bedroom.png",
+      "alt": "bedroom"
+    },
+    {
+      "id": 2,
+      "src": "/proj_guestbed.png",
+      "alt": "guestbed "
+
+    },
+    {
+      "id": 3,
+      "src": "/proj_mastbed.png",
+      "alt": "Image 3",
+      "title": "",
+      "description": ""
+        
+    },
+    {
+      "id": 4,
+      "src":"/proj_warderobe.png",
+      "alt": "Image 4",
+      "title": "Lamborghini Aventador SV",
+      "description":""
+        
+    },
+    {
+      "id": 5,
+      "src": "/proj-bedroom1.png",
+      "alt": "Image 5",
+      "title": "Ferrari 458 Speciale",
+      "description":""
+    
+    },
+    {
+      "id": 6,
+      "src": "/proj_guestbed.png",
+      "alt": "Image 6",
+      "title": "Porsche 911",
+      "description":""
+    }
+    
+]
+      
