@@ -175,111 +175,114 @@
     padding-left: 0;
   }
 }
-.cardHeader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: rgb(255, 255, 255);
-  box-shadow: 0px 0px 5px 0px rgb(240, 226, 223);
-  z-index: 100;
-  font: 16px "Inter-Light", sans-serif;
+/* TwoContainerComponent.css */
+.twoContainerWhy {
+  background-color: #f1f1f1;
+}
+
+.headingTwo {
+  -webkit-animation: slideInRight 1s ease-in-out;
+          animation: slideInRight 1s ease-in-out;
   color: rgb(91, 90, 89);
 }
 
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-left: 2%;
-  padding-right: 2%;
-  height: 80px;
+.gridContainer {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: repeat(4, 0.05fr);
+  font: 12px "Inter-Light", sans-serif;
+  gap: 10px;
+  padding-top: 2%;
 }
 
-.logo {
-  height: 70px;
-  cursor: pointer;
-}
-
-.nav ul {
-  list-style: none;
+.gridItem {
+  text-align: left;
   display: flex;
   align-items: center;
   cursor: pointer;
 }
-
-.nav ul li {
-  margin: 10px 40px;
-}
-
-.nav ul li a {
+.gridItem a {
+  cursor: pointer;
   text-decoration: none;
   color: rgb(91, 90, 89);
-  font-family: "Inter-Light", sans-serif;
+}
+.gridItem a:visited {
+  color: inherit;
 }
 
-.nav ul li:active {
-  text-decoration: underline;
+.lampsImg {
+  width: 100%;
+  height: 100%;
+  -webkit-animation: slideInLeft 1s ease-in-out;
+          animation: slideInLeft 1s ease-in-out;
 }
 
-.nav ul li a:hover {
-  color: rgb(117, 104, 92);
-  color: rgb(0, 0, 0);
-  text-decoration: underline;
+.input {
+  width: 70%;
+  height: 40px;
+  margin-bottom: 20px;
+  background-color: rgba(130, 116, 106, 0.21);
+  color: rgb(91, 90, 89);
+  border: none;
+}
+
+.input:focus {
+  outline: 0.5px solid rgb(91, 90, 89);
 }
 
 .learnMoreBtn {
-  margin-bottom: 0;
+  background-color: rgb(117, 104, 92);
+  color: white;
+  cursor: pointer;
+  margin-bottom: 20px;
+  border: 0.5px solid rgb(91, 90, 89);
 }
 
-.hamburgerMenu {
-  display: none;
+.learnMoreBtn:hover {
+  background-color: white;
+  color: rgb(91, 90, 89);
+  transition: background-color 2s ease-out;
+  cursor: pointer;
 }
 
-@media (max-width: 810px) {
-  .cardHeader {
-    overflow-x: hidden;
-    width: 100vw;
-  }
-  .hamburgerMenu {
-    display: block;
-    position: absolute;
-    cursor: pointer;
-    right: 0;
-    z-index: 10;
-  }
-  .logo {
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-  }
-  .menu {
+@media (max-width: 820px) {
+  .twoContainerWhy {
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
+  }
+  .leftContainerWhy {
+    display: flex;
+    align-items: center;
     justify-content: center;
-    position: fixed;
-    left: -100%;
-    right: 0;
-    top: -3%;
-    bottom: 0;
+    flex-direction: column;
+    height: 70vh;
+    width: 95vw;
+    padding-left: 100px;
+  }
+  .headingTwo {
+    font: 20px "Plus Jakarta Sans", sans-serif;
+    padding-top: 3vh;
+  }
+  .paragraphWhyChooseMe {
+    font: 16px "Roboto-Light", sans-serif;
+    color: #f1f1f1;
     width: 100%;
-    height: 100vh;
-    z-index: 10;
-    background-color: white;
-    transition: left 0.8s;
-    padding-left: 0%;
   }
-  .nav a {
-    font: 16px "Inter-Light", sans-serif;
+  .checkbox {
+    font: 8px "Inter-Light", sans-serif;
   }
-  .active {
-    left: 0;
+  .rightContainerWhy {
+    flex: 1;
+    height: 30vh;
+    width: 100vw;
+    padding: 0;
+    padding-top: 3vh;
+    display: flex;
+    justify-content: center;
   }
-  .nav ul li a:hover {
-    color: rgb(0, 0, 0);
-    text-decoration: underline;
+  .lampsImg {
+    width: 100%;
+    padding-top: 0;
   }
-  .learnMoreBtn {
-    display: none;
-  }
-}/*# sourceMappingURL=Header.module.css.map */
+}/*# sourceMappingURL=contacts.module.css.map */

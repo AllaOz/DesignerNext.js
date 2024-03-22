@@ -1,0 +1,35 @@
+@import "../globals.scss";
+
+.input {
+    width: 70%;
+    height: 40px;
+    margin-bottom: 20px;
+    background-color:  rgb(130, 116, 106, 0.21);;
+    color: $text-color;
+    border: none;
+  }
+.input:focus
+ {
+  outline: 0.5px solid rgb(91, 90, 89);
+}
+.formContainer {
+    display: flex;
+      align-items: flex-start;
+      justify-content: left;
+      flex-direction: column;
+      width: 50vw;
+    }
+    .required {
+        color: red;
+      }
+      .checkbox {
+        margin-bottom: 30px;
+        font: 12px $default-font;
+      }
+    @media (max-width: 820px) {
+        .input {
+            width: 70vw;
+            height: 35px;
+            margin-bottom: 15px;
+          }
+        }

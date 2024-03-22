@@ -4,6 +4,7 @@ import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import Link from 'next/link';
 import Image from 'next/image';
 
+
 function Header() {
   const [nav, setNav] = useState(false);
 
@@ -28,16 +29,17 @@ function Header() {
             <Link href="/Services/Services" onClick ={()=> setNav(!nav)}>Services</Link>
           </li>
           <li>
-            <Link href="/NotFound/NotFound"  onClick ={()=> setNav(!nav)}>Contacts</Link>
+            <Link href="/Contacts/Contacts"  onClick ={()=> setNav(!nav)}>Contacts</Link>
           </li>
-          <li><Link href="/NotFound/NotFound"  onClick ={()=> setNav(!nav)}><button className={styles.learnMoreBtn}>Contact me</button></Link></li>
-          
-         
+          <li><a href="https://wa.me/971555545167" target="_blank" rel="noopener noreferrer">
+        <button className={styles.learnMoreBtn} onClick={() => setNav(!nav)}>Contact me</button>
+    </a>
+    </li>  
         </ul>
         <div onClick ={()=> setNav(!nav)} className={styles.hamburgerMenu}> {nav ? <AiOutlineClose size={25}/> :  <AiOutlineMenu size={30} />}
-       
         </div>
       </nav>
+      
     </header>
   );
 }

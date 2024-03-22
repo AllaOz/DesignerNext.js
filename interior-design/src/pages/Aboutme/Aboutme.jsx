@@ -29,7 +29,7 @@ const Aboutme = () => {
         <h2 className={styles.headingTwo}>About me</h2>
         <p className={styles.paragraphAboutme}>Hello! I'm a Dubai-based interior designer dedicated to seamlessly blending luxury with eco-conscious design. </p>
         <p className={styles.paragraphAboutme}> My designs prioritize functionality, green principles for a mindful and stylish living experience. Let's say hello to a collaboration that redefines your space with an eco-friendly touch.</p>
-        <Link href="/NotFound/NotFound">
+        <Link href="/Contacts/Contacts">
         <button className={styles.freeConsultationBtn}>
            free consultation
         </button>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal';
+import Link  from 'next/link';
 import styles from '../Services/services.module.scss';
 import data from '../../app/data/data.json';
 import Header from '../../app/components/Header/Header';
@@ -24,13 +25,16 @@ const Card = () => {
     <>
     <Header />
       <div className={styles.wrapperCard}>
-      <h2 className={styles.headingTwo}>Interior Design Services</h2>
       <div className={styles.paragraph_container}>
+      <h2 className={styles.headingTwo}>Interior Design Services</h2>
       <p className={styles.paragraphAboutme}>Transform your space with elegance and innovation! I’m offering a free consultation to bring your vision to life. Contact me now to take the first step toward creating a space that reflects your unique style and personality.
-</p></div>
+</p>
+<Link href="/Contacts/Contacts">
 <button className={styles.freeConsultationBtn}>
             free consultation
         </button>
+        </Link>
+        </div>
         
       <div  className={styles.card_container} >
       {data.map((service) => ( 

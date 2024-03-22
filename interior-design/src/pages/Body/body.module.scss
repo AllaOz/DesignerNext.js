@@ -7,6 +7,7 @@
   justify-content: center;
   align-items: center;
   padding-top: 5%;
+  width: 100vw;
 }
 
 
@@ -44,41 +45,33 @@
   }
 
   
-
 @media (max-width: 820px) {
-  .twoContainer {
-  display: flex;
-  flex-direction: column ;
+.twoContainer {
+display: flex;
+flex-direction: column ;
+overflow-x: hidden;
+
   }
   .leftContainer {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    justify-content: flex-start;
     height: 50vh;
-    width: 100vw;
-    padding-left: 3%;
-    padding-right: 3%;
+      width: 100vw;
+      padding-left: 100px;
   }
-  .headingTwo {
-    font: 20px $heading-font;
-    padding-top: 10vh;
-  }
+  
   .paragraph {
-    font: 16px $basic-font;
-    text-align: center;
-    width: 80%;
+    font: 18px $basic-font;
+    line-height: 1.5;
+
   }
   
   .rightContainer {
-    flex: 1;
     height: 50vh;
     width: 100vw;
-    padding: 0;
     padding-top: 5vh;
-    display: flex;
- justify-content: center;
   }
+
   .lampsImg {
   width:100%;
   padding-top: 0;

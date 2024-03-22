@@ -16,7 +16,7 @@ const WhyChooseMe = () => {
   </p>
             <p className={styles.paragraphWhyChooseMe}> <b>Innovative Designs:</b> Stay ahead in style with a collection that incorporates the latest trends and innovative designs, ensuring your space is both timeless and contemporary  </p>
             <br></br>
-            <Link href='./NotFound/notfound'>
+            <Link href='./Contacts/Contacts'>
             <button className={styles.learnMoreBtn}>
                 Contact me
             </button>

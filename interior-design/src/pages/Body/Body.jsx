@@ -2,10 +2,14 @@ import React from 'react';
 import styles from '../Body/body.module.scss';
 import Image from 'next/image'
 import  Link  from 'next/link';
+import Header from '../../app/components/Header/Header';
+
 
 
 const Main = () => {
     return (
+        <>
+        <Header /> 
     <div className={styles.twoContainer}>
         <div className={styles.leftContainer}>
             <div className={styles.textContainer}>
@@ -13,7 +17,7 @@ const Main = () => {
         <p className={styles.paragraph}>Designing spaces where style meets sustainability, making every design a masterpiece.  </p>
        <p className={styles.paragraphAboutme}>Embrace eco-friendly materials and innovative technologies to create a harmonious blend of aesthetic appeal and environmental consciousness in each  crafted space.
        </p>
-        <Link href='/NotFound/notfound'>
+        <Link href='/Projects/Projects'>
         <button className={styles.freeConsultationBtn}>
             VIEW MY PORTFOLIO
         </button>
@@ -30,6 +34,7 @@ const Main = () => {
           alt="Lamps" />
         </div>
     </div>
+    </>
     );
 };
 

@@ -40,6 +40,13 @@ color: $text-color;
   .copyright {
     @include font(12px);
   }
+  @media (max-width: 810px) {
+    .footer {
+      overflow-x: hidden;
+    }
+  }
+
+
   
  
   
