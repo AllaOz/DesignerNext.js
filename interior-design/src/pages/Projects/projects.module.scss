@@ -24,16 +24,17 @@
 
 @media (max-width: 820px) {
     .projectContainer {
-        padding-top: 0;
         overflow-x: hidden;
+        padding-bottom: 10%;
     }
     .sliderContainer {
-        padding: 0 40px 25px 30px;
+        padding: 0 30px 120px 30px;
      }
     
      .sliderImage {
         width: 100vw;
         margin-left: 0px;
+       height: 500px;
     }
     
 }

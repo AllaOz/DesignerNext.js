@@ -143,14 +143,15 @@ cursor: pointer;
     }
     .card_box_modal {
     margin-top: 3vh;
-    width: 60vw;
+     width: 80vw;
      margin-left: 0;
      border: none;
-     padding-top: 10vh;
+     padding: 0;
+     padding-top: 20vh;
   
     }
     .card_name_modal {
-  background-size: 30% 100%; 
+  background-size: 20% 100%; 
     }
     .headingTwo {
       font: 20px $heading-font;

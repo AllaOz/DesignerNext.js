@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "https://AllaOz.github.io/DesignerNext.js/",
   "devDependencies": {
-    "eslint": "^8",
+    "eslint": "^8.3.0",
     "eslint-config-next": "14.0.4"
   },
   "dependencies": {
@@ -14,7 +14,7 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "babel-jest": "^27.4.2",
+    "babel-jest": "^27.4.3",
     "babel-loader": "^8.2.3",
     "babel-plugin-named-asset-import": "^0.3.8",
     "babel-preset-react-app": "^10.0.1",
@@ -26,7 +26,6 @@
     "css-minimizer-webpack-plugin": "^3.2.0",
     "dotenv": "^10.0.0",
     "dotenv-expand": "^5.1.0",
-    "eslint": "^8.3.0",
     "eslint-config-react-app": "^7.0.1",
     "eslint-webpack-plugin": "^3.1.1",
     "file-loader": "^6.2.0",
@@ -46,7 +45,6 @@
     "proxy": "http://itgirlschool.justmakeit.ru",
     "react": "^18.2.0",
     "react-app-polyfill": "^3.0.0",
-    "react-dev-utils": "^12.0.1",
     "react-dom": "^18.2.0",
     "react-refresh": "^0.11.0",
     "react-router-dom": "^6.14.2",
@@ -65,14 +63,13 @@
     "workbox-webpack-plugin": "^6.4.1"
   },
   "scripts": {
-    "dev": "next dev",
+    "dev": "next",
     "build": "next build",
     "start": "next start",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "next build && gh-pages -d out",
+    "deploy": "next build && netlify deploy --dir=out --prod",
     "predeploy": "next build"
   },
-  
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -142,23 +139,14 @@
     ],
     "resetMocks": true
   },
-  "babel": {
+  "babel":{
     "presets": [
-      "@babel/preset-env"
+      ["@babel/preset-env", { "targets": "> 0.25%, not dead" }],
+      "@babel/preset-react"
     ],
     "plugins": [
-      [
-        "@babel/plugin-proposal-decorators",
-        {
-          "legacy": true
-        }
-      ],
-      [
-        "@babel/plugin-proposal-class-properties",
-        {
-          "loose": true
-        }
-      ]
+      "@babel/plugin-transform-runtime",
+      "@babel/plugin-transform-class-properties"
     ]
   }
 }

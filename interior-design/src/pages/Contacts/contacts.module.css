@@ -277,12 +277,11 @@
     height: 30vh;
     width: 100vw;
     padding: 0;
-    padding-top: 3vh;
     display: flex;
     justify-content: center;
   }
   .lampsImg {
-    width: 100%;
+    height: 50%;
     padding-top: 0;
   }
 }/*# sourceMappingURL=contacts.module.css.map */
