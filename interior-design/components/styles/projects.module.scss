@@ -40,7 +40,7 @@
 }
 
 .sliderImage {
-    width: 27vw;
+    width: 40vw;
     height: 450px;
     margin-left: 20px;
     object-fit: cover;
@@ -92,7 +92,7 @@
 .modalContent {
     background: rgba(247, 250, 252, 0.7);
     border-radius: 12px;
-    max-width: 50vw;
+    max-width: 35vw;
     max-height: 80vh;
     overflow-y: auto;
     position: relative;
@@ -133,11 +133,12 @@
         font-size: 1.4rem;
         font-family: "CSQuinzel", serif;
         font-weight: 400;
+        margin: 1rem 3rem;
     }
 
     p {
         color: #6A8A95;
-        margin: 0;
+        margin: 0rem 3rem;
         opacity: 0.8;
         font-family: "Martian Mono", monospace;
         font-weight: 300;

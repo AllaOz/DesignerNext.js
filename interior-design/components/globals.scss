@@ -368,8 +368,14 @@ $hover-color: $accent-color;
   width: 50vw;
   flex: 1;
   height: 100vh;
-  padding: 2rem 3rem;
   box-sizing: border-box;
+}
+
+/* Desktop only padding */
+@media (min-width: 821px) {
+  .leftContainerWhy {
+    padding: 2rem 3rem;
+  }
 }
 
 .rightContainerWhy {

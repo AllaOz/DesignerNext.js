@@ -14,10 +14,10 @@
 .twoContainer {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  gap: 2rem;
   align-items: center;
   min-height: 100vh;
-  padding: 2rem 2rem 0rem 0rem;
+  padding: 0rem 1rem 1rem 0rem;
   max-width: 1200px;
   margin: 0 auto;
   color: $text-color;
@@ -26,9 +26,8 @@
 .leftContainer {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: left;
   align-items: flex-start;
-  padding: 2rem 0rem;
 }
 
 .rightContainer {
@@ -59,7 +58,7 @@
   font-family: $default-font;
   font-size: 0.875rem;
   font-weight: 300;
-  line-height: 1.7;
+  line-height: 1.5;
   letter-spacing: -0.02em;
   color: $text-primary;
   text-align: left;
