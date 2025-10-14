@@ -1,11 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    sassOptions: {
-        includePaths: ['./src'],
-    },
+    reactStrictMode: true,
     images: {
-        domains: ['localhost'],
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: '**',
+            },
+        ],
+        unoptimized: false,
     },
+    output: 'standalone',
 }
 
 module.exports = nextConfig
