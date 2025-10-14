@@ -13,12 +13,31 @@
   src: url("./assets/fonts/PlusJakartaSans-Regular.ttf");
   font-optical-sizing: auto;
   font-weight: 400;
+}
 
+@-webkit-keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
 }
 
 @keyframes slideInLeft {
   from {
     transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes slideInRight {
+  from {
+    transform: translateX(100%);
   }
 
   to {
@@ -60,42 +79,24 @@
   }
 }
 
-
-$default-font: "Inter-Light", sans-serif;
-$basic-font: "Roboto-Light", sans-serif;
-$heading-font: 'Plus Jakarta Sans', sans-serif;
-$extra-font: "Raleway", sans-serif;
-$main-color: rgb(221, 221, 221);
-$icon-color: rgb(150, 129, 125);
-$basic-color: rgb(246, 247, 251);
-$text-color: rgb(91, 90, 89);
-$hover-color: rgb(117, 104, 92);
-
-
-
-@mixin font ($font-size) {
-  font-size: $font-size;
-  font-family: $default-font;
-}
-
-
 .headingTwo {
-  font: 30px $heading-font;
+  font: 30px "Plus Jakarta Sans", sans-serif;
   text-align: center;
-  color: $text-color;
+  color: rgb(91, 90, 89);
   display: inline-block;
 }
 
 .headingThree {
-  font: 20px $heading-font;
+  font: 20px "Plus Jakarta Sans", sans-serif;
+  -webkit-animation: slideInLeft 1s ease-in-out;
   animation: slideInLeft 1s ease-in-out;
 }
 
 .freeConsultationBtn {
   cursor: pointer;
-  font: 14px $main-color;
-  background-color: $hover-color;
-  color: $main-color;
+  font: 14px rgb(221, 221, 221);
+  background-color: rgb(117, 104, 92);
+  color: rgb(221, 221, 221);
   width: 200px;
   height: 45px;
   border: none;
@@ -105,18 +106,15 @@ $hover-color: rgb(117, 104, 92);
 }
 
 .freeConsultationBtn:hover {
-  font: 14px $text-color;
+  font: 14px rgb(91, 90, 89);
   background-color: white;
-  color: $hover-color;
-  border: 1px solid $hover-color;
-  -webkit-transition: background-color 2s ease-out;
-  -moz-transition: background-color 2s ease-out;
-  -o-transition: background-color 2s ease-out;
+  color: rgb(117, 104, 92);
+  border: 1px solid rgb(117, 104, 92);
   transition: background-color 2s ease-out;
 }
 
 .paragraphAboutme {
-  font: 18px $basic-font;
+  font: 18px "Roboto-Light", sans-serif;
   text-align: left;
   width: 80%;
   line-height: 1.5;
@@ -124,7 +122,7 @@ $hover-color: rgb(117, 104, 92);
 
 .textContainer {
   width: 100%;
-  padding-left: 15%;
+  padding-left: 25%;
 }
 
 .learnMoreBtn {
@@ -146,10 +144,9 @@ $hover-color: rgb(117, 104, 92);
   cursor: pointer;
 }
 
-// Why choose me page and Contacts//
 .twoContainerWhy {
   display: flex;
-  color: $text-color;
+  color: rgb(91, 90, 89);
   justify-content: center;
   align-items: center;
   background-color: #80776F;
@@ -163,7 +160,6 @@ $hover-color: rgb(117, 104, 92);
   flex-direction: column;
   width: 50vw;
   flex: 1;
-  padding: 6rem 1.5rem 1rem;
 }
 
 .rightContainerWhy {
@@ -174,28 +170,89 @@ $hover-color: rgb(117, 104, 92);
 }
 
 .paragraphWhyChooseMe {
-  font: 16px $basic-font;
+  font: 16px "Roboto-Light", sans-serif;
   text-align: left;
   width: 70%;
   line-height: 1.5;
-  color: $text-color;
-  padding: 6rem 1.5rem 1rem;
+  color: rgb(91, 90, 89);
 }
 
 @media (max-width: 820px) {
   .headingTwo {
-    font: 20px $heading-font;
+    font: 20px "Plus Jakarta Sans", sans-serif;
     padding-top: 8vh;
   }
 
   .paragraphAboutme {
-    font: 16px $basic-font;
-
+    font: 16px "Roboto-Light", sans-serif;
   }
 
   .textContainer {
     width: 100%;
     padding-left: 0;
   }
-
 }
+
+/* TwoContainerComponent.css */
+.headingTwo {
+  -webkit-animation: slideInLeft 1s ease-in-out;
+  animation: slideInLeft 1s ease-in-out;
+  color: #f1f1f1;
+}
+
+.paragraphWhyChooseMe {
+  color: #f1f1f1;
+}
+
+.lampsImg {
+  width: 100%;
+  height: 100%;
+  -webkit-animation: slideInRight 1s ease-in-out;
+  animation: slideInRight 1s ease-in-out;
+}
+
+@media (max-width: 820px) {
+  .twoContainerWhy {
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+  }
+
+  .leftContainerWhy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 50vh;
+    width: 95vw;
+    padding-left: 100px;
+  }
+
+  .headingTwo {
+    font: 20px "Plus Jakarta Sans", sans-serif;
+    padding-top: 10vh;
+  }
+
+  .paragraphWhyChooseMe {
+    font: 16px "Roboto-Light", sans-serif;
+    color: #f1f1f1;
+    width: 80%;
+  }
+
+  .rightContainerWhy {
+    flex: 1;
+    height: 50vh;
+    width: 100vw;
+    padding: 0;
+    padding-top: 5vh;
+    display: flex;
+    justify-content: center;
+  }
+
+  .lampsImg {
+    width: 100%;
+    padding-top: 0;
+  }
+}
+
+/*# sourceMappingURL=whychooseme.module.css.map */

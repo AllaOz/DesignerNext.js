@@ -11,35 +11,35 @@ function Header() {
 
   return (
     <header className={styles.cardHeader}>
-      
-        <nav className={styles.nav}>
+
+      <nav className={styles.nav}>
         <Link href='/'>
-            <Image src="/logo.jpg" className={styles.logo} width={70} height={70} alt="logo" />
+          <Image src="/logo.jpg" className={styles.logo} width={70} height={70} alt="logo" />
         </Link>
         <ul className={
           nav ? [styles.menu, styles.active].join(' ') : [styles.menu]}>
-         
+
           <li>
-            <Link href="/Projects/Projects" onClick ={()=> setNav(!nav)}>Projects</Link>
+            <Link href="/projects" onClick={() => setNav(!nav)}>Projects</Link>
           </li>
           <li>
-            <Link href="/Aboutme/Aboutme" onClick ={()=> setNav(!nav)}>About me</Link>
+            <Link href="/aboutme" onClick={() => setNav(!nav)}>About me</Link>
           </li>
           <li>
-            <Link href="/Services/Services" onClick ={()=> setNav(!nav)}>Services</Link>
+            <Link href="/services" onClick={() => setNav(!nav)}>Services</Link>
           </li>
           <li>
-            <Link href="/Contacts/Contacts"  onClick ={()=> setNav(!nav)}>Contacts</Link>
+            <Link href="/contacts" onClick={() => setNav(!nav)}>Contacts</Link>
           </li>
           <li><a href="https://wa.me/971555545167" target="_blank" rel="noopener noreferrer">
-        <button className={styles.learnMoreBtn} onClick={() => setNav(!nav)}>Contact me</button>
-    </a>
-    </li>  
+            <button className={styles.learnMoreBtn} onClick={() => setNav(!nav)}>Contact me</button>
+          </a>
+          </li>
         </ul>
-        <div onClick ={()=> setNav(!nav)} className={styles.hamburgerMenu}> {nav ? <AiOutlineClose size={25}/> :  <AiOutlineMenu size={30} />}
+        <div onClick={() => setNav(!nav)} className={styles.hamburgerMenu}> {nav ? <AiOutlineClose size={25} /> : <AiOutlineMenu size={30} />}
         </div>
       </nav>
-      
+
     </header>
   );
 }

@@ -1,0 +1,41 @@
+[
+    {
+        "id": 1,
+        "name": "Express package",
+        "one": "Using every square meter to transform the space to fit your lifestyle.",
+        "two": "Designing lighting scenarios, planning the placement of plugs",
+        "three": "Assisting in effective communication with repair team.",
+        "four": "Measured Plan",
+        "five": "Planning Solution (2-4 Options to Choose From)",
+        "six": "Installation/Disassembly Plan",
+        "seven":  "Lighting and Electrical Plan"
+    
+        
+    },
+    {
+        "id": 2,
+        "name": "Extended package",
+        "one": "Assisting in planning and managing your budget, cost optimization.",
+        "two": "Make sure you're taken care of to the fullest",
+        "three": "Thoughtfully considering every detail, from selecting the paint to the door handles.",
+        "four": "Express Package Contents",
+        "five": "Furnishing",
+        "six": "Detailed Cost Estimate"
+       
+        
+    },
+    {
+        "id": 3,
+        "name": "Full Package",
+        "one": "Creating the perfect home specifically for you with a clear vision of the result",
+        "two": "Development of a step-by-step implementation guide for your project",
+        "three": "Complete project detailing",
+        "four": "Extended Package Contents",
+        "five": "Floor and ceiling plans",
+        "six": "Furniture and material schedules",
+        "seven": "Intricate element detailing",
+        "eight": "3D visualizations"
+        
+    }  
+   
+]

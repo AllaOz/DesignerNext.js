@@ -1,0 +1,137 @@
+@import "../../components/globals.scss";
+/* TwoContainerComponent.css */
+
+// Override learnMoreBtn size for Body section to match freeConsultationBtn
+.learnMoreBtn {
+  width: auto;
+  min-width: 200px;
+  height: 48px;
+  font-size: 0.875rem;
+  font-weight: 300;
+  padding: 12px 24px;
+}
+
+.twoContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem 2rem 0rem 0rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: $text-color;
+}
+
+.leftContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem 0rem;
+}
+
+.rightContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -2rem;
+    right: -2rem;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(124, 110, 97, 0.15) 0%, rgba(139, 125, 112, 0.08) 100%);
+    border-radius: 0;
+    z-index: -1;
+    animation: expandBackground 2s ease-out;
+  }
+}
+
+.headingTwo {
+  animation: slideInLeft 1s ease-in-out;
+}
+
+.paragraph {
+  font-family: $default-font;
+  font-size: 0.875rem;
+  font-weight: 300;
+  line-height: 1.7;
+  letter-spacing: -0.02em;
+  color: $text-primary;
+  text-align: left;
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 1.5rem;
+}
+
+.lampsImg {
+  width: 100%;
+  max-width: 550px;
+  height: auto;
+  border-radius: 0;
+  box-shadow: 0 20px 40px rgba(124, 110, 97, 0.2);
+  animation: expandImage 2s ease-out;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    transform: scale(1.02);
+  }
+}
+
+
+@media (max-width: 768px) {
+  .twoContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 6rem 1.5rem 1rem;
+    min-height: auto;
+  }
+
+  .leftContainer {
+    order: 2;
+    padding: 0;
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .rightContainer {
+    order: 1;
+    padding: 0;
+    position: relative;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .paragraph {
+    font-size: 0.65rem;
+    text-align: left;
+    max-width: 100%;
+  }
+
+  .lampsImg {
+    width: 100vw;
+    height: 100vw;
+    object-fit: cover;
+    margin: 0;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 480px) {
+  .twoContainer {
+    padding: 5rem 1.5rem 2rem;
+  }
+
+  .paragraph {
+    font-size: 0.6rem;
+  }
+}

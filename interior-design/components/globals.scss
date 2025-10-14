@@ -1,0 +1,478 @@
+/* csquinzel regular */
+@font-face {
+  font-family: "CSQuinzel";
+  src: url("./assets/fonts/CSQuinzel-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* martian mono regular */
+@font-face {
+  font-family: "Martian Mono";
+  src: url("./assets/fonts/MartianMono-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* martian mono light */
+@font-face {
+  font-family: "Martian Mono";
+  src: url("./assets/fonts/MartianMono-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+// Martian Mono letter spacing utility class
+.martian-mono {
+  letter-spacing: -0.02em;
+}
+
+// Modern Animations
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(30px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes expandImage {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes expandBackground {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+
+  50% {
+    transform: scale(1.2);
+    opacity: 0.6;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+// Updated Color Palette
+$primary-color: #6A8A95; // Main brand color
+$secondary-color: #DEEBEF; // Lighter brand color
+$accent-color: #6A8A95; // Brand accent
+$accent-light: #F7F0E8; // Light brand color
+$text-primary: #26363D; // Main text color
+$text-secondary: #8a8a8a; // Secondary text color
+$text-light: #F7F0E8; // Light text color
+$neutral-50: #F7FAFC; // Very light gray
+$neutral-100: #EDF2F7; // Light gray
+$neutral-200: #E2E8F0; // Medium light gray
+$neutral-300: #CBD5E0; // Medium gray
+$neutral-400: #A0AEC0; // Dark medium gray
+$neutral-500: #718096; // Dark gray
+$neutral-600: #4A5568; // Darker gray
+$neutral-700: #2D3748; // Very dark gray
+$neutral-800: #1A202C; // Almost black
+$neutral-900: #171923; // Black
+
+// Typography
+$default-font: "Martian Mono", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+$heading-font: "CSQuinzel", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+$display-font: "Martian Mono", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+$basic-font: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+// Global letter spacing for Martian Mono applied via utility class
+
+// Legacy variables for compatibility
+$main-color: $neutral-100;
+$icon-color: $neutral-500;
+$basic-color: $neutral-50;
+$text-color: $text-primary;
+$hover-color: $accent-color;
+
+
+
+@mixin font ($font-size) {
+  font-size: $font-size;
+  font-family: $default-font;
+  letter-spacing: -0.02em;
+}
+
+
+// Updated Typography Scale
+.headingTwo {
+  font-family: $heading-font;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 300;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: #6A8A95;
+  display: inline-block;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.headingThree {
+  font-size: clamp(0.95rem, 1.6vw + 0.4rem, 1.25rem);
+  letter-spacing: clamp(-0.05em, -0.3vw, -0.02em);
+  line-height: 1.1;
+  color: #6A8A95;
+  animation: slideInLeft 1s ease-in-out;
+  text-align: left;
+}
+
+.headingFour {
+  font-family: $heading-font;
+  font-size: clamp(1.125rem, 2vw, 1.5rem);
+  font-weight: 300;
+  line-height: 1.4;
+  color: #6A8A95;
+  text-align: left;
+}
+
+.displayText {
+  font-family: $display-font;
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 300;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: #6A8A95;
+  text-align: left;
+}
+
+// Updated Button Styles
+.freeConsultationBtn {
+  cursor: pointer;
+  font-family: $default-font;
+  font-size: 0.875rem;
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  background: linear-gradient(135deg, $primary-color 100%, $secondary-color 100%);
+  color: white;
+  width: auto;
+  min-width: 200px;
+  height: 48px;
+  border: none;
+  border-radius: 0;
+  padding: 12px 24px;
+  margin-top: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  box-shadow: 0 4px 14px 0 rgba(124, 110, 97, 0.25);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.8s;
+  }
+
+  &:hover {
+    background: linear-gradient(135deg, $secondary-color 0%, $primary-color 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px 0 rgba(124, 110, 97, 0.35);
+
+    &::before {
+      left: 100%;
+    }
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 14px 0 rgba(124, 110, 97, 0.25);
+  }
+}
+
+// Updated Text Styles
+.paragraphAboutme {
+  font-family: $default-font;
+  font-size: 0.875rem;
+  font-weight: 300;
+  line-height: 1.7;
+  letter-spacing: -0.02em;
+  color: $text-primary;
+  text-align: left;
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 1.5rem;
+}
+
+.textContainer {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.learnMoreBtn {
+  width: auto;
+  min-width: 120px;
+  height: 36px;
+  font-family: $default-font;
+  font-size: 0.75rem;
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  padding: 8px 16px;
+  background-color: white;
+  color: $primary-color;
+  cursor: pointer;
+  margin-bottom: 0;
+  border: 2px solid $primary-color;
+  border-radius: 0;
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+    transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: -1;
+  }
+
+  &:hover {
+    color: white;
+    border-color: $primary-color;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(124, 110, 97, 0.15);
+
+    &::before {
+      width: 100%;
+    }
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+// Why choose me page and Contacts//
+.twoContainerWhy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  opacity: 89%;
+}
+
+.leftContainerWhy {
+  display: flex;
+  align-items: flex-start;
+  justify-content: left;
+  flex-direction: column;
+  width: 50vw;
+  flex: 1;
+  min-height: 100vh;
+}
+
+.rightContainerWhy {
+  flex: 1;
+  width: 50vw;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  align-items: center;
+}
+
+.paragraphWhyChooseMe {
+  font-family: $default-font;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  text-align: left;
+  width: 70%;
+  line-height: 1.5;
+  color: $text-color;
+}
+
+// Modern Utility Classes
+.gradient-text {
+  background: linear-gradient(135deg, $accent-color 0%, #C53030 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.shadow-soft {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.shadow-medium {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.shadow-large {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.rounded-sm {
+  border-radius: 0.375rem;
+}
+
+.rounded-md {
+  border-radius: 0.5rem;
+}
+
+.rounded-lg {
+  border-radius: 0.75rem;
+}
+
+.rounded-xl {
+  border-radius: 1rem;
+}
+
+.rounded-2xl {
+  border-radius: 1.5rem;
+}
+
+// Animation Classes
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.animate-slide-up {
+  animation: slideInUp 0.6s ease-out;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.6s ease-out;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@media (max-width: 768px) {
+  .headingTwo {
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    padding-top: 2rem;
+  }
+
+  .paragraphAboutme {
+    font-size: 0.65rem;
+  }
+
+  .paragraphWhyChooseMe {
+    font-size: 0.65rem;
+  }
+
+  .textContainer {
+    padding: 0 1rem;
+  }
+}

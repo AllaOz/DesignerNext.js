@@ -1,0 +1,17 @@
+/* Global font styling for Martian Mono letter spacing */
+body {
+  font-family: "Martian Mono", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  letter-spacing: -0.02em;
+}
+
+/* Apply letter spacing to all Martian Mono text */
+* {
+  font-family: "Martian Mono", monospace;
+}
+
+* {
+  font-family: "Martian Mono", monospace;
+  letter-spacing: -0.02em;
+}
+
+

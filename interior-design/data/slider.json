@@ -1,0 +1,60 @@
+[
+  {
+    "id": 1,
+    "src": "/proj_bedroom.png",
+    "alt": "bedroom",
+    "title": "Master Bedroom Design",
+    "description": "Elegant and cozy master bedroom with modern furniture",
+    "gallery": [
+      "/proj_bedroom.png",
+      "/proj_mastbed.png",
+      "/proj-bedroom1.png"
+    ]
+  },
+  {
+    "id": 2,
+    "src": "/proj_guestbed.png",
+    "alt": "guestbed",
+    "title": "Guest Bedroom",
+    "description": "Comfortable and stylish guest bedroom design",
+    "gallery": [
+      "/proj_guestbed.png",
+      "/proj_bedroom.png"
+    ]
+  },
+  {
+    "id": 3,
+    "src": "/proj_mastbed.png",
+    "alt": "master bedroom",
+    "title": "Luxury Master Suite",
+    "description": "Spacious master bedroom with premium finishes",
+    "gallery": [
+      "/proj_mastbed.png",
+      "/proj-bedroom1.png",
+      "/proj_bedroom.png"
+    ]
+  },
+  {
+    "id": 4,
+    "src": "/proj_warderobe.png",
+    "alt": "wardrobe",
+    "title": "Custom Wardrobe Design",
+    "description": "Modern walk-in closet with organized storage solutions",
+    "gallery": [
+      "/proj_warderobe.png",
+      "/proj_mastbed.png"
+    ]
+  },
+  {
+    "id": 5,
+    "src": "/proj-bedroom1.png",
+    "alt": "bedroom design",
+    "title": "Contemporary Bedroom",
+    "description": "Modern bedroom design with clean lines and natural light",
+    "gallery": [
+      "/proj-bedroom1.png",
+      "/proj_bedroom.png",
+      "/proj_mastbed.png"
+    ]
+  }
+]
