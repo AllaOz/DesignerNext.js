@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styles from '../../pages/Projects/projects.module.scss';
+import styles from '../styles/projects.module.scss';
 import Slider from 'react-slick';
 import Image from 'next/image';
 import "slick-carousel/slick/slick.css";

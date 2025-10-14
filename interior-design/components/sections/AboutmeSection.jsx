@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import styles from '../../pages/Aboutme/aboutme.module.scss';
+import styles from '../styles/aboutme.module.scss';
 
 const AboutmeSection = () => {
     return (

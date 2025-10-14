@@ -1,0 +1,253 @@
+@import "../../globals.scss";
+
+.cardHeader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(106, 138, 149, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(106, 138, 149, 0.2);
+  box-shadow: 0 2px 4px rgba(106, 138, 149, 0.15);
+  z-index: 100;
+  font-family: $heading-font;
+  color: white;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  height: 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  height: 60px;
+  width: auto;
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.desktopMenu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.desktopMenu li {
+  position: relative;
+}
+
+.desktopMenu li a {
+  text-decoration: none;
+  color: white;
+  font-family: $heading-font;
+
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  font-weight: 300;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: $secondary-color;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateX(-50%);
+  }
+
+  &:hover {
+    color: $secondary-color;
+    background: rgba(124, 110, 97, 0.05);
+
+    &::before {
+      width: 80%;
+    }
+  }
+
+  &:active {
+    color: $primary-color;
+    background: rgba(124, 110, 97, 0.1);
+  }
+}
+
+
+.learnMoreBtn {
+  margin-bottom: 0;
+}
+
+/* Mobile menu - always hidden on desktop */
+.menu {
+  display: none;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+}
+
+.hamburgerMenu {
+  display: none;
+  cursor: pointer;
+  z-index: 1000;
+  color: white;
+  font-size: 24px;
+}
+
+@media (max-width: 810px) {
+  .cardHeader {
+    overflow-x: hidden;
+    width: 100vw;
+    max-width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-sizing: border-box;
+    background-color: rgba(106, 138, 149, 0.95);
+  }
+
+  .nav {
+    padding: 0 1.5rem;
+  }
+
+  .desktopMenu {
+    display: none;
+  }
+
+  .hamburgerMenu {
+    display: block;
+    position: fixed;
+    right: 16px;
+    top: 22px;
+    z-index: 1000;
+    cursor: pointer;
+    color: white;
+  }
+
+  .logo {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+
+  }
+
+  .menu {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(106, 138, 149, 0.7);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+    z-index: 999;
+    transform: translateX(0);
+    animation: slideInFromLeft 0.3s ease-out;
+  }
+
+  .closeButton {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    cursor: pointer;
+    z-index: 1000;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: rotate(90deg);
+      opacity: 0.8;
+    }
+  }
+
+  @keyframes slideInFromLeft {
+    from {
+      transform: translateX(-100%);
+    }
+
+    to {
+      transform: translateX(0);
+    }
+  }
+
+
+  .menu a {
+    font-family: $heading-font;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    padding: 1rem 0;
+    transition: all 0.3s ease;
+    opacity: 1;
+    display: block;
+    text-align: center;
+    letter-spacing: 0.02em;
+  }
+
+
+  .menu a:hover {
+    color: rgba(255, 255, 255, 0.8) !important;
+    text-decoration: underline;
+  }
+
+  .menu .learnMoreBtn {
+    font-family: "Martian Mono", monospace;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: -0.02em;
+    color: white !important;
+    background: transparent;
+    border: 1px solid white;
+    padding: 0.8rem 1.5rem;
+    margin-top: 1rem;
+    opacity: 1;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    text-align: center;
+  }
+
+  .menu .learnMoreBtn:hover {
+    background: white;
+    color: #6A8A95 !important;
+  }
+
+  .menu button {
+    display: block;
+    margin-top: 1rem;
+  }
+}

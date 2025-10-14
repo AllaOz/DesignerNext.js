@@ -6,8 +6,8 @@ import ServicesSection from '../components/sections/ServicesSection';
 import WhyChooseMeSection from '../components/sections/WhyChooseMeSection';
 import ProjectsSection from '../components/sections/ProjectsSection';
 import ContactsSection from '../components/sections/ContactsSection';
-import Header from '../components/Header/Header';
-import Footer from '../components/Footer/Footer';
+import Header from '../components/ui/Header/Header';
+import Footer from '../components/ui/Footer/Footer';
 import Head from 'next/head';
 
 

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal';
 import Link from 'next/link';
-import styles from '../../pages/Services/services.module.scss';
+import styles from '../styles/services.module.scss';
 import data from '../../data/data.json';
 
 const ServicesSection = () => {

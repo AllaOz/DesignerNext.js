@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import styles from './Projects/projects.module.scss';
+import styles from '../components/styles/projects.module.scss';
 import Slider from 'react-slick';
-import Header from '../components/Header/Header';
-import Footer from '../components/Footer/Footer';
+import Header from '../components/ui/Header/Header';
+import Footer from '../components/ui/Footer/Footer';
 import Image from 'next/image';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";

@@ -1,0 +1,51 @@
+@import "../../globals.scss";
+
+.footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(106, 138, 149, 0.95);
+  height: 50px;
+  z-index: 100;
+  box-shadow: 0px 0px 5px 0px rgb(240, 226, 223);
+  @include font(16px);
+  color: white;
+
+
+  .logoFooter {
+    height: 40px;
+    margin-right: 3vw;
+    cursor: pointer;
+  }
+}
+
+.socialMedia {
+  display: flex;
+  align-items: center;
+  margin-left: 3vw;
+}
+
+.icon {
+  margin: 0 15px;
+  color: white;
+  cursor: pointer;
+}
+
+.icon:hover {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.copyright {
+  @include font(12px);
+}
+
+@media (max-width: 810px) {
+  .footer {
+    overflow-x: hidden;
+  }
+}

@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from '../../pages/Contacts/contacts.module.scss';
+import styles from '../styles/contacts.module.scss';
 import Image from 'next/image'
-import Form from '../Form/Form';
+import Form from '../ui/Form/Form';
 
 const ContactsSection = () => {
     return (

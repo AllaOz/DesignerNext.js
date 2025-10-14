@@ -1,9 +1,9 @@
 import React from 'react';
-import styles from './WhyChooseMe/whychooseme.module.scss';
+import styles from '../components/styles/whychooseme.module.scss';
 import Link from 'next/link';
 import Image from 'next/image';
-import Header from '../components/Header/Header';
-import Footer from '../components/Footer/Footer';
+import Header from '../components/ui/Header/Header';
+import Footer from '../components/ui/Footer/Footer';
 
 
 const WhyChooseMe = () => {

@@ -1,0 +1,332 @@
+@import "../globals.scss";
+
+.projectContainer {
+
+    color: $text-color;
+    padding-top: 7%;
+    padding-bottom: 3%;
+    text-align: left;
+}
+
+.headingTwo {
+    -webkit-animation: slideInUp 1s ease-in-out;
+    animation: slideInUp 1s ease-in-out;
+    padding-left: 2%;
+}
+
+.sliderContainer {
+    padding: 0 70px 30px 70px;
+}
+
+.projectSlide {
+    position: relative;
+    cursor: pointer;
+}
+
+.imageContainer {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: scale(1.05);
+
+        .imageOverlay {
+            opacity: 1;
+        }
+    }
+}
+
+.sliderImage {
+    width: 27vw;
+    height: 450px;
+    margin-left: 20px;
+    object-fit: cover;
+}
+
+.imageOverlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    color: white;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.projectTitle {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 0 0 8px 0;
+    font-family: "CSQuinzel", serif;
+}
+
+.projectDescription {
+    font-size: 0.75rem;
+    margin: 0;
+    opacity: 0.9;
+    font-family: "Martian Mono", monospace;
+    font-weight: 300;
+    letter-spacing: -0.02em;
+}
+
+// Modal Styles
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(38, 54, 61, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px;
+}
+
+.modalContent {
+    background: rgba(247, 250, 252, 0.7);
+    border-radius: 12px;
+    max-width: 35vw;
+    max-height: 65vh;
+    overflow-y: auto;
+    position: relative;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.closeButton {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    color: #6A8A95;
+    border: none;
+    border-radius: 0;
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 1001;
+    transition: color 0.3s ease;
+
+    &:hover {
+        color: rgba(106, 138, 149, 0.7);
+    }
+}
+
+.modalHeader {
+    text-align: left;
+    margin-bottom: 25px;
+
+    h2 {
+        color: #6A8A95;
+        margin: 0 0 10px 0;
+        font-size: 1.4rem;
+        font-family: "CSQuinzel", serif;
+        font-weight: 400;
+    }
+
+    p {
+        color: #6A8A95;
+        margin: 0;
+        opacity: 0.8;
+        font-family: "Martian Mono", monospace;
+        font-weight: 300;
+        font-size: 0.75rem;
+        letter-spacing: -0.02em;
+    }
+}
+
+.galleryContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    margin: 25px 0;
+}
+
+.navButton {
+    background: none;
+    color: #6A8A95;
+    border: none;
+    border-radius: 0;
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 32px;
+    transition: color 0.3s ease;
+
+    &:hover {
+        color: rgba(106, 138, 149, 0.7);
+    }
+}
+
+.imageWrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    max-width: 600px;
+}
+
+.modalImage {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: contain;
+    width: 600px;
+    height: 450px;
+}
+
+@media (max-width: 820px) {
+    .modalImage {
+        width: 90vw;
+        height: auto;
+        max-height: 60vh;
+        object-fit: contain;
+    }
+
+    .imageWrapper {
+        max-width: 90vw;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.imageCounter {
+    text-align: center;
+    color: #6A8A95;
+    font-size: 1rem;
+    margin: 20px 0;
+    opacity: 0.8;
+}
+
+.thumbnails {
+    display: none;
+}
+
+.thumbnail {
+    cursor: pointer;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+
+    &:hover {
+        border-color: rgba(130, 116, 103, 0.5);
+    }
+}
+
+.activeThumbnail {
+    border-color: rgba(130, 116, 103, 1) !important;
+}
+
+@media (max-width: 820px) {
+    .projectContainer {
+        overflow-x: hidden;
+        padding: 0;
+        padding-top: 80px;
+    }
+
+    .headingTwo {
+        padding-top: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .sliderContainer {
+        padding: 6rem 1.5rem 1rem;
+        position: relative;
+    }
+
+    .sliderImage {
+        width: 100vw;
+        height: 100vw;
+        object-fit: cover;
+        margin: 0;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .imageOverlay {
+        opacity: 1;
+        background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+        padding: 15px;
+    }
+
+    .projectTitle {
+        font-size: 1rem;
+        font-family: "CSQuinzel", serif;
+    }
+
+    .projectDescription {
+        font-size: 0.65rem;
+        font-family: "Martian Mono", monospace;
+        letter-spacing: -0.02em;
+    }
+
+    .modal {
+        padding: 10px;
+    }
+
+    .modalContent {
+        max-width: 95vw;
+        max-height: 95vh;
+        padding: 10px;
+        margin: auto;
+    }
+
+    .modalHeader {
+        margin-bottom: 15px;
+    }
+
+    .modalHeader h2 {
+        font-size: 1.1rem;
+        font-family: "CSQuinzel", serif;
+        margin-bottom: 5px;
+    }
+
+    .modalHeader p {
+        font-family: "Martian Mono", monospace;
+        font-size: 0.65rem;
+        letter-spacing: -0.02em;
+    }
+
+    .galleryContainer {
+        flex-direction: row;
+        gap: 10px;
+        justify-content: space-between;
+        align-items: center;
+        margin: 10px 0;
+    }
+
+    .navButton {
+        width: auto;
+        height: auto;
+        font-size: 28px;
+        position: relative;
+    }
+
+    .thumbnails {
+        display: none;
+    }
+
+    .imageCounter {
+        display: none;
+    }
+
+    .thumbnail {
+        width: 60px;
+        height: 45px;
+    }
+}

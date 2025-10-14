@@ -1,8 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
-import styles from './NotFound/notfound.module.scss';
-import Header from '../components/Header/Header';
-import Footer from '../components/Footer/Footer';
+import styles from '../components/styles/notfound.module.scss';
+import Header from '../components/ui/Header/Header';
+import Footer from '../components/ui/Footer/Footer';
 
 function NotFound() {
     return (

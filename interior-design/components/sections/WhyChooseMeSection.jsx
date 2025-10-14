@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../../pages/WhyChooseMe/whychooseme.module.scss';
+import styles from '../styles/whychooseme.module.scss';
 import Link from 'next/link';
 import Image from 'next/image';
 

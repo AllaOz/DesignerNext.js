@@ -1,9 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import styles from './Aboutme/aboutme.module.scss';
-import Header from '../components/Header/Header';
-import Footer from '../components/Footer/Footer';
+import styles from '../components/styles/aboutme.module.scss';
+import Header from '../components/ui/Header/Header';
+import Footer from '../components/ui/Footer/Footer';
 
 
 

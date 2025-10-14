@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal';
 import Link from 'next/link';
-import styles from './Services/services.module.scss';
+import styles from '../components/styles/services.module.scss';
 import data from '../data/data.json';
-import Header from '../components/Header/Header';
-import Footer from '../components/Footer/Footer';
+import Header from '../components/ui/Header/Header';
+import Footer from '../components/ui/Footer/Footer';
 
 
 

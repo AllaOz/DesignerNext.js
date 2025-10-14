@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import styles from './Contacts/contacts.module.scss';
+import styles from '../components/styles/contacts.module.scss';
 import Image from 'next/image'
-import Header from '../components/Header/Header';
-import Footer from '../components/Footer/Footer';
-import Form from '../components/Form/Form';
+import Header from '../components/ui/Header/Header';
+import Footer from '../components/ui/Footer/Footer';
+import Form from '../components/ui/Form/Form';
 
 
 
