@@ -10,7 +10,6 @@ const nextConfig = {
         ],
         unoptimized: false,
     },
-    output: 'standalone',
 }
 
 module.exports = nextConfig
