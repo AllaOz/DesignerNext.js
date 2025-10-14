@@ -1,9 +1,8 @@
 {
-  "version": 2,
-  "buildCommand": "cd interior-design && npm run build",
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "cd interior-design && npm install && npm run build",
   "devCommand": "cd interior-design && npm run dev",
   "installCommand": "cd interior-design && npm install",
-  "framework": null,
   "outputDirectory": "interior-design/.next"
 }
 
