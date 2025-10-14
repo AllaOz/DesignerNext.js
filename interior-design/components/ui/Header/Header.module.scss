@@ -228,19 +228,21 @@
 
   .menu .learnMoreBtn {
     font-family: "Martian Mono", monospace;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 300;
     letter-spacing: -0.02em;
     color: white !important;
     background: transparent;
     border: 1px solid white;
-    padding: 0.8rem 1.5rem;
+    padding: 0.7rem 1.2rem;
     margin-top: 1rem;
     opacity: 1;
     cursor: pointer;
     border-radius: 4px;
     transition: all 0.3s ease;
     text-align: center;
+    display: inline-block;
+    width: auto;
   }
 
   .menu .learnMoreBtn:hover {

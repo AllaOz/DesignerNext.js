@@ -115,6 +115,22 @@
   }
 }
 
+@media (max-width: 820px) {
+  .gridContainer {
+    font: 8px $default-font;
+    gap: 8px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .gridItem {
+    font-size: 8px;
+  }
+
+  .gridItem a {
+    font-size: 8px;
+  }
+}
+
 .gridContainer {
   width: 100% !important;
   margin-top: 1rem !important;

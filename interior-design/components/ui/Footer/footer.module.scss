@@ -48,4 +48,16 @@
   .footer {
     overflow-x: hidden;
   }
+
+  .logoFooter {
+    height: 30px;
+  }
+
+  .icon {
+    margin: 0 10px;
+  }
+
+  .copyright {
+    @include font(10px);
+  }
 }
