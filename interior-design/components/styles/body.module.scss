@@ -103,6 +103,7 @@
     padding: 0;
     position: relative;
 
+
     &::before {
       display: none;
     }
@@ -111,7 +112,8 @@
   .paragraph {
     font-size: 0.65rem;
     text-align: left;
-    max-width: 100%;
+    max-width: 100dvh;
+
   }
 
   .lampsImg {
