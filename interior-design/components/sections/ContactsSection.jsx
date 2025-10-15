@@ -15,7 +15,7 @@ const ContactsSection = () => {
             </div>
 
             <div className={styles.leftContainerWhy}>
-                <h2 className={styles.headingTwo}>Contact me</h2>
+                <h2 className={styles.headingTwo}>Contact us</h2>
                 <Form />
                 <div className={styles.gridContainer}>
                     <div className={styles.gridItem}>

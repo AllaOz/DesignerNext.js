@@ -37,13 +37,13 @@ function Contacts() {
                 <a href="https://wa.me/971555545167" target="_blank" rel="noopener noreferrer">+971 55 554 5167</a>
               </div>
               <div className={styles.gridItem}>
-                <a href="https://www.instagram.com/souldecore" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.instagram.com/bscinteriorstudio" target="_blank" rel="noopener noreferrer">
                   <Image
                     src="/instagram (3).png"
                     width={25}
                     height={25}
                     alt="instagram icon" /></a></div>
-              <div className={styles.gridItem}><a href="https://www.instagram.com/souldecore" target="_blank" rel="noopener noreferrer">@souldecore</a></div>
+              <div className={styles.gridItem}><a href="https://www.instagram.com/bscinteriorstudio" target="_blank" rel="noopener noreferrer">@bscinteriorstudio</a></div>
               <div className={styles.gridItem}>
                 <Image
                   src="/email (1).png"
@@ -51,7 +51,7 @@ function Contacts() {
                   height={25}
                   alt="email icon" />
               </div>
-              <div className={styles.gridItem}><a href="mailto:info@souldecore.com">info@souldecore.com</a></div>
+              <div className={styles.gridItem}><a href="mailto:info@bureausoulconcept.com">info@bureausoulconcept.com</a></div>
               <div className={styles.gridItem}><a href="https://t.me/souldecore" target="_blank" rel="noopener noreferrer"><Image
                 src="/telegram (1).png"
                 width={25}
