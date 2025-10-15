@@ -31,7 +31,6 @@ const AboutmeSection = () => {
                     </a>
                 </div>
             </div>
-            <div style={{ height: '15vh', width: '100%' }}></div>
         </>
     );
 };

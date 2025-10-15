@@ -19,8 +19,10 @@
 
   .logoFooter {
     height: 40px;
+    width: auto;
     margin-right: 3vw;
     cursor: pointer;
+    object-fit: contain;
   }
 }
 
@@ -50,7 +52,9 @@
   }
 
   .logoFooter {
-    height: 30px;
+    height: 20px;
+    width: auto;
+    object-fit: contain;
   }
 
   .icon {

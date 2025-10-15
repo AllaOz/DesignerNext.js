@@ -95,7 +95,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 2rem 1.5rem 6rem 1.5rem;
+    padding: 2rem 1.5rem 2rem 1.5rem;
     background: #f7fafc;
     width: 100%;
     max-width: 100vw;
@@ -107,6 +107,7 @@
   .rightContainerWhy {
     height: 100%;
     width: 100%;
+
   }
 
   .lampsImg {
@@ -119,11 +120,12 @@
   .gridContainer {
     font: 8px $default-font;
     gap: 8px;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 0.1fr);
   }
 
   .gridItem {
     font-size: 8px;
+    align-items: left;
   }
 
   .gridItem a {

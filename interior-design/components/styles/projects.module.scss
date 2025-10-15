@@ -194,7 +194,7 @@
     .modalImage {
         width: 90vw;
         height: auto;
-        max-height: 60vh;
+        max-height: 80vh;
         object-fit: contain;
     }
 
@@ -237,14 +237,29 @@
     .projectContainer {
         overflow-x: hidden;
         padding: 0;
-        padding-top: 80px;
-
+        padding-top: 1rem;
+        margin-bottom: 1rem;
     }
 
 
     .sliderContainer {
-        padding: 1rem 1.5rem 1rem;
+        padding: 2rem 0.5rem 1.5rem 1.5rem;
         position: relative;
+        margin-top: 0;
+    }
+
+    .headingTwo {
+        margin-bottom: 0.5rem;
+        padding-bottom: 0.5rem;
+        margin-top: 3rem;
+    }
+
+    .projectSlide {
+        padding-right: 15px;
+    }
+
+    .imageContainer {
+        margin-right: 10px;
     }
 
     .sliderImage {
@@ -280,7 +295,7 @@
 
     .modalContent {
         max-width: 95vw;
-        max-height: 95vh;
+        max-height: 100dvh;
         padding: 10px;
         margin: auto;
     }
