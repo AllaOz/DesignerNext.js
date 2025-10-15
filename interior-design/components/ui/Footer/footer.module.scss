@@ -49,11 +49,16 @@
 @media (max-width: 810px) {
   .footer {
     overflow-x: hidden;
+    position: static;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    width: 100%;
   }
 
   .logoFooter {
-    height: 20px;
-    width: auto;
+    max-height: 30px;
+    max-width: 30px;
     object-fit: contain;
   }
 
