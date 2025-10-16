@@ -165,15 +165,48 @@
     width: 100%;
   }
 
+  .modal-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border-radius: 8px;
+    padding: 2rem 1.5rem;
+    max-width: 85vw;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  }
+
   .card_box_modal {
-    margin: 2rem 0;
+    margin: 0;
     width: 100%;
     border: none;
-    padding: 2rem 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
   .card_name_modal {
     background-size: 20% 100%;
+    width: 100%;
+    text-align: center;
+  }
+
+  .card_box_modal li {
+    text-align: center;
+    list-style: none;
+    margin: 0.5rem 0;
+  }
+
+  .card_btn {
+    margin-top: 1.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 
   .headingTwo {
