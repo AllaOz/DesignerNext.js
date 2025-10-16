@@ -142,6 +142,7 @@
   .paragraphCard {
     font-size: 0.65rem;
     padding-bottom: 1vh;
+
   }
 
   .card_container {
@@ -149,13 +150,12 @@
     flex-direction: column;
     padding: 0;
     margin-bottom: 2rem;
-    width: 100%;
   }
 
   .card_box {
     display: flex;
     padding: 1rem 0;
-    margin: 1rem 0;
+    margin: 1rem 1rem 0rem;
     width: 100%;
   }
 

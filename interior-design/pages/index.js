@@ -15,23 +15,11 @@ function Home() {
   return (
     <>
       <Head>
-        <title>Soul Decore and Dariya Amadi</title>
-        <meta name="description" content="Interior design solutions from Dariya Amadi and Soul Decore, an interior designer based in Dubai. Collaborating with global furniture companies import of furniture from all over the world, curating exquisite furnishings to elevate your space, crafting bespoke carpets of any size design, bringing your vision to life with unparalleled elegance and sophistication." />
+        <title>Bureau Soul Concept and Dariya Amadi</title>
+        <meta name="description" content="Interior design solutions from Dariya Amadi and Bureau Soul Concept, an interior designer based in Dubai. Collaborating with global furniture companies import of furniture from all over the world, curating exquisite furnishings to elevate your space, crafting bespoke carpets of any size design, bringing your vision to life with unparalleled elegance and sophistication." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon-32.png" />
         <link rel="apple-touch-icon" href="/icon-180-apple.png" />
-        <link rel="manifest" href="/site.webmanifest" />
-        <link
-          rel="stylesheet"
-          type="text/css"
-          charSet="UTF-8"
-          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
-        />
-        <link
-          rel="stylesheet"
-          type="text/css"
-          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
-        />
       </Head>
 
       <Header />
