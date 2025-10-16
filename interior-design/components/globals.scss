@@ -308,13 +308,13 @@ $hover-color: $accent-color;
 
 .learnMoreBtn {
   width: auto;
-  min-width: 120px;
-  height: 36px;
+  min-width: 160px;
+  height: 44px;
   font-family: $default-font;
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   font-weight: 300;
   letter-spacing: -0.02em;
-  padding: 8px 16px;
+  padding: 12px 20px;
   background-color: white;
   color: $primary-color;
   cursor: pointer;

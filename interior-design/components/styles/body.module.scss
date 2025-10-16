@@ -1,15 +1,7 @@
 @import "../globals.scss";
 /* TwoContainerComponent.css */
 
-// Override learnMoreBtn size for Body section to match freeConsultationBtn
-.learnMoreBtn {
-  width: auto;
-  min-width: 200px;
-  height: 48px;
-  font-size: 0.875rem;
-  font-weight: 300;
-  padding: 12px 24px;
-}
+// learnMoreBtn uses global styles from globals.scss
 
 .twoContainer {
   display: grid;
