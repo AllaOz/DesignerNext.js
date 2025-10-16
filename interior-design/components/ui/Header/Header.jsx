@@ -13,7 +13,14 @@ function Header() {
       <header className={styles.cardHeader}>
         <nav className={styles.nav}>
           <Link href='/'>
-            <Image src="/Bureau_Soul_Logo.png" className={styles.logo} width={70} height={70} alt="logo" />
+            <Image
+              src="/Bureau_Soul_Logo.png"
+              className={styles.logo}
+              width={70}
+              height={70}
+              alt="Bureau Soul Logo"
+              priority
+            />
           </Link>
 
           {/* Desktop Menu */}

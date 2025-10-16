@@ -8,9 +8,7 @@
         "four": "Measured Plan",
         "five": "Planning Solution (2-4 Options to Choose From)",
         "six": "Installation/Disassembly Plan",
-        "seven":  "Lighting and Electrical Plan"
-    
-        
+        "seven": "Lighting and Electrical Plan"
     },
     {
         "id": 2,
@@ -20,9 +18,8 @@
         "three": "Thoughtfully considering every detail, from selecting the paint to the door handles.",
         "four": "Express Package Contents",
         "five": "Furnishing",
-        "six": "Detailed Cost Estimate"
-       
-        
+        "six": "Detailed Cost Estimate",
+        "seven": "Material Selection Guidance"
     },
     {
         "id": 3,
@@ -35,7 +32,5 @@
         "six": "Furniture and material schedules",
         "seven": "Intricate element detailing",
         "eight": "3D visualizations"
-        
-    }  
-   
+    }
 ]

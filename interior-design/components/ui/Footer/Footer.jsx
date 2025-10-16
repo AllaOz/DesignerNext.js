@@ -18,10 +18,13 @@ function Footer() {
       </div>
 
       <Link href='/'>
-        <Image src="/Bureau_Soul_Logo.png" className={styles.logoFooter}
+        <Image
+          src="/Bureau_Soul_Logo.png"
+          className={styles.logoFooter}
           width={50}
           height={50}
-          alt="logo" />
+          alt="Bureau Soul Logo"
+        />
       </Link>
     </footer>
   );

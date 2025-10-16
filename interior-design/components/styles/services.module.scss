@@ -81,6 +81,7 @@
   background-size: 20% 100%;
   background-position: left;
   background-repeat: no-repeat;
+  margin-bottom: 1.5rem;
 }
 
 .card_name_modal {
@@ -90,7 +91,7 @@
   background-size: 20% 100%;
   background-position: left;
   background-repeat: no-repeat;
-
+  margin-bottom: 1.5rem;
 }
 
 .paragraphCard {
@@ -100,8 +101,7 @@
   letter-spacing: -0.02em;
   color: $text-primary;
   text-align: left;
-  line-height: 1.7;
-  padding-bottom: 2vh;
+  margin-bottom: 1rem;
   list-style-type: none;
   cursor: pointer;
 }
@@ -139,10 +139,17 @@
     margin-bottom: 2rem;
   }
 
+  .paragraphAboutme {
+    margin-bottom: 1.5rem;
+  }
+
   .paragraphCard {
     font-size: 0.65rem;
-    padding-bottom: 1vh;
+    margin-bottom: 0.5rem;
+  }
 
+  .card_box ul li:last-child {
+    margin-bottom: 0.3rem;
   }
 
   .card_container {
@@ -150,13 +157,22 @@
     flex-direction: column;
     padding: 0;
     margin-bottom: 2rem;
+    width: 100%;
   }
 
   .card_box {
     display: flex;
     padding: 1rem 0;
-    margin: 1rem 1rem 0rem;
+    margin: 0;
     width: 100%;
+  }
+
+  .card_name {
+    margin-bottom: 0.5rem;
+  }
+
+  .headingThree {
+    margin-bottom: 0;
   }
 
   .modal-container {
@@ -197,7 +213,7 @@
   }
 
   .card_btn {
-    margin-top: 1.5rem;
+    margin-top: 0.5rem;
     width: 100%;
     display: flex;
     justify-content: flex-start;
