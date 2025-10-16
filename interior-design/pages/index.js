@@ -18,7 +18,9 @@ function Home() {
         <title>Soul Decore and Dariya Amadi</title>
         <meta name="description" content="Interior design solutions from Dariya Amadi and Soul Decore, an interior designer based in Dubai. Collaborating with global furniture companies import of furniture from all over the world, curating exquisite furnishings to elevate your space, crafting bespoke carpets of any size design, bringing your vision to life with unparalleled elegance and sophistication." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/logo-icon.png" />
+        <link rel="icon" href="/favicon-32.png" />
+        <link rel="apple-touch-icon" href="/icon-180-apple.png" />
+        <link rel="manifest" href="/site.webmanifest" />
         <link
           rel="stylesheet"
           type="text/css"

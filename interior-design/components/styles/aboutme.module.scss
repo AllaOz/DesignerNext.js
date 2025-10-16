@@ -109,6 +109,18 @@
     padding: 2.5rem 1.5rem 1rem;
   }
 
+  .headingTwo {
+    animation: fadeIn 0.8s ease-in-out;
+  }
+
+  .aboutmeImg {
+    animation: fadeIn 1s ease-in-out;
+  }
+
+  .aboutmeImgSmall {
+    animation: fadeIn 1.2s ease-in-out;
+  }
+
   .upContainer {
     display: flex;
     align-items: flex-start;

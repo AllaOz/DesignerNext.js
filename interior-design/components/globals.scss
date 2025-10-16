@@ -207,6 +207,7 @@ $hover-color: $accent-color;
 }
 
 .headingThree {
+  font-family: $heading-font;
   font-size: clamp(0.95rem, 1.6vw + 0.4rem, 1.25rem);
   letter-spacing: clamp(-0.05em, -0.3vw, -0.02em);
   line-height: 1.1;

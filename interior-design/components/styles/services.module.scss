@@ -10,6 +10,7 @@
   padding-top: 7%;
   padding-bottom: 3%;
 
+
 }
 
 .card_container {
@@ -17,6 +18,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+
 }
 
 .paragraph_container {
@@ -25,7 +27,10 @@
   justify-content: center;
   align-items: center;
   width: 60vw;
+  line-height: 1.7;
+  letter-spacing: -0.02em;
 }
+
 
 .modal-container {
   border: none;
@@ -43,7 +48,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 22vw;
+  width: 20vw;
   margin-left: 40px;
   padding: 20px;
   margin-top: 2vh;
@@ -89,12 +94,13 @@
 }
 
 .paragraphCard {
-  font-family: $default-font;
-  font-size: 10px;
+  font-size: 0.875rem;
   font-weight: 300;
+  line-height: 1.7;
   letter-spacing: -0.02em;
+  color: $text-primary;
   text-align: left;
-  line-height: 1.4;
+  line-height: 1.7;
   padding-bottom: 2vh;
   list-style-type: none;
   cursor: pointer;
@@ -137,6 +143,11 @@
     align-items: flex-start;
     padding: 0;
     margin-bottom: 2rem;
+  }
+
+  .paragraphCard {
+    font-size: 0.65rem;
+    padding-bottom: 1vh;
   }
 
   .card_container {
