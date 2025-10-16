@@ -68,5 +68,6 @@
 
   .copyright {
     @include font(10px);
+    font-family: $heading-font;
   }
 }

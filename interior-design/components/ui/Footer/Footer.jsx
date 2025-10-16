@@ -14,7 +14,7 @@ function Footer() {
       </div>
 
       <div>
-        <p className={styles.copyright}>&copy; {currentYear} Soul Decore</p>
+        <p className={styles.copyright}>&copy; {currentYear} Bureau Soul Concept</p>
       </div>
 
       <Link href='/'>
