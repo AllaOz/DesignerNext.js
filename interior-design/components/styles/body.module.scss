@@ -126,7 +126,8 @@
 
   .lampsImg {
     width: 100vw;
-    height: 100vw;
+    height: 60vh;
+    max-height: 400px;
     object-fit: cover;
     margin: 0;
     position: relative;
