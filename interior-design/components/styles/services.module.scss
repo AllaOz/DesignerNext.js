@@ -60,13 +60,11 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  width: 40vw;
-  min-width: 500px;
+  width: 20vw;
   border: 0.5px solid $icon-color;
-  padding: 6vh 4vw;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 15vh;
+  padding: 8vh;
+  margin-left: 30vw;
+  margin-top: 20vh;
   color: $text-color;
   transition: background-color 0.6s ease;
   background-color: white;
