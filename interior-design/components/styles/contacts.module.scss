@@ -145,3 +145,10 @@
   width: 100% !important;
   margin-top: 1rem !important;
 }
+
+/* Desktop spacing to prevent footer overlap */
+@media (min-width: 821px) {
+  .twoContainerWhy {
+    padding-bottom: 4rem;
+  }
+}
