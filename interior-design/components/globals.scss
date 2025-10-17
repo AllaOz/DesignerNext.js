@@ -391,16 +391,7 @@ $hover-color: $accent-color;
 
 }
 
-.paragraphWhyChooseMe {
-  font-family: $default-font;
-  font-size: 10px;
-  font-weight: 200;
-  letter-spacing: -0.02em;
-  text-align: left;
-  width: 80%;
-  line-height: 1.5;
-  color: $text-color;
-}
+// .paragraphWhyChooseMe styles moved to whychooseme.module.scss
 
 // Modern Utility Classes
 .gradient-text {
@@ -472,8 +463,14 @@ $hover-color: $accent-color;
 
 @media (max-width: 768px) {
   .headingTwo {
-    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    font-size: 22px !important;
     padding-top: 2rem;
+    text-align: left !important;
+  }
+
+  .headingThree {
+    font-size: 20px !important;
+    text-align: left !important;
   }
 
   .paragraphAboutme {
@@ -486,5 +483,13 @@ $hover-color: $accent-color;
 
   .textContainer {
     padding: 0 1rem;
+  }
+
+  .freeConsultationBtn,
+  .learnMoreBtn {
+    min-width: 180px;
+    width: 180px;
+    font-size: 0.7rem;
+    padding: 8px 12px;
   }
 }
