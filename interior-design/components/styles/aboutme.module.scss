@@ -59,7 +59,7 @@
     display: flex;
     flex-direction: column-reverse;
     overflow-x: hidden;
-    padding: 2.5rem 1.5rem 1rem;
+    padding: 50px 1.5rem 0.5rem;
   }
 
   .headingTwo {
@@ -82,7 +82,7 @@
     height: 50vh;
     width: 100%;
     padding: 0;
-    margin-top: 1.5rem;
+    margin-top: 0;
   }
 
   .upContainer :global(.freeConsultationBtn) {
@@ -101,7 +101,8 @@
   }
 
   .headingTwo {
-    font: 20px $heading-font;
+    font: 22px $heading-font;
+    margin-top: 1rem;
     margin-bottom: 1rem;
   }
 

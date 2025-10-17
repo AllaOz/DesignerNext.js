@@ -40,7 +40,7 @@
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
-    padding: 0;
+    padding: 50px 0 0;
     margin: 0;
     width: 100%;
     max-width: 100vw;
@@ -59,10 +59,12 @@
     align-items: flex-start;
     justify-content: flex-start;
     flex-direction: column;
-    max-height: 50vh;
+    min-height: auto;
     width: 100%;
     max-width: 100vw;
-    padding: 2rem 1.5rem;
+    padding: 0.5rem 1.5rem 1.5rem;
+    position: relative;
+    z-index: 1;
   }
 
   .rightContainerWhy {
@@ -98,7 +100,8 @@
   }
 
   .learnMoreBtn {
-    margin-bottom: 2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
     align-self: flex-start;
   }
 }

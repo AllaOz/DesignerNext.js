@@ -125,7 +125,7 @@
 
 @media (max-width: 820px) {
   .wrapperCard {
-    padding: 1rem 1.5rem 1rem;
+    padding: 50px 1.5rem 0.5rem;
     overflow-x: hidden;
   }
 
@@ -221,7 +221,8 @@
   }
 
   .headingTwo {
-    font: 20px $heading-font;
-    margin: 2rem 0;
+    font: 22px $heading-font;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
 }
