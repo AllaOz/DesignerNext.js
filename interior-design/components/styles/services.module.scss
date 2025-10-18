@@ -47,13 +47,14 @@
 .card_box {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
   width: 25vw;
   margin-left: 40px;
   padding: 2vh;
   margin-top: 2vh;
   color: $text-color;
   transition: background-color 0.6s ease;
+  min-height: 400px;
 }
 
 .card_box_modal {
