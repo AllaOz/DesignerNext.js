@@ -73,5 +73,26 @@
       "/Dubai_Hills_7.jpg",
       "/Dubai_Hills_8.jpg"
     ]
+  },
+  {
+    "id": 7,
+    "src": "/Al_Mourooj_Terrace_1.jpg",
+    "alt": "Al Murooj Terrace",
+    "title": "Al Murooj Terrace",
+    "description": "Elegant interior design at Al Murooj Terrace",
+    "gallery": [
+      "/Al_Mourooj_Terrace_1.jpg",
+      "/Al_Murooj_terrace_2.jpg",
+      "/Al_Murooj_terrace_3.jpg",
+      "/Al_Murooj_Terrace_4.jpg",
+      "/Al_Murooj_Terrace_5.jpg",
+      "/Al_Murooj_Terrace_6.jpg",
+      "/Al_Murooj_Terrace_7.jpg",
+      "/Al_Murooj_Terrace_8.jpg",
+      "/Al_Murooj_Terrace_9.jpg",
+      "/Al_Murooj_Terrace_10.jpg",
+      "/Al_Murooj_Terrace_11.jpg",
+      "/Al_Murooj_Terrace_12.jpg"
+    ]
   }
 ]
