@@ -56,5 +56,22 @@
       "/proj_bedroom.png",
       "/proj_mastbed.png"
     ]
+  },
+  {
+    "id": 6,
+    "src": "/Dubai_Hills_3.jpg",
+    "alt": "Dubai Hills",
+    "title": "Dubai Hills Residence",
+    "description": "Luxury interior design in Dubai Hills",
+    "gallery": [
+      "/Dubai_hills_1.jpg",
+      "/Dubai_Hills_2.jpg",
+      "/Dubai_Hills_3.jpg",
+      "/Dubai_Hills_4.jpg",
+      "/Dubai_Hills_5.jpg",
+      "/Dubai_Hills_6.jpg",
+      "/Dubai_Hills_7.jpg",
+      "/Dubai_Hills_8.jpg"
+    ]
   }
 ]
