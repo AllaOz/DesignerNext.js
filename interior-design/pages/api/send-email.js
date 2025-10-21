@@ -15,47 +15,55 @@ export default async function handler(req, res) {
     }
 
     try {
-        console.log('Environment variables:', {
-            EMAIL_USER: process.env.EMAIL_USER,
-            EMAIL_PASS: process.env.EMAIL_PASS ? 'Set' : 'Not set'
-        });
-
-        // For now, let's just simulate email sending without actually sending
-        // This will help us test if the form submission works
-        console.log('Form data received:', { name, email, phone, agree });
-
-        // Simulate a delay
-        await new Promise(resolve => setTimeout(resolve, 1000));
-
-        // Return success without actually sending email for now
-        res.status(200).json({
-            message: 'Form submitted successfully! (Email sending temporarily disabled for testing)',
-            data: { name, email, phone, submittedAt: new Date().toISOString() }
-        });
-
-        // Comment out the actual email sending for now
-        /*
         // Create transporter using Gmail
         const transporter = nodemailer.createTransport({
-          service: 'gmail',
-          auth: {
-            user: process.env.EMAIL_USER || 'your-email@gmail.com',
-            pass: process.env.EMAIL_PASS || 'your-app-password'
-          }
+            service: 'gmail',
+            auth: {
+                user: process.env.EMAIL_USER,
+                pass: process.env.EMAIL_PASS
+            }
         });
-    
+
         // Email content
         const mailOptions = {
-          from: process.env.EMAIL_USER || 'your-email@gmail.com',
-          to: 'alla.s.bobrova@gmail.com',
-          subject: 'New Contact Form Submission - Soul Decore',
-          html: `...email template...`,
-          text: `...text template...`
+            from: process.env.EMAIL_USER,
+            to: 'bureausoulconcept@gmail.com',
+            subject: `New Contact Form Submission - Bureau Soul Concept`,
+            html: `
+                <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #ddd; border-radius: 10px;">
+                    <h2 style="color: #6A8A95; border-bottom: 2px solid #6A8A95; padding-bottom: 10px;">New Contact Form Submission</h2>
+                    
+                    <div style="margin: 20px 0;">
+                        <p style="margin: 10px 0;"><strong>Name:</strong> ${name}</p>
+                        <p style="margin: 10px 0;"><strong>Email:</strong> <a href="mailto:${email}">${email}</a></p>
+                        <p style="margin: 10px 0;"><strong>Phone:</strong> ${phone || 'Not provided'}</p>
+                    </div>
+                    
+                    <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid #ddd; font-size: 12px; color: #666;">
+                        <p>Submitted at: ${new Date().toLocaleString('en-US', { timeZone: 'Asia/Dubai' })}</p>
+                        <p>Privacy Policy: Agreed ✓</p>
+                    </div>
+                </div>
+            `,
+            text: `
+New Contact Form Submission
+
+Name: ${name}
+Email: ${email}
+Phone: ${phone || 'Not provided'}
+
+Submitted at: ${new Date().toLocaleString('en-US', { timeZone: 'Asia/Dubai' })}
+Privacy Policy: Agreed
+            `
         };
-    
+
         // Send email
         await transporter.sendMail(mailOptions);
-        */
+        
+        res.status(200).json({
+            message: 'Form submitted successfully!',
+            data: { name, email, phone, submittedAt: new Date().toISOString() }
+        });
 
     } catch (error) {
         console.error('Error processing form:', error);
