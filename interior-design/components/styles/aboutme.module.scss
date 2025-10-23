@@ -63,15 +63,15 @@
   }
 
   .headingTwo {
-    animation: fadeIn 0.8s ease-in-out;
+    animation: slideInRight 1s ease-out;
   }
 
   .aboutmeImg {
-    animation: fadeIn 1s ease-in-out;
+    animation: slideInLeft 1.2s ease-out;
   }
 
   .aboutmeImgSmall {
-    animation: fadeIn 1.2s ease-in-out;
+    animation: slideInRight 1.4s ease-out;
   }
 
   .upContainer {
