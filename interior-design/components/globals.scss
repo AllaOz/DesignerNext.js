@@ -57,6 +57,18 @@
   }
 }
 
+@keyframes slideInRightCentered {
+  from {
+    transform: translateX(calc(-50% + 30px));
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(-50%);
+    opacity: 1;
+  }
+}
+
 @keyframes slideInUp {
   from {
     transform: translateY(30px);

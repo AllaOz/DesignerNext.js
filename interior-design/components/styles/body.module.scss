@@ -74,10 +74,10 @@
   border-radius: 0;
   box-shadow: 0 20px 40px rgba(124, 110, 97, 0.2);
   animation: slideInRight 1.5s ease-out;
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover {
     transform: scale(1.02);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 
@@ -121,15 +121,10 @@
     animation: slideInLeft 1s ease-out;
   }
 
-  .lampsImg {
-    animation: slideInRight 1.2s ease-out;
-  }
-
   .paragraph {
     font-size: 0.65rem;
     text-align: left;
     max-width: 100dvh;
-
   }
 
   .lampsImg {
@@ -141,6 +136,7 @@
     position: relative;
     left: 50%;
     transform: translateX(-50%);
+    animation: slideInRightCentered 1.2s ease-out;
   }
 }
 
