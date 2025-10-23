@@ -9,6 +9,8 @@ import ContactsSection from '../components/sections/ContactsSection';
 import Header from '../components/ui/Header/Header';
 import Footer from '../components/ui/Footer/Footer';
 import Head from 'next/head';
+import AnimatedSection from '../components/AnimatedSection';
+import '../styles/scroll-animations.css';
 
 
 function Home() {
@@ -26,21 +28,21 @@ function Home() {
       <section id="body">
         <Body />
       </section>
-      <section id="aboutme">
+      <AnimatedSection id="aboutme" animationType="left" threshold={0.15}>
         <AboutmeSection />
-      </section>
-      <section id="services">
+      </AnimatedSection>
+      <AnimatedSection id="services" animationType="default" threshold={0.15}>
         <ServicesSection />
-      </section>
-      <section id="whychooseme">
+      </AnimatedSection>
+      <AnimatedSection id="whychooseme" animationType="right" threshold={0.15}>
         <WhyChooseMeSection />
-      </section>
-      <section id="projects">
+      </AnimatedSection>
+      <AnimatedSection id="projects" animationType="scale" threshold={0.15}>
         <ProjectsSection />
-      </section>
-      <section id="contacts">
+      </AnimatedSection>
+      <AnimatedSection id="contacts" animationType="default" threshold={0.15}>
         <ContactsSection />
-      </section>
+      </AnimatedSection>
       <Footer />
     </>
   );

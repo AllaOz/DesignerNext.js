@@ -1,0 +1,85 @@
+/* Scroll Animation Styles */
+
+/* Base animation class - hidden by default */
+.scroll-animate,
+.scroll-animate-left,
+.scroll-animate-right,
+.scroll-animate-scale {
+    opacity: 0;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Default fade in animation */
+.scroll-animate {
+    transform: translateY(30px);
+}
+
+.scroll-animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Slide from left animation */
+.scroll-animate-left {
+    transform: translateX(-50px);
+}
+
+.scroll-animate-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Slide from right animation */
+.scroll-animate-right {
+    transform: translateX(50px);
+}
+
+.scroll-animate-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Scale animation */
+.scroll-animate-scale {
+    transform: scale(0.95);
+}
+
+.scroll-animate-scale.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+    .scroll-animate,
+    .scroll-animate-left,
+    .scroll-animate-right,
+    .scroll-animate-scale {
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    .scroll-animate {
+        transform: translateY(20px);
+    }
+
+    .scroll-animate-left {
+        transform: translateX(-30px);
+    }
+
+    .scroll-animate-right {
+        transform: translateX(30px);
+    }
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+    .scroll-animate,
+    .scroll-animate-left,
+    .scroll-animate-right,
+    .scroll-animate-scale {
+        transition: none;
+        transform: none;
+        opacity: 1;
+    }
+}
+
