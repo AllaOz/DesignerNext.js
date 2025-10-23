@@ -10,7 +10,6 @@ import Header from '../components/ui/Header/Header';
 import Footer from '../components/ui/Footer/Footer';
 import Head from 'next/head';
 import AnimatedSection from '../components/AnimatedSection';
-import '../styles/scroll-animations.css';
 
 
 function Home() {
