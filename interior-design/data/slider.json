@@ -20,14 +20,23 @@
   },
   {
     "id": 2,
-    "src": "/proj-bedroom1.png",
-    "alt": "bedroom design",
-    "title": "Contemporary Bedroom",
-    "description": "Modern bedroom design with clean lines and natural light",
+    "src": "/Al_Barari_Community_5.jpg",
+    "alt": "Al Barari Community",
+    "title": "Al Barari Community",
+    "description": "Luxurious eco-friendly villa design at Al Barari Community",
     "gallery": [
-      "/proj-bedroom1.png",
-      "/proj_bedroom.png",
-      "/proj_mastbed.png"
+      "/Al_Barari_Community_5.jpg",
+      "/Al_Barari_Community_1.jpg",
+      "/Al_Barari_Community_2.jpg",
+      "/Al_Barari_Community_3.jpg",
+      "/Al_Barari_Community_4.jpg",
+      "/Al_Barari_Community_7.jpg",
+      "/Al_Barari_Community_8.jpg",
+      "/Al_Barari_Community_9.jpg",
+      "/Al_Barari_Community_10.jpg",
+      "/Al_Barari_Community_11.jpg",
+      "/Al_Barari_Community_12.jpg",
+      "/Al_Barari_Community_13.jpg"
     ]
   },
   {
