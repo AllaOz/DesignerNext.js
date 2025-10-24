@@ -1,13 +1,21 @@
 [
   {
     "id": 1,
-    "src": "/proj_warderobe.png",
-    "alt": "wardrobe",
-    "title": "Custom Wardrobe Design",
-    "description": "Modern walk-in closet with organized storage solutions",
+    "src": "/Blue_Waters_8.jpg",
+    "alt": "Blue Waters",
+    "title": "Blue Waters",
+    "description": "Sophisticated interior design at Blue Waters residence",
     "gallery": [
-      "/proj_warderobe.png",
-      "/proj_mastbed.png"
+      "/Blue_Waters_8.jpg",
+      "/Blue_Waters_1.jpg",
+      "/Blue_Waters_2.jpg",
+      "/Blue_Waters_3.jpg",
+      "/Blue_Waters_4.jpg",
+      "/Blue_Waters_5.jpg",
+      "/Blue_Waters_6.jpg",
+      "/Blue_Waters_7.jpg",
+      "/Blue_Waters_9.jpg",
+      "/Blue_Waters_10.jpg"
     ]
   },
   {
