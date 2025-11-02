@@ -9,7 +9,7 @@ const Main = () => {
             <div className={styles.twoContainer}>
                 <div className={styles.leftContainer}>
                     <h1 className={styles.headingTwo}>Bureau Soul Concept & Dariya Amadi</h1>
-                    <p className={styles.paragraph}>Designing spaces where style meets sustainability, making every design a masterpiece.</p>
+                    <p className={styles.paragraphAboutme}>Designing spaces where style meets sustainability, making every design a masterpiece.</p>
                     <p className={styles.paragraphAboutme}>Embrace eco-friendly materials and innovative technologies to create a harmonious blend of aesthetic appeal and environmental consciousness in each crafted space.</p>
                     <div className={styles.buttonContainer}>
                         <a href='#projects'>

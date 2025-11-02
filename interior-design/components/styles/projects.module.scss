@@ -45,6 +45,20 @@
     object-fit: cover;
 }
 
+// Tablet (iPad) specific styles
+@media (min-width: 769px) and (max-width: 1024px) {
+    .sliderImage {
+        width: 40vw;
+        height: 40vw;
+        max-height: 450px;
+        object-fit: cover;
+    }
+
+    .sliderContainer {
+        padding: 0 40px 30px 40px;
+    }
+}
+
 .imageOverlay {
     position: absolute;
     bottom: 0;

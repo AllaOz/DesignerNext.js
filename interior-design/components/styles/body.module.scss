@@ -46,19 +46,6 @@
   animation: slideInLeft 1s ease-in-out;
 }
 
-.paragraph {
-  font-family: $default-font;
-  font-size: 0.875rem;
-  font-weight: 300;
-  line-height: 1.7;
-  letter-spacing: -0.02em;
-  color: $text-primary;
-  text-align: left;
-  width: 100%;
-  max-width: 500px;
-  margin-bottom: 1.5rem;
-}
-
 .buttonContainer {
   display: flex;
   gap: 1rem;
@@ -81,6 +68,19 @@
   }
 }
 
+
+// Tablet (iPad) specific styles
+@media (min-width: 769px) and (max-width: 1024px) {
+  .twoContainer {
+    padding: 1rem 2rem;
+    gap: 2rem;
+  }
+
+  .leftContainer {
+    padding-right: 1rem;
+  }
+
+}
 
 @media (max-width: 768px) {
   .twoContainer {
@@ -121,11 +121,6 @@
     animation: slideInLeft 1s ease-out;
   }
 
-  .paragraph {
-    font-size: 0.65rem;
-    text-align: left;
-    max-width: 100dvh;
-  }
 
   .lampsImg {
     width: 100vw;
@@ -145,7 +140,4 @@
     padding: 60px 1.5rem 2rem;
   }
 
-  .paragraph {
-    font-size: 0.65rem;
-  }
 }
