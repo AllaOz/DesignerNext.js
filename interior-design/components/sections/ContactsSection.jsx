@@ -31,7 +31,7 @@ const ContactsSection = () => {
                         <a href="https://wa.me/971555545167" target="_blank" rel="noopener noreferrer">+971 55 554 5167</a>
                     </div>
                     <div className={styles.gridItem}>
-                        <a href="https://www.instagram.com/bscinteriorstudio" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.instagram.com/bureausoulcnbt" target="_blank" rel="noopener noreferrer">
                             <Image
                                 src="/instagram (3).png"
                                 width={25}
@@ -40,7 +40,7 @@ const ContactsSection = () => {
                         </a>
                     </div>
                     <div className={styles.gridItem}>
-                        <a href="https://www.instagram.com/bscinteriorstudio" target="_blank" rel="noopener noreferrer">@bscinteriorstudio</a>
+                        <a href="https://www.instagram.com/bureausoulcnbt" target="_blank" rel="noopener noreferrer">@bureausoulcnpt</a>
                     </div>
                     <div className={styles.gridItem}>
                         <Image
@@ -50,10 +50,10 @@ const ContactsSection = () => {
                             alt="email icon" />
                     </div>
                     <div className={styles.gridItem}>
-                        <a href="mailto:info@souldecore.com">info@bureausoulconcept.com</a>
+                        <a href="mailto:hello@soulcnpt.com">hello@soulcnpt.com</a>
                     </div>
                     <div className={styles.gridItem}>
-                        <a href="https://t.me/bscinteriorstudio" target="_blank" rel="noopener noreferrer">
+                        <a href="https://t.me/soulcnpt" target="_blank" rel="noopener noreferrer">
                             <Image
                                 src="/telegram (1).png"
                                 width={25}
@@ -62,7 +62,7 @@ const ContactsSection = () => {
                         </a>
                     </div>
                     <div className={styles.gridItem}>
-                        <a href="https://t.me/bscinteriorstudio" target="_blank" rel="noopener noreferrer">@bscinteriorstudio</a>
+                        <a href="https://t.me/soulcnpt" target="_blank" rel="noopener noreferrer">@soulcnpt</a>
                     </div>
                 </div>
             </div>
