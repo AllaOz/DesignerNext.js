@@ -69,17 +69,37 @@
 }
 
 
-// Tablet (iPad) specific styles
+// Tablet (iPad) specific styles - both orientations
 @media (min-width: 769px) and (max-width: 1024px) {
   .twoContainer {
     padding: 1rem 2rem;
     gap: 2rem;
+    max-width: 100%;
   }
 
   .leftContainer {
     padding-right: 1rem;
   }
 
+  .lampsImg {
+    max-width: 480px;
+  }
+
+  .buttonContainer {
+    margin-top: 1.5rem;
+  }
+}
+
+// Tablet landscape - better spacing
+@media (min-width: 769px) and (max-width: 1024px) and (orientation: landscape) {
+  .twoContainer {
+    padding: 1rem 3rem;
+    gap: 3rem;
+  }
+
+  .lampsImg {
+    max-width: 500px;
+  }
 }
 
 @media (max-width: 768px) {

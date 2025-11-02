@@ -121,6 +121,44 @@
 
 // learnMoreBtn uses global styles from globals.scss
 
+// Tablet (iPad) styles - optimized for both orientations
+@media (min-width: 769px) and (max-width: 1024px) {
+  .wrapperCard {
+    padding: 5% 2rem 3%;
+  }
+
+  .card_container {
+    width: 85vw;
+    gap: 1rem;
+  }
+
+  .paragraph_container {
+    width: 75vw;
+  }
+
+  .card_box {
+    width: 28vw;
+    margin-left: 0;
+    padding: 2rem 1.5rem;
+    min-height: 380px;
+  }
+
+  .paragraphCard {
+    font-size: 0.8rem;
+  }
+}
+
+// Tablet landscape - wider cards
+@media (min-width: 769px) and (max-width: 1024px) and (orientation: landscape) {
+  .card_box {
+    width: 30vw;
+    padding: 2.5rem 2rem;
+  }
+
+  .card_container {
+    width: 90vw;
+  }
+}
 
 @media (max-width: 768px) {
   .wrapperCard {

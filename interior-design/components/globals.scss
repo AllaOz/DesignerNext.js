@@ -485,6 +485,39 @@ $hover-color: $accent-color;
   animation: pulse 2s ease-in-out infinite;
 }
 
+// Tablet (iPad) styles - consistent sizing for both orientations
+@media (min-width: 769px) and (max-width: 1024px) {
+  .headingTwo {
+    font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+  }
+
+  .headingThree {
+    font-size: clamp(0.9rem, 1.4vw, 1.15rem);
+  }
+
+  .paragraphAboutme {
+    font-size: 0.8rem;
+    line-height: 1.7;
+  }
+
+  .paragraphWhyChooseMe {
+    font-size: 0.8rem;
+    line-height: 1.7;
+  }
+
+  .textContainer {
+    padding: 0 1.5rem;
+  }
+
+  .freeConsultationBtn,
+  .learnMoreBtn {
+    min-width: 160px;
+    width: auto;
+    font-size: 0.75rem;
+    padding: 10px 18px;
+  }
+}
+
 @media (max-width: 768px) {
   .headingTwo {
     font-size: 22px !important;

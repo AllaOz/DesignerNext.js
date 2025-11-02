@@ -45,8 +45,12 @@
     object-fit: cover;
 }
 
-// Tablet (iPad) specific styles
+// Tablet (iPad) specific styles - both orientations
 @media (min-width: 769px) and (max-width: 1024px) {
+    .projectContainer {
+        padding: 4% 2rem 3%;
+    }
+
     .sliderImage {
         width: 40vw;
         height: 40vw;
@@ -56,6 +60,27 @@
 
     .sliderContainer {
         padding: 0 40px 30px 40px;
+    }
+
+    .projectTitle {
+        font-size: 1.1rem;
+    }
+
+    .projectDescription {
+        font-size: 0.7rem;
+    }
+}
+
+// Tablet landscape - better proportions
+@media (min-width: 769px) and (max-width: 1024px) and (orientation: landscape) {
+    .sliderImage {
+        width: 35vw;
+        height: 35vw;
+        max-height: 400px;
+    }
+
+    .sliderContainer {
+        padding: 0 50px 30px 50px;
     }
 }
 
