@@ -37,13 +37,13 @@ function Contacts() {
                 <a href="https://wa.me/971555545167" target="_blank" rel="noopener noreferrer">+971 55 554 5167</a>
               </div>
               <div className={styles.gridItem}>
-                <a href="https://www.instagram.com/bureausoulcnbt" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.instagram.com/bureausoulcbpt" target="_blank" rel="noopener noreferrer">
                   <Image
                     src="/instagram (3).png"
                     width={25}
                     height={25}
                     alt="instagram icon" /></a></div>
-              <div className={styles.gridItem}><a href="https://www.instagram.com/bureausoulcnbt" target="_blank" rel="noopener noreferrer">@bureausoulcnpt</a></div>
+              <div className={styles.gridItem}><a href="https://www.instagram.com/bureausoulcbpt" target="_blank" rel="noopener noreferrer">@bureausoulcnpt</a></div>
               <div className={styles.gridItem}>
                 <Image
                   src="/email (1).png"
