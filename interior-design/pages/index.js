@@ -19,6 +19,23 @@ function Home() {
         <title>Bureau Soul Concept and Dariya Amadi</title>
         <meta name="description" content="Interior design solutions from Dariya Amadi and Bureau Soul Concept, an interior designer based in Dubai. Collaborating with global furniture companies import of furniture from all over the world, curating exquisite furnishings to elevate your space, crafting bespoke carpets of any size design, bringing your vision to life with unparalleled elegance and sophistication." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.soulcnpt.com/" />
+        <meta property="og:title" content="Bureau Soul Concept and Dariya Amadi" />
+        <meta property="og:description" content="Interior design solutions from Dariya Amadi and Bureau Soul Concept, an interior designer based in Dubai. Collaborating with global furniture companies import of furniture from all over the world, curating exquisite furnishings to elevate your space, crafting bespoke carpets of any size design, bringing your vision to life with unparalleled elegance and sophistication." />
+        <meta property="og:image" content="https://www.soulcnpt.com/Bureau_Soul_Logo.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://www.soulcnpt.com/" />
+        <meta property="twitter:title" content="Bureau Soul Concept and Dariya Amadi" />
+        <meta property="twitter:description" content="Interior design solutions from Dariya Amadi and Bureau Soul Concept, an interior designer based in Dubai." />
+        <meta property="twitter:image" content="https://www.soulcnpt.com/Bureau_Soul_Logo.png" />
+        
         <link rel="icon" href="/favicon-32.png" />
         <link rel="apple-touch-icon" href="/icon-180-apple.png" />
       </Head>
