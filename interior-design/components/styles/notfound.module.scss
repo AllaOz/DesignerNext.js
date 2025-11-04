@@ -25,7 +25,7 @@
 .notfoundheading {
     color: $text-color;
     font-family: $default-font;
-    font-size: 20px;
+    font-size: 16px;
     align-self: flex-start;
     text-align: left;
 }
@@ -34,7 +34,7 @@
     text-decoration: none;
     color: $hover-color;
     align-self: center;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .notfoundlink:hover {
@@ -47,12 +47,12 @@
     }
 
     .notfoundheading {
-        font-size: 16px;
+        font-size: 14px;
 
 
     }
 
     .notfoundlink {
-        font-size: 18px;
+        font-size: 14px;
     }
 }

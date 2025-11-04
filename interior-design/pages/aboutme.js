@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import Head from 'next/head';
 import styles from '../components/styles/aboutme.module.scss';
 import Header from '../components/ui/Header/Header';
 import Footer from '../components/ui/Footer/Footer';
@@ -10,6 +11,22 @@ import Footer from '../components/ui/Footer/Footer';
 const Aboutme = () => {
     return (
         <>
+            <Head>
+                <title>About Dariya Amadi - Interior Designer in Dubai</title>
+                <meta name="description" content="Meet Dariya Amadi, a Dubai-based interior designer dedicated to blending luxury with eco-conscious design. Functional, green, and stylish living experiences." />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://www.soulcnpt.com/aboutme" />
+                <meta property="og:title" content="About Dariya Amadi - Interior Designer in Dubai" />
+                <meta property="og:description" content="Meet Dariya Amadi, a Dubai-based interior designer dedicated to blending luxury with eco-conscious design." />
+                <meta property="og:image" content="https://www.soulcnpt.com/og-image.png" />
+                <meta property="og:image:width" content="1200" />
+                <meta property="og:image:height" content="630" />
+                <meta property="twitter:card" content="summary_large_image" />
+                <meta property="twitter:title" content="About Dariya Amadi - Interior Designer in Dubai" />
+                <meta property="twitter:description" content="Meet Dariya Amadi, a Dubai-based interior designer dedicated to blending luxury with eco-conscious design." />
+                <meta property="twitter:image" content="https://www.soulcnpt.com/og-image.png" />
+                <link rel="icon" href="/favicon-32.png" />
+            </Head>
             <Header />
             <div className={styles.mainContainer}>
 
