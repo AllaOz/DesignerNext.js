@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import styles from '../components/styles/projects.module.scss';
 import Slider from 'react-slick';
@@ -63,7 +63,40 @@ const Projects = () => {
     setCurrentImageIndex(0);
     setIsModalOpen(true);
     document.body.style.overflow = 'hidden';
+    
+    // Preload first few images for faster loading
+    if (project.gallery && project.gallery.length > 0) {
+      const imagesToPreload = project.gallery.slice(0, 3);
+      imagesToPreload.forEach((src) => {
+        const link = document.createElement('link');
+        link.rel = 'preload';
+        link.as = 'image';
+        link.href = src;
+        document.head.appendChild(link);
+      });
+    }
   };
+  
+  // Preload next and previous images when image changes
+  useEffect(() => {
+    if (selectedProject && selectedProject.gallery) {
+      const preloadImages = [];
+      
+      // Preload next image
+      const nextIndex = currentImageIndex === selectedProject.gallery.length - 1 ? 0 : currentImageIndex + 1;
+      preloadImages.push(selectedProject.gallery[nextIndex]);
+      
+      // Preload previous image
+      const prevIndex = currentImageIndex === 0 ? selectedProject.gallery.length - 1 : currentImageIndex - 1;
+      preloadImages.push(selectedProject.gallery[prevIndex]);
+      
+      // Preload images
+      preloadImages.forEach((src) => {
+        const img = new Image();
+        img.src = src;
+      });
+    }
+  }, [currentImageIndex, selectedProject]);
 
   const closeModal = () => {
     setIsModalOpen(false);
@@ -160,6 +193,9 @@ const Projects = () => {
                   className={styles.modalImage}
                   width={600}
                   height={450}
+                  priority={currentImageIndex === 0}
+                  loading="eager"
+                  quality={90}
                 />
               </div>
 
@@ -184,6 +220,9 @@ const Projects = () => {
                     alt={`Thumbnail ${index + 1}`}
                     width={80}
                     height={60}
+                    priority={index < 5}
+                    loading={index < 5 ? "eager" : "lazy"}
+                    quality={75}
                   />
                 </div>
               ))}
