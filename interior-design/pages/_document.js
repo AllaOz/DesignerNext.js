@@ -4,6 +4,30 @@ export default function Document() {
     return (
         <Html lang="en">
             <Head>
+                {/* Favicons for Google Search and browsers */}
+                {/* Standard favicon path that Google looks for */}
+                <link rel="icon" href="/favicon-32.png" />
+                <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+                <link rel="icon" type="image/png" sizes="16x16" href="/favicon-32.png" />
+                <link rel="shortcut icon" href="/favicon-32.png" />
+                {/* Alternative favicon using logo for better visibility */}
+                <link rel="icon" type="image/png" sizes="192x192" href="/og-image.png" />
+                <link rel="icon" type="image/png" sizes="512x512" href="/og-image.png" />
+                {/* Apple touch icons */}
+                <link rel="apple-touch-icon" sizes="180x180" href="/icon-180-apple.png" />
+                <link rel="apple-touch-icon" sizes="152x152" href="/icon-180-apple.png" />
+                <link rel="apple-touch-icon" sizes="144x144" href="/icon-180-apple.png" />
+                <link rel="apple-touch-icon" sizes="120x120" href="/icon-180-apple.png" />
+                <link rel="apple-touch-icon" sizes="114x114" href="/icon-180-apple.png" />
+                <link rel="apple-touch-icon" sizes="76x76" href="/icon-180-apple.png" />
+                <link rel="apple-touch-icon" sizes="72x72" href="/icon-180-apple.png" />
+                <link rel="apple-touch-icon" sizes="60x60" href="/icon-180-apple.png" />
+                <link rel="apple-touch-icon" sizes="57x57" href="/icon-180-apple.png" />
+                {/* Microsoft tiles */}
+                <meta name="msapplication-TileImage" content="/icon-180-apple.png" />
+                <meta name="msapplication-TileColor" content="#ffffff" />
+                <meta name="theme-color" content="#ffffff" />
+                
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
                 <link
