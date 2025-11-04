@@ -59,6 +59,11 @@ const Projects = () => {
   };
 
   const openModal = (project) => {
+    if (!project || !project.gallery || project.gallery.length === 0) {
+      console.error('Invalid project data:', project);
+      return;
+    }
+    
     setSelectedProject(project);
     setCurrentImageIndex(0);
     setIsModalOpen(true);
@@ -68,27 +73,41 @@ const Projects = () => {
     }
     
     // Preload first few images for faster loading
-    if (project.gallery && project.gallery.length > 0 && typeof window !== 'undefined') {
-      const imagesToPreload = project.gallery.slice(0, 3);
-      imagesToPreload.forEach((src) => {
-        const img = new Image();
-        img.src = src;
-      });
+    if (typeof window !== 'undefined') {
+      try {
+        const imagesToPreload = project.gallery.slice(0, 3).filter(Boolean);
+        imagesToPreload.forEach((src) => {
+          if (src) {
+            const img = new Image();
+            img.src = src;
+          }
+        });
+      } catch (error) {
+        console.error('Error preloading images:', error);
+      }
     }
   };
   
   // Preload next and previous images when image changes
   useEffect(() => {
-    if (selectedProject && selectedProject.gallery && typeof window !== 'undefined') {
-      // Preload next image
-      const nextIndex = currentImageIndex === selectedProject.gallery.length - 1 ? 0 : currentImageIndex + 1;
-      const nextImg = new Image();
-      nextImg.src = selectedProject.gallery[nextIndex];
-      
-      // Preload previous image
-      const prevIndex = currentImageIndex === 0 ? selectedProject.gallery.length - 1 : currentImageIndex - 1;
-      const prevImg = new Image();
-      prevImg.src = selectedProject.gallery[prevIndex];
+    if (selectedProject && selectedProject.gallery && selectedProject.gallery.length > 0 && typeof window !== 'undefined') {
+      try {
+        // Preload next image
+        const nextIndex = currentImageIndex === selectedProject.gallery.length - 1 ? 0 : currentImageIndex + 1;
+        if (selectedProject.gallery[nextIndex]) {
+          const nextImg = new Image();
+          nextImg.src = selectedProject.gallery[nextIndex];
+        }
+        
+        // Preload previous image
+        const prevIndex = currentImageIndex === 0 ? selectedProject.gallery.length - 1 : currentImageIndex - 1;
+        if (selectedProject.gallery[prevIndex]) {
+          const prevImg = new Image();
+          prevImg.src = selectedProject.gallery[prevIndex];
+        }
+      } catch (error) {
+        console.error('Error preloading images:', error);
+      }
     }
   }, [currentImageIndex, selectedProject]);
 
@@ -102,7 +121,7 @@ const Projects = () => {
   };
 
   const nextImage = () => {
-    if (selectedProject && selectedProject.gallery) {
+    if (selectedProject && selectedProject.gallery && selectedProject.gallery.length > 0) {
       setCurrentImageIndex((prev) =>
         prev === selectedProject.gallery.length - 1 ? 0 : prev + 1
       );
@@ -110,7 +129,7 @@ const Projects = () => {
   };
 
   const prevImage = () => {
-    if (selectedProject && selectedProject.gallery) {
+    if (selectedProject && selectedProject.gallery && selectedProject.gallery.length > 0) {
       setCurrentImageIndex((prev) =>
         prev === 0 ? selectedProject.gallery.length - 1 : prev - 1
       );
@@ -165,7 +184,7 @@ const Projects = () => {
       </div>
 
       {/* Modal Gallery */}
-      {isModalOpen && selectedProject && (
+      {isModalOpen && selectedProject && selectedProject.gallery && selectedProject.gallery.length > 0 && (
         <div className={styles.modal} onClick={closeModal}>
           <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
             <button className={styles.closeButton} onClick={closeModal}>
@@ -173,54 +192,63 @@ const Projects = () => {
             </button>
 
             <div className={styles.modalHeader}>
-              <h2>{selectedProject.title}</h2>
-              <p>{selectedProject.description}</p>
+              <h2>{selectedProject.title || 'Project'}</h2>
+              <p>{selectedProject.description || ''}</p>
             </div>
 
-            <div className={styles.galleryContainer}>
-              <button className={styles.navButton} onClick={prevImage}>
-                <AiOutlineLeft />
-              </button>
+            {selectedProject.gallery[currentImageIndex] && (
+              <>
+                <div className={styles.galleryContainer}>
+                  <button className={styles.navButton} onClick={prevImage}>
+                    <AiOutlineLeft />
+                  </button>
 
-              <div className={styles.imageWrapper}>
-                <Image
-                  src={selectedProject.gallery[currentImageIndex]}
-                  alt={`${selectedProject.title} - Image ${currentImageIndex + 1}`}
-                  className={styles.modalImage}
-                  width={600}
-                  height={450}
-                  priority={currentImageIndex === 0}
-                  quality={90}
-                />
-              </div>
+                  <div className={styles.imageWrapper}>
+                    <Image
+                      src={selectedProject.gallery[currentImageIndex]}
+                      alt={`${selectedProject.title || 'Project'} - Image ${currentImageIndex + 1}`}
+                      className={styles.modalImage}
+                      width={600}
+                      height={450}
+                      quality={90}
+                      unoptimized={false}
+                      onError={(e) => {
+                        console.error('Image load error:', selectedProject.gallery[currentImageIndex]);
+                      }}
+                    />
+                  </div>
 
-              <button className={styles.navButton} onClick={nextImage}>
-                <AiOutlineRight />
-              </button>
-            </div>
-
-            <div className={styles.imageCounter}>
-              {currentImageIndex + 1} / {selectedProject.gallery.length}
-            </div>
-
-            <div className={styles.thumbnails}>
-              {selectedProject.gallery.map((image, index) => (
-                <div
-                  key={index}
-                  className={`${styles.thumbnail} ${index === currentImageIndex ? styles.activeThumbnail : ''}`}
-                  onClick={() => setCurrentImageIndex(index)}
-                >
-                  <Image
-                    src={image}
-                    alt={`Thumbnail ${index + 1}`}
-                    width={80}
-                    height={60}
-                    priority={index < 5}
-                    quality={75}
-                  />
+                  <button className={styles.navButton} onClick={nextImage}>
+                    <AiOutlineRight />
+                  </button>
                 </div>
-              ))}
-            </div>
+
+                <div className={styles.imageCounter}>
+                  {currentImageIndex + 1} / {selectedProject.gallery.length}
+                </div>
+
+                <div className={styles.thumbnails}>
+                  {selectedProject.gallery.map((image, index) => (
+                    image && (
+                      <div
+                        key={index}
+                        className={`${styles.thumbnail} ${index === currentImageIndex ? styles.activeThumbnail : ''}`}
+                        onClick={() => setCurrentImageIndex(index)}
+                      >
+                        <Image
+                          src={image}
+                          alt={`Thumbnail ${index + 1}`}
+                          width={80}
+                          height={60}
+                          quality={75}
+                          loading={index < 5 ? "eager" : "lazy"}
+                        />
+                      </div>
+                    )
+                  ))}
+                </div>
+              </>
+            )}
           </div>
         </div>
       )}
