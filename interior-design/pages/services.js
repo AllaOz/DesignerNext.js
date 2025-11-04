@@ -48,7 +48,7 @@ const Card = () => {
       <div className={styles.wrapperCard}>
         <div className={styles.paragraph_container}>
           <h2 className={styles.headingTwo}>Interior Design Services</h2>
-          <p className={styles.paragraphAboutme}>Transform your space with elegance and innovation! I'm offering a free consultation to bring your vision to life. Contact me now to take the first step toward creating a space that reflects your unique style and personality.
+          <p className={styles.paragraphAboutme}>Transform your space with elegance and innovation! I&apos;m offering a free consultation to bring your vision to life. Contact me now to take the first step toward creating a space that reflects your unique style and personality.
           </p>
           <Link href="/contacts">
             <button className={styles.freeConsultationBtn}>
