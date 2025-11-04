@@ -26,8 +26,11 @@ function Home() {
         <meta property="og:title" content="Bureau Soul Concept and Dariya Amadi" />
         <meta property="og:description" content="Interior design solutions from Dariya Amadi and Bureau Soul Concept, an interior designer based in Dubai. Collaborating with global furniture companies import of furniture from all over the world, curating exquisite furnishings to elevate your space, crafting bespoke carpets of any size design, bringing your vision to life with unparalleled elegance and sophistication." />
         <meta property="og:image" content="https://www.soulcnpt.com/og-image.png" />
+        <meta property="og:image:secure_url" content="https://www.soulcnpt.com/og-image.png" />
+        <meta property="og:image:type" content="image/png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Bureau Soul Concept Logo" />
         
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />

@@ -98,8 +98,11 @@ const Projects = () => {
         <meta property="og:title" content="Interior Design Projects by Bureau Soul Concept" />
         <meta property="og:description" content="Explore stunning interior design projects by Dariya Amadi and Bureau Soul Concept. Luxury residential designs in Dubai." />
         <meta property="og:image" content="https://www.soulcnpt.com/og-image.png" />
+        <meta property="og:image:secure_url" content="https://www.soulcnpt.com/og-image.png" />
+        <meta property="og:image:type" content="image/png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Bureau Soul Concept Logo" />
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:title" content="Interior Design Projects by Bureau Soul Concept" />
         <meta property="twitter:description" content="Explore stunning interior design projects by Dariya Amadi and Bureau Soul Concept." />

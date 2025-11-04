@@ -19,8 +19,11 @@ function Contacts() {
         <meta property="og:title" content="Contact Bureau Soul Concept - Dariya Amadi" />
         <meta property="og:description" content="Get in touch with Bureau Soul Concept for your interior design needs. Contact Dariya Amadi for a free consultation in Dubai." />
         <meta property="og:image" content="https://www.soulcnpt.com/og-image.png" />
+        <meta property="og:image:secure_url" content="https://www.soulcnpt.com/og-image.png" />
+        <meta property="og:image:type" content="image/png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Bureau Soul Concept Logo" />
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:title" content="Contact Bureau Soul Concept - Dariya Amadi" />
         <meta property="twitter:description" content="Get in touch with Bureau Soul Concept for your interior design needs." />
