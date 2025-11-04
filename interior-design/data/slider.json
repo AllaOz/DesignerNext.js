@@ -19,6 +19,28 @@
     ]
   },
   {
+    "id": 5,
+    "src": "/cyprus_villa_1.jpeg",
+    "alt": "Cyprus Villa",
+    "title": "Cyprus Villa",
+    "description": "Stunning villa interior design in Cyprus",
+    "gallery": [
+      "/cyprus_villa_1.jpeg",
+      "/cyprus_villa_2.jpeg",
+      "/cyprus_villa_3.jpeg",
+      "/cyprus_villa_4.jpeg",
+      "/cyprus_villa_5.jpeg",
+      "/cyprus_villa_6.jpeg",
+      "/cyprus_villa_7.jpeg",
+      "/cyprus_villa_8.jpeg",
+      "/cyprus_villa_9.jpeg",
+      "/cyprus_villa_10.jpeg",
+      "/cyprus_villa_11.jpeg",
+      "/cyprus_villa_12.jpeg",
+      "/cyprus_villa_13.jpeg"
+    ]
+  },
+  {
     "id": 2,
     "src": "/Al_Barari_Community_5.jpg",
     "alt": "Al Barari Community",
@@ -75,28 +97,6 @@
       "/Al_Murooj_Terrace_10.jpg",
       "/Al_Murooj_Terrace_11.jpg",
       "/Al_Murooj_Terrace_12.jpg"
-    ]
-  },
-  {
-    "id": 5,
-    "src": "/cyprus_villa_1.jpeg",
-    "alt": "Cyprus Villa",
-    "title": "Cyprus Villa",
-    "description": "Stunning villa interior design in Cyprus",
-    "gallery": [
-      "/cyprus_villa_1.jpeg",
-      "/cyprus_villa_2.jpeg",
-      "/cyprus_villa_3.jpeg",
-      "/cyprus_villa_4.jpeg",
-      "/cyprus_villa_5.jpeg",
-      "/cyprus_villa_6.jpeg",
-      "/cyprus_villa_7.jpeg",
-      "/cyprus_villa_8.jpeg",
-      "/cyprus_villa_9.jpeg",
-      "/cyprus_villa_10.jpeg",
-      "/cyprus_villa_11.jpeg",
-      "/cyprus_villa_12.jpeg",
-      "/cyprus_villa_13.jpeg"
     ]
   }
 ]
