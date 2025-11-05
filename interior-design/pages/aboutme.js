@@ -18,16 +18,16 @@ const Aboutme = () => {
                 <meta property="og:url" content="https://www.soulcnpt.com/aboutme" />
                 <meta property="og:title" content="About Dariya Amadi - Interior Designer in Dubai" />
                 <meta property="og:description" content="Meet Dariya Amadi, a Dubai-based interior designer dedicated to blending luxury with eco-conscious design." />
-                <meta property="og:image" content="https://www.soulcnpt.com/og-image.png" />
-                <meta property="og:image:secure_url" content="https://www.soulcnpt.com/og-image.png" />
+                <meta property="og:image" content="https://www.soulcnpt.com/icon-180-apple.png" />
+                <meta property="og:image:secure_url" content="https://www.soulcnpt.com/icon-180-apple.png" />
                 <meta property="og:image:type" content="image/png" />
-                <meta property="og:image:width" content="631" />
-                <meta property="og:image:height" content="611" />
+                <meta property="og:image:width" content="180" />
+                <meta property="og:image:height" content="180" />
                 <meta property="og:image:alt" content="Bureau Soul Concept Logo" />
                 <meta property="twitter:card" content="summary" />
                 <meta property="twitter:title" content="About Dariya Amadi - Interior Designer in Dubai" />
                 <meta property="twitter:description" content="Meet Dariya Amadi, a Dubai-based interior designer dedicated to blending luxury with eco-conscious design." />
-                <meta property="twitter:image" content="https://www.soulcnpt.com/og-image.png" />
+                <meta property="twitter:image" content="https://www.soulcnpt.com/icon-180-apple.png" />
                 <link rel="icon" href="/favicon-32.png" />
             </Head>
             <Header />

@@ -32,16 +32,16 @@ const Card = () => {
         <meta property="og:url" content="https://www.soulcnpt.com/services" />
         <meta property="og:title" content="Interior Design Services - Bureau Soul Concept" />
         <meta property="og:description" content="Professional interior design services by Bureau Soul Concept. From concept to execution, we create luxurious and eco-friendly spaces in Dubai." />
-        <meta property="og:image" content="https://www.soulcnpt.com/og-image.png" />
-        <meta property="og:image:secure_url" content="https://www.soulcnpt.com/og-image.png" />
+        <meta property="og:image" content="https://www.soulcnpt.com/icon-180-apple.png" />
+        <meta property="og:image:secure_url" content="https://www.soulcnpt.com/icon-180-apple.png" />
         <meta property="og:image:type" content="image/png" />
-        <meta property="og:image:width" content="631" />
-        <meta property="og:image:height" content="611" />
+        <meta property="og:image:width" content="180" />
+        <meta property="og:image:height" content="180" />
         <meta property="og:image:alt" content="Bureau Soul Concept Logo" />
         <meta property="twitter:card" content="summary" />
         <meta property="twitter:title" content="Interior Design Services - Bureau Soul Concept" />
         <meta property="twitter:description" content="Professional interior design services by Bureau Soul Concept." />
-        <meta property="twitter:image" content="https://www.soulcnpt.com/og-image.png" />
+        <meta property="twitter:image" content="https://www.soulcnpt.com/icon-180-apple.png" />
         <link rel="icon" href="/favicon-32.png" />
       </Head>
       <Header />

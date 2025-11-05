@@ -25,19 +25,20 @@ function Home() {
         <meta property="og:url" content="https://www.soulcnpt.com/" />
         <meta property="og:title" content="Bureau Soul Concept and Dariya Amadi" />
         <meta property="og:description" content="Interior design solutions from Dariya Amadi and Bureau Soul Concept, an interior designer based in Dubai. Collaborating with global furniture companies import of furniture from all over the world, curating exquisite furnishings to elevate your space, crafting bespoke carpets of any size design, bringing your vision to life with unparalleled elegance and sophistication." />
-        <meta property="og:image" content="https://www.soulcnpt.com/og-image.png" />
-        <meta property="og:image:secure_url" content="https://www.soulcnpt.com/og-image.png" />
+        {/* Use square icon for small logo format (summary card) - shows logo on left */}
+        <meta property="og:image" content="https://www.soulcnpt.com/icon-180-apple.png" />
+        <meta property="og:image:secure_url" content="https://www.soulcnpt.com/icon-180-apple.png" />
         <meta property="og:image:type" content="image/png" />
-        <meta property="og:image:width" content="631" />
-        <meta property="og:image:height" content="611" />
+        <meta property="og:image:width" content="180" />
+        <meta property="og:image:height" content="180" />
         <meta property="og:image:alt" content="Bureau Soul Concept Logo" />
         
-        {/* Twitter */}
+        {/* Twitter - summary card for small logo on left */}
         <meta property="twitter:card" content="summary" />
         <meta property="twitter:url" content="https://www.soulcnpt.com/" />
         <meta property="twitter:title" content="Bureau Soul Concept and Dariya Amadi" />
         <meta property="twitter:description" content="Interior design solutions from Dariya Amadi and Bureau Soul Concept, an interior designer based in Dubai." />
-        <meta property="twitter:image" content="https://www.soulcnpt.com/og-image.png" />
+        <meta property="twitter:image" content="https://www.soulcnpt.com/icon-180-apple.png" />
         
         <link rel="icon" href="/favicon-32.png" />
         <link rel="apple-touch-icon" href="/icon-180-apple.png" />
