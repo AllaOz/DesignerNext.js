@@ -318,9 +318,13 @@ $hover-color: $accent-color;
   letter-spacing: -0.02em;
   color: $text-primary;
   text-align: left;
+  text-align-last: left;
   width: 100%;
   max-width: 600px;
   margin-bottom: 1.5rem;
+  word-break: normal;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
 .textContainer {
@@ -532,10 +536,20 @@ $hover-color: $accent-color;
 
   .paragraphAboutme {
     font-size: 0.78125rem; // ~12.5px
+    text-align: left;
+    text-align-last: left;
+    word-break: normal;
+    overflow-wrap: break-word;
+    hyphens: auto;
   }
 
   .paragraphWhyChooseMe {
     font-size: 0.78125rem; // ~12.5px
+    text-align: left;
+    text-align-last: left;
+    word-break: normal;
+    overflow-wrap: break-word;
+    hyphens: auto;
   }
 
   .textContainer {

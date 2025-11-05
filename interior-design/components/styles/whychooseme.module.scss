@@ -13,6 +13,11 @@
   font-weight: 300;
   line-height: 1.7;
   letter-spacing: -0.02em;
+  text-align: left;
+  text-align-last: left;
+  word-break: normal;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
 .lampsImg {
@@ -102,11 +107,16 @@
   }
 
   .paragraphWhyChooseMe {
-    font: 0.65rem $default-font;
+    font: 0.78125rem $default-font; // ~12.5px
     color: $accent-light;
     width: 100%;
     padding-right: 1rem;
     line-height: 1.7;
+    text-align: left;
+    text-align-last: left;
+    word-break: normal;
+    overflow-wrap: break-word;
+    hyphens: auto;
   }
 
   .lampsImg {
