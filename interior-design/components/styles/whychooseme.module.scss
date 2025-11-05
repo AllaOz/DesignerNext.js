@@ -97,10 +97,11 @@
 
   .headingTwo {
     font: 22px $heading-font;
-    margin: 1rem 0;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
     text-align: left;
     align-self: flex-start;
-    padding-top: 0;
   }
 
   .paragraphWhyChooseMe {
