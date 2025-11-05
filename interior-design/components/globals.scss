@@ -531,11 +531,11 @@ $hover-color: $accent-color;
   }
 
   .paragraphAboutme {
-    font-size: 0.65rem;
+    font-size: 0.78125rem; // ~12.5px
   }
 
   .paragraphWhyChooseMe {
-    font-size: 0.65rem;
+    font-size: 0.78125rem; // ~12.5px
   }
 
   .textContainer {
@@ -546,7 +546,7 @@ $hover-color: $accent-color;
   .learnMoreBtn {
     min-width: 180px;
     width: 180px;
-    font-size: 0.7rem;
+    font-size: 0.78125rem; // ~12.5px
     padding: 8px 12px;
   }
 }
