@@ -29,7 +29,7 @@ function Header() {
               <Link href="/projects">Projects</Link>
             </li>
             <li>
-              <Link href="/aboutme">About me</Link>
+              <Link href="/aboutme">About us</Link>
             </li>
             <li>
               <Link href="/services">Services</Link>
@@ -73,7 +73,7 @@ function Header() {
             </div>
 
             <Link href="/projects" onClick={() => setNav(false)}>Projects</Link>
-            <Link href="/aboutme" onClick={() => setNav(false)}>About me</Link>
+            <Link href="/aboutme" onClick={() => setNav(false)}>About us</Link>
             <Link href="/services" onClick={() => setNav(false)}>Services</Link>
             <Link href="/contacts" onClick={() => setNav(false)}>Contacts</Link>
             <a href="https://wa.me/971555545167" target="_blank" rel="noopener noreferrer">
