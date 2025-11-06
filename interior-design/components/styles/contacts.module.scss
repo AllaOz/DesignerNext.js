@@ -23,17 +23,37 @@
   align-items: center;
   cursor: pointer;
 
-
   a {
     cursor: pointer;
     text-decoration: none;
     color: $text-color;
-
+    transition: color 0.3s ease;
   }
 
   a:visited {
     color: inherit;
   }
+
+  a:hover {
+    color: $primary-color;
+  }
+}
+
+.iconLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.animatedIcon {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: drop-shadow(0 2px 4px rgba(106, 138, 149, 0.2));
+}
+
+.iconLink:hover .animatedIcon {
+  transform: translateY(-8px) scale(1.15);
+  filter: drop-shadow(0 4px 8px rgba(106, 138, 149, 0.4));
 }
 
 

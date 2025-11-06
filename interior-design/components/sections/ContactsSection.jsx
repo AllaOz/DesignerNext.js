@@ -19,46 +19,56 @@ const ContactsSection = () => {
                 <Form />
                 <div className={styles.gridContainer}>
                     <div className={styles.gridItem}>
-                        <a href="https://wa.me/971555545167" target="_blank" rel="noopener noreferrer">
+                        <a href="https://wa.me/971555545167" target="_blank" rel="noopener noreferrer" className={styles.iconLink}>
                             <Image
                                 src="/phone-call.png"
                                 width={25}
                                 height={25}
-                                alt="Contact Bureau Soul Concept interior design" />
+                                alt="Contact Bureau Soul Concept interior design"
+                                className={styles.animatedIcon}
+                            />
                         </a>
                     </div>
                     <div className={styles.gridItem}>
                         <a href="https://wa.me/971555545167" target="_blank" rel="noopener noreferrer">+971 55 554 5167</a>
                     </div>
                     <div className={styles.gridItem}>
-                        <a href="https://www.instagram.com/bureausoulcnpt" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.instagram.com/bureausoulcnpt" target="_blank" rel="noopener noreferrer" className={styles.iconLink}>
                             <Image
                                 src="/instagram (3).png"
                                 width={25}
                                 height={25}
-                                alt="Bureau Soul Concept Instagram interior design projects" />
+                                alt="Bureau Soul Concept Instagram interior design projects"
+                                className={styles.animatedIcon}
+                            />
                         </a>
                     </div>
                     <div className={styles.gridItem}>
                         <a href="https://www.instagram.com/bureausoulcnpt" target="_blank" rel="noopener noreferrer">@bureausoulcnpt</a>
                     </div>
                     <div className={styles.gridItem}>
-                        <Image
-                            src="/email (1).png"
-                            width={25}
-                            height={25}
-                            alt="Email Bureau Soul Concept interior design consultation" />
+                        <a href="mailto:hello@soulcnpt.com" className={styles.iconLink}>
+                            <Image
+                                src="/email (1).png"
+                                width={25}
+                                height={25}
+                                alt="Email Bureau Soul Concept interior design consultation"
+                                className={styles.animatedIcon}
+                            />
+                        </a>
                     </div>
                     <div className={styles.gridItem}>
                         <a href="mailto:hello@soulcnpt.com">hello@soulcnpt.com</a>
                     </div>
                     <div className={styles.gridItem}>
-                        <a href="https://t.me/soulcnpt" target="_blank" rel="noopener noreferrer">
+                        <a href="https://t.me/soulcnpt" target="_blank" rel="noopener noreferrer" className={styles.iconLink}>
                             <Image
                                 src="/telegram (1).png"
                                 width={25}
                                 height={25}
-                                alt="Bureau Soul Concept Telegram interior design services" />
+                                alt="Bureau Soul Concept Telegram interior design services"
+                                className={styles.animatedIcon}
+                            />
                         </a>
                     </div>
                     <div className={styles.gridItem}>
