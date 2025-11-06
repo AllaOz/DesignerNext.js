@@ -23,7 +23,7 @@ const AboutmeSection = () => {
                 <div className={styles.upContainer}>
                     <h2 className={styles.headingTwo}>About us</h2>
                     <p className={styles.paragraphAboutme}>Hello! I&apos;m a Dubai-based interior designer dedicated to seamlessly blending luxury with eco-conscious design. </p>
-                    <p className={styles.paragraphAboutme}> My designs prioritize functionality, green principles for a mindful and stylish living experience. Let&apos;s say hello to a collaboration that redefines your space with an eco-friendly touch.</p>
+                    <p className={styles.paragraphAboutme}> Our designs prioritize functionality, green principles for a mindful and stylish living experience. Let&apos;s say hello to a collaboration that redefines your space with an eco-friendly touch.</p>
                     <p className={styles.paragraphAboutme}>You are the soul of everything we do. We are a team of dedicated professionals who love what we do and take pride in every detail.</p>
                     <a href="https://wa.me/971555545167" target="_blank" rel="noopener noreferrer">
                         <button className={`${styles.freeConsultationBtn} ${styles.spaceBelow}`}>
