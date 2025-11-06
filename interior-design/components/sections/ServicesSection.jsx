@@ -54,6 +54,7 @@ const ServicesSection = () => {
                 onRequestClose={closeModal}
                 contentLabel="Example Modal"
                 className={styles['modal-container']}
+                overlayClassName={styles['modal-overlay']}
             >
                 {selectedService && (
                     <>

@@ -1,0 +1,75 @@
+@import "../../globals.scss";
+
+.scrollToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, $primary-color 0%, rgba(106, 138, 149, 0.9) 100%);
+  color: white;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  z-index: 999;
+  box-shadow: 0 4px 14px rgba(106, 138, 149, 0.3);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.4s ease-out forwards;
+
+  &:hover {
+    background: linear-gradient(135deg, rgba(106, 138, 149, 0.9) 0%, $primary-color 100%);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(106, 138, 149, 0.4);
+  }
+
+  &:active {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(106, 138, 149, 0.3);
+  }
+
+  &:focus {
+    outline: 2px solid rgba(106, 138, 149, 0.5);
+    outline-offset: 2px;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Tablet styles
+@media (min-width: 769px) and (max-width: 1024px) {
+  .scrollToTop {
+    bottom: 25px;
+    right: 25px;
+    width: 45px;
+    height: 45px;
+    font-size: 22px;
+  }
+}
+
+// Mobile styles
+@media (max-width: 768px) {
+  .scrollToTop {
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    box-shadow: 0 4px 12px rgba(106, 138, 149, 0.35);
+  }
+}
+
