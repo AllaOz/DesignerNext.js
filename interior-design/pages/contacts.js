@@ -51,7 +51,7 @@ function Contacts() {
                     src="/phone-call.png"
                     width={25}
                     height={25}
-                    alt="phone icon" />
+                    alt="Contact Bureau Soul Concept interior design" />
                 </a></div>
               <div className={styles.gridItem}>
                 <a href="https://wa.me/971555545167" target="_blank" rel="noopener noreferrer">+971 55 554 5167</a>
@@ -62,21 +62,21 @@ function Contacts() {
                     src="/instagram (3).png"
                     width={25}
                     height={25}
-                    alt="instagram icon" /></a></div>
+                    alt="Bureau Soul Concept Instagram interior design projects" /></a></div>
               <div className={styles.gridItem}><a href="https://www.instagram.com/bureausoulcbpt" target="_blank" rel="noopener noreferrer">@bureausoulcnpt</a></div>
               <div className={styles.gridItem}>
                 <Image
                   src="/email (1).png"
                   width={25}
                   height={25}
-                  alt="email icon" />
+                  alt="Email Bureau Soul Concept interior design consultation" />
               </div>
               <div className={styles.gridItem}><a href="mailto:hello@soulcnpt.com">hello@soulcnpt.com</a></div>
               <div className={styles.gridItem}><a href="https://t.me/soulcnpt" target="_blank" rel="noopener noreferrer"><Image
                 src="/telegram (1).png"
                 width={25}
                 height={25}
-                alt="telegram icon" /></a></div>
+                alt="Bureau Soul Concept Telegram interior design services" /></a></div>
               <div className={styles.gridItem}><a href="https://t.me/soulcnpt" target="_blank" rel="noopener noreferrer">@soulcnpt</a></div>
 
 

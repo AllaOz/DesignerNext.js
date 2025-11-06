@@ -42,6 +42,42 @@ function Home() {
         
         <link rel="icon" href="/favicon-32.png" />
         <link rel="apple-touch-icon" href="/icon-180-apple.png" />
+        
+        {/* Structured Data for SEO */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "ProfessionalService",
+              "name": "Bureau Soul Concept",
+              "alternateName": "Bureau Soul Concept and Dariya Amadi",
+              "description": "Interior design solutions from Dariya Amadi and Bureau Soul Concept, an interior designer based in Dubai. Collaborating with global furniture companies, importing furniture from all over the world, curating exquisite furnishings to elevate your space, crafting bespoke carpets of any size design, bringing your vision to life with unparalleled elegance and sophistication.",
+              "url": "https://www.soulcnpt.com",
+              "logo": "https://www.soulcnpt.com/icon-180-apple.png",
+              "image": "https://www.soulcnpt.com/icon-180-apple.png",
+              "serviceType": "Interior Design",
+              "areaServed": {
+                "@type": "City",
+                "name": "Dubai"
+              },
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+971-55-554-5167",
+                "contactType": "Customer Service",
+                "availableLanguage": ["English", "Russian"]
+              },
+              "sameAs": [
+                "https://www.instagram.com/bureausoulcbpt",
+                "https://t.me/soulcnpt"
+              ],
+              "founder": {
+                "@type": "Person",
+                "name": "Dariya Amadi"
+              }
+            })
+          }}
+        />
       </Head>
 
       <Header />

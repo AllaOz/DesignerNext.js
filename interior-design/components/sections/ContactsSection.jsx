@@ -24,7 +24,7 @@ const ContactsSection = () => {
                                 src="/phone-call.png"
                                 width={25}
                                 height={25}
-                                alt="phone icon" />
+                                alt="Contact Bureau Soul Concept interior design" />
                         </a>
                     </div>
                     <div className={styles.gridItem}>
@@ -36,7 +36,7 @@ const ContactsSection = () => {
                                 src="/instagram (3).png"
                                 width={25}
                                 height={25}
-                                alt="instagram icon" />
+                                alt="Bureau Soul Concept Instagram interior design projects" />
                         </a>
                     </div>
                     <div className={styles.gridItem}>
@@ -47,7 +47,7 @@ const ContactsSection = () => {
                             src="/email (1).png"
                             width={25}
                             height={25}
-                            alt="email icon" />
+                            alt="Email Bureau Soul Concept interior design consultation" />
                     </div>
                     <div className={styles.gridItem}>
                         <a href="mailto:hello@soulcnpt.com">hello@soulcnpt.com</a>
@@ -58,7 +58,7 @@ const ContactsSection = () => {
                                 src="/telegram (1).png"
                                 width={25}
                                 height={25}
-                                alt="telegram icon" />
+                                alt="Bureau Soul Concept Telegram interior design services" />
                         </a>
                     </div>
                     <div className={styles.gridItem}>
