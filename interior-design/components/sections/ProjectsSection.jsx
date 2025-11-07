@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import styles from '../styles/projects.module.scss';
 import Slider from 'react-slick';
 import Image from 'next/image';
@@ -11,6 +11,7 @@ const ProjectsSection = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [selectedProject, setSelectedProject] = useState(null);
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    const sliderRef = useRef(null);
 
     const settings = {
         focusOnSelect: true,
@@ -114,6 +115,37 @@ const ProjectsSection = () => {
         }
     };
 
+    const handleModalContentClick = (e) => {
+        // Don't navigate if clicking on buttons, links, or slider controls
+        if (
+            e.target.closest('button') ||
+            e.target.closest('.slick-arrow') ||
+            e.target.closest('.slick-dots')
+        ) {
+            e.stopPropagation();
+            return;
+        }
+
+        // Only work on desktop (screen width > 820px)
+        if (typeof window !== 'undefined' && window.innerWidth > 820) {
+            e.stopPropagation(); // Prevent modal from closing
+            const rect = e.currentTarget.getBoundingClientRect();
+            const clickX = e.clientX - rect.left;
+            const width = rect.width;
+            const middle = width / 2;
+
+            if (sliderRef.current) {
+                if (clickX < middle) {
+                    // Click on left half - go to previous
+                    sliderRef.current.slickPrev();
+                } else {
+                    // Click on right half - go to next
+                    sliderRef.current.slickNext();
+                }
+            }
+        }
+    };
+
     return (
         <>
             <div className={styles.projectContainer}>
@@ -144,7 +176,7 @@ const ProjectsSection = () => {
             {/* Modal Gallery with Carousel */}
             {isModalOpen && selectedProject && selectedProject.gallery && selectedProject.gallery.length > 0 && (
                 <div className={styles.modal} onClick={closeModal}>
-                    <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
+                    <div className={styles.modalContent} onClick={handleModalContentClick}>
                         <button className={styles.closeButton} onClick={closeModal}>
                             <AiOutlineClose />
                         </button>
@@ -155,7 +187,11 @@ const ProjectsSection = () => {
                         </div>
 
                         <div className={styles.modalSliderContainer}>
-                            <Slider {...modalSliderSettings} initialSlide={currentImageIndex}>
+                            <Slider 
+                                ref={sliderRef}
+                                {...modalSliderSettings} 
+                                initialSlide={currentImageIndex}
+                            >
                                 {selectedProject.gallery.map((image, index) => (
                                     <div key={index} className={styles.modalSlide}>
                                         <div className={styles.modalImageWrapper}>
