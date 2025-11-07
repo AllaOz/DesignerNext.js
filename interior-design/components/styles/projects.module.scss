@@ -447,6 +447,8 @@
         max-width: 95vw;
         width: 95vw;
         max-height: 90vh;
+        height: auto;
+        min-height: auto;
         padding: 15px;
         padding-top: 50px;
         margin: 0 auto;
@@ -455,6 +457,7 @@
         overflow-x: hidden;
         -webkit-overflow-scrolling: touch;
         overscroll-behavior: contain;
+        touch-action: pan-y pan-x;
     }
 
     .closeButton {
@@ -508,7 +511,7 @@
 
     .modalSliderContainer {
         margin: 15px 0;
-        touch-action: pan-y;
+        pointer-events: auto;
         
         :global(.slick-arrow) {
             display: none !important;
@@ -516,11 +519,15 @@
         
         :global(.slick-list) {
             overflow: visible !important;
-            touch-action: pan-y;
+            touch-action: pan-x;
         }
         
         :global(.slick-track) {
-            touch-action: pan-y;
+            touch-action: pan-x;
+        }
+        
+        :global(.slick-slide) {
+            touch-action: pan-x;
         }
         
         :global(.slick-dots) {
@@ -535,7 +542,7 @@
     }
     
     .modalImageWrapper {
-        touch-action: pan-y;
+        width: 100%;
     }
 
     .imageCounter {

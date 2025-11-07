@@ -17,6 +17,8 @@ const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const sliderRef = useRef(null);
+  const touchStartRef = useRef({ x: 0, y: 0 });
+  const touchEndRef = useRef({ x: 0, y: 0 });
 
   const settings = {
     focusOnSelect: true,
@@ -152,6 +154,52 @@ const Projects = () => {
     }
   };
 
+  const handleTouchStart = (e) => {
+    if (typeof window !== 'undefined' && window.innerWidth <= 820) {
+      const touch = e.touches[0];
+      touchStartRef.current = { x: touch.clientX, y: touch.clientY };
+    }
+  };
+
+  const handleTouchMove = (e) => {
+    // Don't prevent default to allow scrolling
+    // Only prevent if it's a clear horizontal swipe
+    if (typeof window !== 'undefined' && window.innerWidth <= 820) {
+      const touch = e.touches[0];
+      const deltaX = Math.abs(touch.clientX - touchStartRef.current.x);
+      const deltaY = Math.abs(touch.clientY - touchStartRef.current.y);
+      
+      // If horizontal movement is significantly greater than vertical, allow swipe
+      if (deltaX > deltaY * 1.5 && deltaX > 30) {
+        // This is a horizontal swipe, allow it
+        return;
+      }
+      // Otherwise, allow normal scrolling
+    }
+  };
+
+  const handleTouchEnd = (e) => {
+    if (typeof window !== 'undefined' && window.innerWidth <= 820 && sliderRef.current) {
+      const touch = e.changedTouches[0];
+      touchEndRef.current = { x: touch.clientX, y: touch.clientY };
+      
+      const deltaX = touchEndRef.current.x - touchStartRef.current.x;
+      const deltaY = Math.abs(touchEndRef.current.y - touchStartRef.current.y);
+      const minSwipeDistance = 50;
+
+      // Only swipe horizontally if horizontal movement is greater than vertical
+      if (Math.abs(deltaX) > minSwipeDistance && Math.abs(deltaX) > deltaY) {
+        if (deltaX > 0) {
+          // Swipe right - go to previous
+          sliderRef.current.slickPrev();
+        } else {
+          // Swipe left - go to next
+          sliderRef.current.slickNext();
+        }
+      }
+    }
+  };
+
   const modalSliderSettings = {
     dots: false,
     infinite: true,
@@ -183,12 +231,14 @@ const Projects = () => {
         settings: {
           dots: false,
           arrows: false,
-          swipe: true,
-          swipeToSlide: true,
-          touchMove: true,
-          touchThreshold: 10,
+          swipe: false,
+          swipeToSlide: false,
+          touchMove: false,
+          touchThreshold: 5,
           vertical: false,
           verticalSwiping: false,
+          useCSS: true,
+          useTransform: true,
         }
       }
     ]
@@ -244,7 +294,13 @@ const Projects = () => {
       {/* Modal Gallery with Carousel */}
       {isModalOpen && selectedProject && selectedProject.gallery && selectedProject.gallery.length > 0 && (
         <div className={styles.modal} onClick={closeModal}>
-          <div className={styles.modalContent} onClick={handleModalContentClick}>
+          <div 
+            className={styles.modalContent} 
+            onClick={handleModalContentClick}
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+          >
             <button className={styles.closeButton} onClick={closeModal}>
               <AiOutlineClose />
             </button>
