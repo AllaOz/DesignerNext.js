@@ -445,6 +445,7 @@
         max-width: 95vw;
         max-height: 95vh;
         padding: 15px;
+        padding-top: 60px;
         margin: auto;
     }
 
@@ -468,12 +469,16 @@
     .modalHeader {
         margin-bottom: 15px;
         text-align: left;
+        padding-right: 50px;
         
         h2 {
             font-size: 1.1rem;
             font-family: "CSQuinzel", serif;
             margin: 0 0 5px 0;
             text-align: left;
+            padding-right: 0;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
         }
 
         p {
@@ -482,6 +487,9 @@
             letter-spacing: -0.02em;
             margin: 0;
             text-align: left;
+            padding-right: 0;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
         }
     }
 
