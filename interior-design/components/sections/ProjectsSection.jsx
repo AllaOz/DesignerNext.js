@@ -87,7 +87,9 @@ const ProjectsSection = () => {
                     swipe: true,
                     swipeToSlide: true,
                     touchMove: true,
-                    touchThreshold: 5,
+                    touchThreshold: 10,
+                    vertical: false,
+                    verticalSwiping: false,
                 }
             }
         ]

@@ -453,6 +453,8 @@
         position: relative;
         overflow-y: auto;
         overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
+        overscroll-behavior: contain;
     }
 
     .closeButton {
@@ -506,9 +508,19 @@
 
     .modalSliderContainer {
         margin: 15px 0;
+        touch-action: pan-y;
         
         :global(.slick-arrow) {
             display: none !important;
+        }
+        
+        :global(.slick-list) {
+            overflow: visible !important;
+            touch-action: pan-y;
+        }
+        
+        :global(.slick-track) {
+            touch-action: pan-y;
         }
         
         :global(.slick-dots) {
@@ -517,7 +529,13 @@
     }
     
     .modalImage {
-        max-height: 70vh;
+        max-height: none;
+        height: auto;
+        width: 100%;
+    }
+    
+    .modalImageWrapper {
+        touch-action: pan-y;
     }
 
     .imageCounter {
