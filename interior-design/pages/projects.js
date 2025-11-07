@@ -8,7 +8,7 @@ import Image from 'next/image';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import data from '../data/slider.json';
-import { AiOutlineClose, AiOutlineLeft, AiOutlineRight } from 'react-icons/ai';
+import { AiOutlineClose } from 'react-icons/ai';
 
 
 
@@ -120,20 +120,33 @@ const Projects = () => {
     }
   };
 
-  const nextImage = () => {
-    if (selectedProject && selectedProject.gallery && selectedProject.gallery.length > 0) {
-      setCurrentImageIndex((prev) =>
-        prev === selectedProject.gallery.length - 1 ? 0 : prev + 1
-      );
-    }
-  };
-
-  const prevImage = () => {
-    if (selectedProject && selectedProject.gallery && selectedProject.gallery.length > 0) {
-      setCurrentImageIndex((prev) =>
-        prev === 0 ? selectedProject.gallery.length - 1 : prev - 1
-      );
-    }
+  const modalSliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    swipe: true,
+    swipeToSlide: true,
+    touchMove: true,
+    touchThreshold: 5,
+    adaptiveHeight: true,
+    arrows: false,
+    beforeChange: (current, next) => {
+      setCurrentImageIndex(next);
+    },
+    responsive: [
+      {
+        breakpoint: 820,
+        settings: {
+          dots: true,
+          swipe: true,
+          swipeToSlide: true,
+          touchMove: true,
+          touchThreshold: 5,
+        }
+      }
+    ]
   };
 
   return (
@@ -183,7 +196,7 @@ const Projects = () => {
         </div>
       </div>
 
-      {/* Modal Gallery */}
+      {/* Modal Gallery with Carousel */}
       {isModalOpen && selectedProject && selectedProject.gallery && selectedProject.gallery.length > 0 && (
         <div className={styles.modal} onClick={closeModal}>
           <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
@@ -196,59 +209,29 @@ const Projects = () => {
               <p>{selectedProject.description || ''}</p>
             </div>
 
-            {selectedProject.gallery[currentImageIndex] && (
-              <>
-                <div className={styles.galleryContainer}>
-                  <button className={styles.navButton} onClick={prevImage}>
-                    <AiOutlineLeft />
-                  </button>
-
-                  <div className={styles.imageWrapper}>
-                    <Image
-                      src={selectedProject.gallery[currentImageIndex]}
-                      alt={`${selectedProject.title || 'Project'} - Image ${currentImageIndex + 1}`}
-                      className={styles.modalImage}
-                      width={600}
-                      height={450}
-                      quality={90}
-                      unoptimized={false}
-                      onError={(e) => {
-                        console.error('Image load error:', selectedProject.gallery[currentImageIndex]);
-                      }}
-                    />
-                  </div>
-
-                  <button className={styles.navButton} onClick={nextImage}>
-                    <AiOutlineRight />
-                  </button>
-                </div>
-
-                <div className={styles.imageCounter}>
-                  {currentImageIndex + 1} / {selectedProject.gallery.length}
-                </div>
-
-                <div className={styles.thumbnails}>
-                  {selectedProject.gallery.map((image, index) => (
-                    image && (
-                      <div
-                        key={index}
-                        className={`${styles.thumbnail} ${index === currentImageIndex ? styles.activeThumbnail : ''}`}
-                        onClick={() => setCurrentImageIndex(index)}
-                      >
+            <div className={styles.modalSliderContainer}>
+              <Slider {...modalSliderSettings} initialSlide={currentImageIndex}>
+                {selectedProject.gallery.map((image, index) => (
+                  image && (
+                    <div key={index} className={styles.modalSlide}>
+                      <div className={styles.modalImageWrapper}>
                         <Image
                           src={image}
-                          alt={`Thumbnail ${index + 1}`}
-                          width={80}
-                          height={60}
-                          quality={75}
-                          loading={index < 5 ? "eager" : "lazy"}
+                          alt={`${selectedProject.title || 'Project'} - Image ${index + 1}`}
+                          className={styles.modalImage}
+                          width={600}
+                          height={450}
+                          quality={90}
+                          onError={(e) => {
+                            console.error('Image load error:', image);
+                          }}
                         />
                       </div>
-                    )
-                  ))}
-                </div>
-              </>
-            )}
+                    </div>
+                  )
+                ))}
+              </Slider>
+            </div>
           </div>
         </div>
       )}

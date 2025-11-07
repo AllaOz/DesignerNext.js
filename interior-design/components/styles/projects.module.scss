@@ -173,7 +173,7 @@
     max-height: 80vh;
     overflow-y: auto;
     position: relative;
-    padding: 10px;
+    padding: 20px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     border-radius: 0;
 }
@@ -203,7 +203,7 @@
 
 .modalHeader {
     text-align: left;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 
     h2 {
         color: #6A8A95;
@@ -211,12 +211,11 @@
         font-size: 1.4rem;
         font-family: "CSQuinzel", serif;
         font-weight: 400;
-        margin: 1rem 3rem;
     }
 
     p {
         color: #6A8A95;
-        margin: 0rem 3rem;
+        margin: 0;
         opacity: 0.8;
         font-family: "Martian Mono", monospace;
         font-weight: 300;
@@ -225,61 +224,49 @@
     }
 }
 
-.galleryContainer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 25px;
-    margin: 25px 0;
-}
-
-.navButton {
-    background: none;
-    color: #6A8A95;
-    border: none;
-    border-radius: 0;
-    width: auto;
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    font-size: 32px;
-    transition: color 0.3s ease;
-
-    &:hover {
-        color: rgba(106, 138, 149, 0.7);
+.modalSliderContainer {
+    width: 100%;
+    margin: 20px 0;
+    
+    :global(.slick-slider) {
+        margin-bottom: 0;
+    }
+    
+    :global(.slick-dots) {
+        bottom: -40px;
+        position: relative;
+        
+        li button:before {
+            color: #6A8A95;
+            font-size: 12px;
+            opacity: 0.5;
+        }
+        
+        li.slick-active button:before {
+            opacity: 1;
+            color: #6A8A95;
+        }
     }
 }
 
-.imageWrapper {
-    flex: 1;
+.modalSlide {
+    outline: none;
+}
+
+.modalImageWrapper {
     display: flex;
     justify-content: center;
-    max-width: 600px;
+    align-items: center;
+    width: 100%;
+    padding: 0 10px;
 }
 
 .modalImage {
     max-width: 100%;
     height: auto;
     object-fit: contain;
-    width: 600px;
-    height: 450px;
-}
-
-@media (max-width: 820px) {
-    .modalImage {
-        width: 90vw;
-        height: auto;
-        max-height: 80vh;
-        object-fit: contain;
-    }
-
-    .imageWrapper {
-        max-width: 90vw;
-        display: flex;
-        justify-content: center;
-    }
+    width: 100%;
+    max-height: 60vh;
 }
 
 .imageCounter {
@@ -318,7 +305,6 @@
         margin-bottom: 0.5rem;
         text-align: left;
     }
-
 
     .sliderContainer {
         padding: 2rem 0.5rem 1.5rem 1.5rem;
@@ -374,52 +360,42 @@
 
     .modalContent {
         max-width: 95vw;
-        max-height: 100dvh;
-        padding: 10px;
+        max-height: 95vh;
+        padding: 15px;
         margin: auto;
     }
 
     .modalHeader {
         margin-bottom: 15px;
+        
+        h2 {
+            font-size: 1.1rem;
+            font-family: "CSQuinzel", serif;
+            margin: 0 0 5px 0;
+        }
+
+        p {
+            font-family: "Martian Mono", monospace;
+            font-size: 0.78125rem; // ~12.5px
+            letter-spacing: -0.02em;
+            margin: 0;
+        }
     }
 
-    .modalHeader h2 {
-        font-size: 1.1rem;
-        font-family: "CSQuinzel", serif;
-        margin-bottom: 5px;
+    .modalSliderContainer {
+        margin: 15px 0;
+        
+        :global(.slick-dots) {
+            bottom: -35px;
+        }
     }
-
-    .modalHeader p {
-        font-family: "Martian Mono", monospace;
-        font-size: 0.78125rem; // ~12.5px
-        letter-spacing: -0.02em;
-    }
-
-    .galleryContainer {
-        flex-direction: row;
-        gap: 10px;
-        justify-content: space-between;
-        align-items: center;
-        margin: 10px 0;
-    }
-
-    .navButton {
-        width: auto;
-        height: auto;
-        font-size: 28px;
-        position: relative;
-    }
-
-    .thumbnails {
-        display: none;
+    
+    .modalImage {
+        max-height: 70vh;
     }
 
     .imageCounter {
-        display: none;
-    }
-
-    .thumbnail {
-        width: 60px;
-        height: 45px;
+        font-size: 0.875rem;
+        margin: 15px 0;
     }
 }
