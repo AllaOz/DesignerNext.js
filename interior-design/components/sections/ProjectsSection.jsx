@@ -5,7 +5,7 @@ import Image from 'next/image';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import data from '../../data/slider.json';
-import { AiOutlineClose } from 'react-icons/ai';
+import { AiOutlineClose, AiOutlineLeft, AiOutlineRight } from 'react-icons/ai';
 
 const ProjectsSection = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -53,7 +53,7 @@ const ProjectsSection = () => {
     };
 
     const modalSliderSettings = {
-        dots: true,
+        dots: false,
         infinite: true,
         speed: 500,
         slidesToShow: 1,
@@ -63,7 +63,17 @@ const ProjectsSection = () => {
         touchMove: true,
         touchThreshold: 5,
         adaptiveHeight: true,
-        arrows: false,
+        arrows: true,
+        prevArrow: (
+            <button type="button" className={styles.modalArrow} aria-label="Previous">
+                <AiOutlineLeft />
+            </button>
+        ),
+        nextArrow: (
+            <button type="button" className={styles.modalArrow} aria-label="Next">
+                <AiOutlineRight />
+            </button>
+        ),
         beforeChange: (current, next) => {
             setCurrentImageIndex(next);
         },
@@ -71,7 +81,8 @@ const ProjectsSection = () => {
             {
                 breakpoint: 820,
                 settings: {
-                    dots: true,
+                    dots: false,
+                    arrows: false,
                     swipe: true,
                     swipeToSlide: true,
                     touchMove: true,
@@ -160,6 +171,10 @@ const ProjectsSection = () => {
                                     </div>
                                 ))}
                             </Slider>
+                        </div>
+
+                        <div className={styles.imageCounter}>
+                            {currentImageIndex + 1} / {selectedProject.gallery.length}
                         </div>
                     </div>
                 </div>
