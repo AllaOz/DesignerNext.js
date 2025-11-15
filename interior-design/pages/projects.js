@@ -10,6 +10,29 @@ import "slick-carousel/slick/slick-theme.css";
 import data from '../data/slider.json';
 import { AiOutlineClose, AiOutlineLeft, AiOutlineRight } from 'react-icons/ai';
 
+// Custom arrow component to filter out slick-carousel props
+const CustomArrow = ({ className, ariaLabel, direction, children, ...props }) => {
+  // Filter out slick-carousel specific props that React doesn't recognize
+  const { currentSlide, slideCount, ...restProps } = props;
+  
+  return (
+    <button
+      type="button"
+      className={className}
+      aria-label={ariaLabel}
+      onClick={(e) => {
+        e.stopPropagation();
+        if (props.onClick) {
+          props.onClick(e);
+        }
+      }}
+      {...restProps}
+    >
+      {children}
+    </button>
+  );
+};
+
 
 
 const Projects = () => {
@@ -19,9 +42,10 @@ const Projects = () => {
   const sliderRef = useRef(null);
   const touchStartRef = useRef({ x: 0, y: 0 });
   const touchEndRef = useRef({ x: 0, y: 0 });
+  const modalContentRef = useRef(null);
 
   const settings = {
-    focusOnSelect: true,
+    focusOnSelect: false,
     accessibility: true,
     dots: true,
     infinite: true,
@@ -32,7 +56,7 @@ const Projects = () => {
       {
         breakpoint: 1024,
         settings: {
-          focusOnSelect: true,
+          focusOnSelect: false,
           slidesToShow: 3,
           slidesToScroll: 3,
           infinite: true,
@@ -42,7 +66,7 @@ const Projects = () => {
       {
         breakpoint: 600,
         settings: {
-          focusOnSelect: true,
+          focusOnSelect: false,
           slidesToShow: 1,
           slidesToScroll: 1,
           initialSlide: 1,
@@ -52,7 +76,7 @@ const Projects = () => {
       {
         breakpoint: 480,
         settings: {
-          focusOnSelect: true,
+          focusOnSelect: false,
           slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
@@ -72,7 +96,7 @@ const Projects = () => {
     setIsModalOpen(true);
     
     if (typeof document !== 'undefined') {
-      document.body.style.overflow = 'hidden';
+    document.body.style.overflow = 'hidden';
     }
     
     // Preload first few images for faster loading
@@ -81,7 +105,7 @@ const Projects = () => {
         const imagesToPreload = project.gallery.slice(0, 3).filter(Boolean);
         imagesToPreload.forEach((src) => {
           if (src) {
-            const img = new Image();
+            const img = new window.Image();
             img.src = src;
           }
         });
@@ -90,6 +114,7 @@ const Projects = () => {
       }
     }
   };
+
   
   // Preload next and previous images when image changes
   useEffect(() => {
@@ -98,14 +123,14 @@ const Projects = () => {
         // Preload next image
         const nextIndex = currentImageIndex === selectedProject.gallery.length - 1 ? 0 : currentImageIndex + 1;
         if (selectedProject.gallery[nextIndex]) {
-          const nextImg = new Image();
+          const nextImg = new window.Image();
           nextImg.src = selectedProject.gallery[nextIndex];
         }
         
         // Preload previous image
         const prevIndex = currentImageIndex === 0 ? selectedProject.gallery.length - 1 : currentImageIndex - 1;
         if (selectedProject.gallery[prevIndex]) {
-          const prevImg = new Image();
+          const prevImg = new window.Image();
           prevImg.src = selectedProject.gallery[prevIndex];
         }
       } catch (error) {
@@ -119,7 +144,7 @@ const Projects = () => {
     setSelectedProject(null);
     setCurrentImageIndex(0);
     if (typeof document !== 'undefined') {
-      document.body.style.overflow = 'unset';
+    document.body.style.overflow = 'unset';
     }
   };
 
@@ -212,15 +237,25 @@ const Projects = () => {
     touchThreshold: 5,
     adaptiveHeight: true,
     arrows: true,
+    focusOnSelect: false,
+    accessibility: true,
     prevArrow: (
-      <button type="button" className={styles.modalArrow} aria-label="Previous">
+      <CustomArrow 
+        className={styles.modalArrow} 
+        ariaLabel="Previous"
+        direction="prev"
+      >
         <AiOutlineLeft />
-      </button>
+      </CustomArrow>
     ),
     nextArrow: (
-      <button type="button" className={styles.modalArrow} aria-label="Next">
+      <CustomArrow 
+        className={styles.modalArrow} 
+        ariaLabel="Next"
+        direction="next"
+      >
         <AiOutlineRight />
-      </button>
+      </CustomArrow>
     ),
     beforeChange: (current, next) => {
       setCurrentImageIndex(next);
@@ -295,19 +330,24 @@ const Projects = () => {
       {isModalOpen && selectedProject && selectedProject.gallery && selectedProject.gallery.length > 0 && (
         <div className={styles.modal} onClick={closeModal}>
           <div 
+            ref={modalContentRef}
             className={styles.modalContent} 
             onClick={handleModalContentClick}
             onTouchStart={handleTouchStart}
             onTouchMove={handleTouchMove}
             onTouchEnd={handleTouchEnd}
           >
-            <button className={styles.closeButton} onClick={closeModal}>
-              <AiOutlineClose />
-            </button>
-
             <div className={styles.modalHeader}>
-              <h2>{selectedProject.title || 'Project'}</h2>
-              <p>{selectedProject.description || ''}</p>
+              <div>
+                <h2>{selectedProject.title || 'Project'}</h2>
+                <p>{selectedProject.description || ''}</p>
+              </div>
+              <button 
+                className={styles.closeButton} 
+                onClick={closeModal}
+              >
+                <AiOutlineClose />
+              </button>
             </div>
 
             <div className={styles.modalSliderContainer}>
@@ -320,18 +360,18 @@ const Projects = () => {
                   image && (
                     <div key={index} className={styles.modalSlide}>
                       <div className={styles.modalImageWrapper}>
-                        <Image
+                <Image
                           src={image}
                           alt={`${selectedProject.title || 'Project'} - Image ${index + 1}`}
-                          className={styles.modalImage}
-                          width={600}
-                          height={450}
+                  className={styles.modalImage}
+                  width={600}
+                  height={450}
                           quality={90}
                           onError={(e) => {
                             console.error('Image load error:', image);
                           }}
-                        />
-                      </div>
+                />
+              </div>
                     </div>
                   )
                 ))}

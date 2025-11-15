@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import styles from '../styles/projects.module.scss';
 import Slider from 'react-slick';
 import Image from 'next/image';
@@ -7,6 +7,29 @@ import "slick-carousel/slick/slick-theme.css";
 import data from '../../data/slider.json';
 import { AiOutlineClose, AiOutlineLeft, AiOutlineRight } from 'react-icons/ai';
 
+// Custom arrow component to filter out slick-carousel props
+const CustomArrow = ({ className, ariaLabel, direction, children, ...props }) => {
+    // Filter out slick-carousel specific props that React doesn't recognize
+    const { currentSlide, slideCount, ...restProps } = props;
+    
+    return (
+        <button
+            type="button"
+            className={className}
+            aria-label={ariaLabel}
+            onClick={(e) => {
+                e.stopPropagation();
+                if (props.onClick) {
+                    props.onClick(e);
+                }
+            }}
+            {...restProps}
+        >
+            {children}
+        </button>
+    );
+};
+
 const ProjectsSection = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [selectedProject, setSelectedProject] = useState(null);
@@ -14,9 +37,10 @@ const ProjectsSection = () => {
     const sliderRef = useRef(null);
     const touchStartRef = useRef({ x: 0, y: 0 });
     const touchEndRef = useRef({ x: 0, y: 0 });
+    const modalContentRef = useRef(null);
 
     const settings = {
-        focusOnSelect: true,
+        focusOnSelect: false,
         accessibility: true,
         dots: true,
         infinite: true,
@@ -27,7 +51,7 @@ const ProjectsSection = () => {
             {
                 breakpoint: 1024,
                 settings: {
-                    focusOnSelect: true,
+                    focusOnSelect: false,
                     slidesToShow: 3,
                     slidesToScroll: 3,
                     infinite: true,
@@ -36,7 +60,7 @@ const ProjectsSection = () => {
             {
                 breakpoint: 600,
                 settings: {
-                    focusOnSelect: true,
+                    focusOnSelect: false,
                     slidesToShow: 1,
                     slidesToScroll: 1,
                     initialSlide: 1,
@@ -46,7 +70,7 @@ const ProjectsSection = () => {
             {
                 breakpoint: 480,
                 settings: {
-                    focusOnSelect: true,
+                    focusOnSelect: false,
                     slidesToShow: 1,
                     slidesToScroll: 1,
                     infinite: true,
@@ -67,15 +91,25 @@ const ProjectsSection = () => {
         touchThreshold: 5,
         adaptiveHeight: true,
         arrows: true,
+        focusOnSelect: false,
+        accessibility: true,
         prevArrow: (
-            <button type="button" className={styles.modalArrow} aria-label="Previous">
+            <CustomArrow 
+                className={styles.modalArrow} 
+                ariaLabel="Previous"
+                direction="prev"
+            >
                 <AiOutlineLeft />
-            </button>
+            </CustomArrow>
         ),
         nextArrow: (
-            <button type="button" className={styles.modalArrow} aria-label="Next">
+            <CustomArrow 
+                className={styles.modalArrow} 
+                ariaLabel="Next"
+                direction="next"
+            >
                 <AiOutlineRight />
-            </button>
+            </CustomArrow>
         ),
         beforeChange: (current, next) => {
             setCurrentImageIndex(next);
@@ -111,6 +145,7 @@ const ProjectsSection = () => {
             document.body.style.overflow = 'hidden';
         }
     };
+
 
     const closeModal = () => {
         setIsModalOpen(false);
@@ -229,19 +264,24 @@ const ProjectsSection = () => {
             {isModalOpen && selectedProject && selectedProject.gallery && selectedProject.gallery.length > 0 && (
                 <div className={styles.modal} onClick={closeModal}>
                     <div 
+                        ref={modalContentRef}
                         className={styles.modalContent} 
                         onClick={handleModalContentClick}
                         onTouchStart={handleTouchStart}
                         onTouchMove={handleTouchMove}
                         onTouchEnd={handleTouchEnd}
                     >
-                        <button className={styles.closeButton} onClick={closeModal}>
-                            <AiOutlineClose />
-                        </button>
-
                         <div className={styles.modalHeader}>
-                            <h2>{selectedProject.title}</h2>
-                            <p>{selectedProject.description}</p>
+                            <div>
+                                <h2>{selectedProject.title}</h2>
+                                <p>{selectedProject.description}</p>
+                            </div>
+                            <button 
+                                className={styles.closeButton} 
+                                onClick={closeModal}
+                            >
+                                <AiOutlineClose />
+                            </button>
                         </div>
 
                         <div className={styles.modalSliderContainer}>
