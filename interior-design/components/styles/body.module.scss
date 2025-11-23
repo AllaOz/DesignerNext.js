@@ -178,9 +178,9 @@
     object-fit: cover;
     margin: 0;
     position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    animation: slideInRightCentered 1.2s ease-out;
+    left: 0;
+    transform: translateX(0);
+    animation: slideInRightCenteredMobile 0.8s cubic-bezier(0.4, 0, 0.2, 1);
     touch-action: manipulation;
     user-select: none;
     -webkit-user-select: none;
@@ -189,20 +189,22 @@
     -moz-user-select: none;
     -ms-user-select: none;
     pointer-events: auto;
-    will-change: auto;
+    will-change: transform, opacity;
     -webkit-tap-highlight-color: transparent;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
 
     &:hover {
-      transform: translateX(-50%) !important;
+      transform: translateX(0) !important;
       box-shadow: 0 20px 40px rgba(124, 110, 97, 0.2);
     }
 
     &:active {
-      transform: translateX(-50%) !important;
+      transform: translateX(0) !important;
     }
 
     &:focus {
-      transform: translateX(-50%) !important;
+      transform: translateX(0) !important;
       outline: none;
     }
   }
