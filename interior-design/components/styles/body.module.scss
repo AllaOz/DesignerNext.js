@@ -178,9 +178,9 @@
     object-fit: cover;
     margin: 0;
     position: relative;
-    left: 0;
-    transform: translateX(0);
-    animation: slideInRightCenteredMobile 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    left: 50%;
+    transform: translateX(-50%);
+    animation: slideInRightCentered 1s ease-out;
     touch-action: manipulation;
     user-select: none;
     -webkit-user-select: none;
@@ -195,16 +195,16 @@
     -webkit-backface-visibility: hidden;
 
     &:hover {
-      transform: translateX(0) !important;
+      transform: translateX(-50%) !important;
       box-shadow: 0 20px 40px rgba(124, 110, 97, 0.2);
     }
 
     &:active {
-      transform: translateX(0) !important;
+      transform: translateX(-50%) !important;
     }
 
     &:focus {
-      transform: translateX(0) !important;
+      transform: translateX(-50%) !important;
       outline: none;
     }
   }
