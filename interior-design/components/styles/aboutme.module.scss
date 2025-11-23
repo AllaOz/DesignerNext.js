@@ -163,6 +163,8 @@
     height: 50vh;
     padding: 0;
     position: relative;
+    overflow: hidden;
+    max-width: 100vw;
   }
 
   .headingTwo {
@@ -180,6 +182,29 @@
     position: relative;
     left: 50%;
     transform: translateX(-50%);
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-drag: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    pointer-events: auto;
+    will-change: auto;
+    -webkit-tap-highlight-color: transparent;
+
+    &:hover {
+      transform: translateX(-50%) !important;
+    }
+
+    &:active {
+      transform: translateX(-50%) !important;
+    }
+
+    &:focus {
+      transform: translateX(-50%) !important;
+      outline: none;
+    }
   }
 
   .aboutmeImgSmall {
