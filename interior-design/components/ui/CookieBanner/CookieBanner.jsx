@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { setCookie, getCookie } from '../../../lib/cookies';
+import { GA_TRACKING_ID } from '../../../lib/gtag';
 import styles from './cookieBanner.module.scss';
 
 const CookieBanner = () => {
@@ -16,6 +17,17 @@ const CookieBanner = () => {
   const handleAccept = () => {
     setCookie('cookie-consent', 'accepted', 365);
     setShowBanner(false);
+    // Update Google Analytics consent immediately
+    if (typeof window !== 'undefined' && window.gtag && GA_TRACKING_ID) {
+      window.gtag('consent', 'update', {
+        'analytics_storage': 'granted',
+        'ad_storage': 'granted'
+      });
+      // Track pageview immediately after consent
+      window.gtag('config', GA_TRACKING_ID, {
+        page_path: window.location.pathname,
+      });
+    }
     // Trigger custom event to notify GoogleAnalytics component
     if (typeof window !== 'undefined') {
       window.dispatchEvent(new Event('cookieConsentAccepted'));

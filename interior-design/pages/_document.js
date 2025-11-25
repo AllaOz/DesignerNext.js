@@ -6,7 +6,7 @@ export default function Document() {
     return (
         <Html lang="en">
             <Head>
-                {/* Google Analytics with Consent Mode */}
+                {/* Google tag (gtag.js) */}
                 {GA_TRACKING_ID && (
                     <>
                         <script
@@ -24,9 +24,7 @@ export default function Document() {
                                         'analytics_storage': 'denied',
                                         'ad_storage': 'denied'
                                     });
-                                    gtag('config', '${GA_TRACKING_ID}', {
-                                        page_path: window.location.pathname,
-                                    });
+                                    gtag('config', '${GA_TRACKING_ID}');
                                 `,
                             }}
                         />

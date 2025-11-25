@@ -12,8 +12,8 @@ export default function GoogleAnalytics() {
       return;
     }
 
-    // Check cookie consent on client side
-    const checkConsent = () => {
+    // Function to update consent and track pageview
+    const updateConsentAndTrack = () => {
       const cookieConsent = getCookie('cookie-consent');
 
       if (cookieConsent === 'accepted') {
@@ -25,19 +25,6 @@ export default function GoogleAnalytics() {
 
         // Track initial pageview
         pageview(window.location.pathname);
-
-        // Set up route change tracking
-        const handleRouteChange = (url) => {
-          pageview(url);
-        };
-
-        router.events.on('routeChangeComplete', handleRouteChange);
-        router.events.on('hashChangeComplete', handleRouteChange);
-
-        return () => {
-          router.events.off('routeChangeComplete', handleRouteChange);
-          router.events.off('hashChangeComplete', handleRouteChange);
-        };
       } else if (cookieConsent === 'declined') {
         // Ensure consent is denied
         window.gtag('consent', 'update', {
@@ -47,17 +34,30 @@ export default function GoogleAnalytics() {
       }
     };
 
-    // Initial check
-    checkConsent();
+    // Check consent immediately on mount
+    updateConsentAndTrack();
+
+    // Set up route change tracking (only if consent is granted)
+    const handleRouteChange = (url) => {
+      const cookieConsent = getCookie('cookie-consent');
+      if (cookieConsent === 'accepted') {
+        pageview(url);
+      }
+    };
+
+    router.events.on('routeChangeComplete', handleRouteChange);
+    router.events.on('hashChangeComplete', handleRouteChange);
 
     // Listen for consent acceptance
     const handleConsentAccepted = () => {
-      checkConsent();
+      updateConsentAndTrack();
     };
 
     window.addEventListener('cookieConsentAccepted', handleConsentAccepted);
 
     return () => {
+      router.events.off('routeChangeComplete', handleRouteChange);
+      router.events.off('hashChangeComplete', handleRouteChange);
       window.removeEventListener('cookieConsentAccepted', handleConsentAccepted);
     };
   }, [router.events]);
