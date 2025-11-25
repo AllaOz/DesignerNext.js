@@ -52,6 +52,8 @@ const Projects = () => {
     slidesToShow: 3,
     slidesToScroll: 1,
     speed: 500,
+    centerMode: false,
+    initialSlide: 0,
     responsive: [
       {
         breakpoint: 1024,
@@ -60,7 +62,7 @@ const Projects = () => {
           slidesToShow: 3,
           slidesToScroll: 3,
           infinite: true,
-
+          centerMode: false,
         }
       },
       {
@@ -69,8 +71,9 @@ const Projects = () => {
           focusOnSelect: false,
           slidesToShow: 1,
           slidesToScroll: 1,
-          initialSlide: 1,
+          initialSlide: 0,
           infinite: true,
+          centerMode: false,
         }
       },
       {
@@ -80,6 +83,8 @@ const Projects = () => {
           slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
+          centerMode: false,
+          initialSlide: 0,
         }
       }
     ]
