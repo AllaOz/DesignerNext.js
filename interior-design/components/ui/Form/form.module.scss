@@ -81,39 +81,59 @@
 }
 
 @media (max-width: 820px) {
+  .formContainer {
+    width: 100%;
+    max-width: 100vw;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+
   .input {
-    width: 70vw;
+    width: 100%;
+    max-width: 100%;
     height: 35px;
     margin-bottom: 15px;
-    font-size: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+    padding: 0 10px;
   }
 
   .input::placeholder {
-    font-size: 9px;
+    font-size: 14px;
   }
 
   .checkbox {
     font: 7px $default-font;
     margin-bottom: 20px;
-    white-space: nowrap;
+    white-space: normal;
+    word-wrap: break-word;
     letter-spacing: -0.3px;
     display: flex;
-    align-items: center;
-    gap: 3px;
+    align-items: flex-start;
+    gap: 5px;
+    width: 100%;
   }
 
   .formLabel {
     font-size: 9px;
+    width: 100%;
   }
 
   .statusMessage {
     font: 9px $default-font;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
   .learnMoreBtn {
     min-width: 110px;
+    width: 100%;
+    max-width: 100%;
     height: 36px;
     font-size: 0.7rem;
     padding: 8px 14px;
+    box-sizing: border-box;
   }
 }
