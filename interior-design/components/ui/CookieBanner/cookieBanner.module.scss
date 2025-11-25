@@ -52,7 +52,7 @@
 
 .cookieTitle {
   font-family: $heading-font;
-  font-size: 1rem;
+  font-size: 0.875rem;
   color: white;
   margin: 0 0 0.5rem 0;
   font-weight: 400;
@@ -60,7 +60,7 @@
 
 .cookieDescription {
   font-family: $default-font;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   color: rgba(255, 255, 255, 0.9);
   margin: 0;
   line-height: 1.5;
@@ -121,11 +121,11 @@
   }
 
   .cookieTitle {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 
   .cookieDescription {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     margin-bottom: 1rem;
   }
 
