@@ -160,6 +160,9 @@
     max-width: 100vw;
     margin-left: calc(-50vw + 50%);
     margin-right: calc(-50vw + 50%);
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    will-change: auto;
 
     &::before {
       display: none;
@@ -180,7 +183,8 @@
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    animation: slideInRightCentered 1s ease-out;
+    animation: slideInRightCenteredSmooth 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: none;
     touch-action: manipulation;
     user-select: none;
     -webkit-user-select: none;
@@ -193,6 +197,8 @@
     -webkit-tap-highlight-color: transparent;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
 
     &:hover {
       transform: translateX(-50%) !important;

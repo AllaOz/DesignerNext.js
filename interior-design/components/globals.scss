@@ -81,6 +81,18 @@
   }
 }
 
+@keyframes slideInRightCenteredSmooth {
+  0% {
+    transform: translateX(calc(-50% + 50px));
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(-50%);
+    opacity: 1;
+  }
+}
+
 @keyframes slideInRightCenteredMobile {
   from {
     transform: translateX(100%);
