@@ -1,20 +1,32 @@
-import Script from 'next/script';
 import { useRouter } from 'next/router';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { GA_TRACKING_ID, pageview } from '../../../lib/gtag';
 import { getCookie } from '../../../lib/cookies';
 
 export default function GoogleAnalytics() {
   const router = useRouter();
-  const [consent, setConsent] = useState(null);
 
   useEffect(() => {
+    // Check if gtag is available (script is loaded in _document.js)
+    if (typeof window === 'undefined' || !window.gtag || !GA_TRACKING_ID) {
+      return;
+    }
+
     // Check cookie consent on client side
     const checkConsent = () => {
       const cookieConsent = getCookie('cookie-consent');
-      setConsent(cookieConsent);
 
-      if (cookieConsent === 'accepted' && GA_TRACKING_ID) {
+      if (cookieConsent === 'accepted') {
+        // Update consent to allow analytics
+        window.gtag('consent', 'update', {
+          'analytics_storage': 'granted',
+          'ad_storage': 'granted'
+        });
+
+        // Track initial pageview
+        pageview(window.location.pathname);
+
+        // Set up route change tracking
         const handleRouteChange = (url) => {
           pageview(url);
         };
@@ -22,16 +34,20 @@ export default function GoogleAnalytics() {
         router.events.on('routeChangeComplete', handleRouteChange);
         router.events.on('hashChangeComplete', handleRouteChange);
 
-        // Track initial pageview
-        pageview(window.location.pathname);
-
         return () => {
           router.events.off('routeChangeComplete', handleRouteChange);
           router.events.off('hashChangeComplete', handleRouteChange);
         };
+      } else if (cookieConsent === 'declined') {
+        // Ensure consent is denied
+        window.gtag('consent', 'update', {
+          'analytics_storage': 'denied',
+          'ad_storage': 'denied'
+        });
       }
     };
 
+    // Initial check
     checkConsent();
 
     // Listen for consent acceptance
@@ -46,32 +62,7 @@ export default function GoogleAnalytics() {
     };
   }, [router.events]);
 
-  // Only load GA if user has accepted cookies
-  if (!GA_TRACKING_ID || consent !== 'accepted') {
-    return null;
-  }
-
-  return (
-    <>
-      <Script
-        strategy="afterInteractive"
-        src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
-      />
-      <Script
-        id="gtag-init"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${GA_TRACKING_ID}', {
-              page_path: window.location.pathname,
-            });
-          `,
-        }}
-      />
-    </>
-  );
+  // Component doesn't render anything - script is in _document.js
+  return null;
 }
 

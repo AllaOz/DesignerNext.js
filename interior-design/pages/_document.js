@@ -1,9 +1,37 @@
 import { Html, Head, Main, NextScript } from 'next/document'
 
+const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_ID;
+
 export default function Document() {
     return (
         <Html lang="en">
             <Head>
+                {/* Google Analytics with Consent Mode */}
+                {GA_TRACKING_ID && (
+                    <>
+                        <script
+                            async
+                            src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+                        />
+                        <script
+                            dangerouslySetInnerHTML={{
+                                __html: `
+                                    window.dataLayer = window.dataLayer || [];
+                                    function gtag(){dataLayer.push(arguments);}
+                                    gtag('js', new Date());
+                                    // Set default consent to 'denied' for GDPR compliance
+                                    gtag('consent', 'default', {
+                                        'analytics_storage': 'denied',
+                                        'ad_storage': 'denied'
+                                    });
+                                    gtag('config', '${GA_TRACKING_ID}', {
+                                        page_path: window.location.pathname,
+                                    });
+                                `,
+                            }}
+                        />
+                    </>
+                )}
                 {/* Favicons for Google Search and browsers */}
                 {/* Standard favicon path that Google looks for */}
                 <link rel="icon" href="/favicon-32.png" />
