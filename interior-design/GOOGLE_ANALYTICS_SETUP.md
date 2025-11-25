@@ -57,3 +57,4 @@ event({
 - `components/ui/GoogleAnalytics/GoogleAnalytics.jsx` - компонент загрузки GA
 - `components/ui/CookieBanner/CookieBanner.jsx` - баннер согласия на cookies
 
+
