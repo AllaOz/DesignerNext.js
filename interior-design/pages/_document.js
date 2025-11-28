@@ -10,20 +10,27 @@ export default function Document() {
                 {GA_TRACKING_ID && (
                     <>
                         <script
+                            dangerouslySetInnerHTML={{
+                                __html: `
+                                    window.dataLayer = window.dataLayer || [];
+                                    function gtag(){dataLayer.push(arguments);}
+                                    // Set default consent to 'denied' BEFORE loading GA script
+                                    // This ensures no data is sent until user accepts cookies
+                                    gtag('consent', 'default', {
+                                        'analytics_storage': 'denied',
+                                        'ad_storage': 'denied'
+                                    });
+                                `,
+                            }}
+                        />
+                        <script
                             async
                             src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
                         />
                         <script
                             dangerouslySetInnerHTML={{
                                 __html: `
-                                    window.dataLayer = window.dataLayer || [];
-                                    function gtag(){dataLayer.push(arguments);}
                                     gtag('js', new Date());
-                                    // Set default consent to 'denied' for GDPR compliance
-                                    gtag('consent', 'default', {
-                                        'analytics_storage': 'denied',
-                                        'ad_storage': 'denied'
-                                    });
                                     gtag('config', '${GA_TRACKING_ID}');
                                 `,
                             }}

@@ -12,8 +12,8 @@ export default function GoogleAnalytics() {
       return;
     }
 
-    // Function to update consent and track pageview
-    const updateConsentAndTrack = () => {
+    // Function to check consent and update if needed
+    const checkAndUpdateConsent = () => {
       const cookieConsent = getCookie('cookie-consent');
 
       if (cookieConsent === 'accepted') {
@@ -23,19 +23,17 @@ export default function GoogleAnalytics() {
           'ad_storage': 'granted'
         });
 
-        // Track initial pageview
-        pageview(window.location.pathname);
-      } else if (cookieConsent === 'declined') {
-        // Ensure consent is denied
-        window.gtag('consent', 'update', {
-          'analytics_storage': 'denied',
-          'ad_storage': 'denied'
-        });
+        // Track initial pageview after consent is granted
+        // Use setTimeout to ensure consent update is processed
+        setTimeout(() => {
+          pageview(window.location.pathname);
+        }, 100);
       }
+      // If consent is 'declined' or not set, consent remains 'denied' (set in _document.js)
     };
 
     // Check consent immediately on mount
-    updateConsentAndTrack();
+    checkAndUpdateConsent();
 
     // Set up route change tracking (only if consent is granted)
     const handleRouteChange = (url) => {
@@ -50,7 +48,7 @@ export default function GoogleAnalytics() {
 
     // Listen for consent acceptance
     const handleConsentAccepted = () => {
-      updateConsentAndTrack();
+      setConsentAndTrack();
     };
 
     window.addEventListener('cookieConsentAccepted', handleConsentAccepted);

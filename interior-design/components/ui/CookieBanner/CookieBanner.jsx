@@ -19,14 +19,18 @@ const CookieBanner = () => {
     setShowBanner(false);
     // Update Google Analytics consent immediately
     if (typeof window !== 'undefined' && window.gtag && GA_TRACKING_ID) {
+      // Update consent to allow analytics
       window.gtag('consent', 'update', {
         'analytics_storage': 'granted',
         'ad_storage': 'granted'
       });
-      // Track pageview immediately after consent
-      window.gtag('config', GA_TRACKING_ID, {
-        page_path: window.location.pathname,
-      });
+      // Track pageview immediately after consent is granted
+      // Use setTimeout to ensure consent update is processed first
+      setTimeout(() => {
+        window.gtag('config', GA_TRACKING_ID, {
+          page_path: window.location.pathname,
+        });
+      }, 100);
     }
     // Trigger custom event to notify GoogleAnalytics component
     if (typeof window !== 'undefined') {
