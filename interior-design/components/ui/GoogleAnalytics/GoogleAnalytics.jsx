@@ -48,7 +48,7 @@ export default function GoogleAnalytics() {
 
     // Listen for consent acceptance
     const handleConsentAccepted = () => {
-      setConsentAndTrack();
+      checkAndUpdateConsent();
     };
 
     window.addEventListener('cookieConsentAccepted', handleConsentAccepted);
